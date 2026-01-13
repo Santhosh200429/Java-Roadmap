@@ -1,4 +1,4 @@
-# Networking Fundamentals in Java
+﻿# Networking Fundamentals in Java
 
 ## What is Networking?
 
@@ -412,10 +412,10 @@ public class NetworkMonitor {
             boolean reachable = address.isReachable(3000);
             long time = System.currentTimeMillis() - start;
             
-            String status = reachable ? "✓ UP" : "✗ DOWN";
+            String status = reachable ? "âœ“ UP" : "âœ— DOWN";
             System.out.println(host + ": " + status + " (" + time + "ms)");
         } catch (Exception e) {
-            System.out.println(host + ": ✗ ERROR - " + e.getMessage());
+            System.out.println(host + ": âœ— ERROR - " + e.getMessage());
         }
     }
 }
@@ -454,15 +454,14 @@ try {
 
 ## Key Takeaways
 
-- ✅ IP addresses identify computers on network
-- ✅ Ports identify specific applications
-- ✅ Use URL class for parsing web addresses
-- ✅ Use HttpURLConnection for HTTP requests
-- ✅ GET for retrieving data, POST for sending data
-- ✅ Always set timeouts for network operations
-- ✅ Handle NetworkException, SocketException, UnknownHostException
-- ✅ Disconnect connections when done
+- âœ… IP addresses identify computers on network
+- âœ… Ports identify specific applications
+- âœ… Use URL class for parsing web addresses
+- âœ… Use HttpURLConnection for HTTP requests
+- âœ… GET for retrieving data, POST for sending data
+- âœ… Always set timeouts for network operations
+- âœ… Handle NetworkException, SocketException, UnknownHostException
+- âœ… Disconnect connections when done
 
 ---
 
-**Next →** Sockets: [Socket Programming](/8-I-O-Networking/04-Sockets.md)

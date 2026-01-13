@@ -1,11 +1,11 @@
-# JDBC: Database Connectivity
+﻿# JDBC: Database Connectivity
 
 ## What is JDBC?
 
 **JDBC** (Java Database Connectivity) is a Java API for connecting to databases. It provides a standard interface to work with any SQL database.
 
 ```
-Java Program → JDBC Driver → Database
+Java Program â†’ JDBC Driver â†’ Database
 ```
 
 ## Database Setup
@@ -196,7 +196,7 @@ public class StudentDB {
 ## Best Practices
 
 ```java
-// ✅ Use try-with-resources (auto-close)
+// âœ… Use try-with-resources (auto-close)
 try (Connection conn = DriverManager.getConnection(url, user, password);
      PreparedStatement stmt = conn.prepareStatement(query)) {
     // Code here
@@ -204,25 +204,24 @@ try (Connection conn = DriverManager.getConnection(url, user, password);
     e.printStackTrace();
 }
 
-// ✅ Use PreparedStatement (prevents SQL injection)
+// âœ… Use PreparedStatement (prevents SQL injection)
 String query = "SELECT * FROM users WHERE email = ?";
 PreparedStatement stmt = conn.prepareStatement(query);
 stmt.setString(1, email);
 
-// ❌ Never do this (vulnerable)
+// âŒ Never do this (vulnerable)
 String query = "SELECT * FROM users WHERE email = '" + email + "'";
 ```
 
 ## Key Takeaways
 
-- ✅ JDBC connects Java to databases
-- ✅ Use PreparedStatement for queries
-- ✅ Always close connections
-- ✅ Handle SQLExceptions appropriately
-- ✅ Use try-with-resources for auto-closing
-- ✅ Avoid SQL injection with parameterized queries
-- ✅ Check ResultSet with next() before accessing
+- âœ… JDBC connects Java to databases
+- âœ… Use PreparedStatement for queries
+- âœ… Always close connections
+- âœ… Handle SQLExceptions appropriately
+- âœ… Use try-with-resources for auto-closing
+- âœ… Avoid SQL injection with parameterized queries
+- âœ… Check ResultSet with next() before accessing
 
 ---
 
-**JDBC enables Java to work with any SQL database.**

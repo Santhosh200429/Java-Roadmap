@@ -1,4 +1,4 @@
-# Nested Classes: Inner, Static, Local & Anonymous Classes
+﻿# Nested Classes: Inner, Static, Local & Anonymous Classes
 
 ## What are Nested Classes?
 
@@ -10,11 +10,11 @@
 
 ```
 Nested Classes
-├── Static Nested Class (static inner class)
-├── Inner Classes (non-static)
-│   ├── Member Inner Class
-│   ├── Local Inner Class
-│   └── Anonymous Inner Class
+â”œâ”€â”€ Static Nested Class (static inner class)
+â”œâ”€â”€ Inner Classes (non-static)
+â”‚   â”œâ”€â”€ Member Inner Class
+â”‚   â”œâ”€â”€ Local Inner Class
+â”‚   â””â”€â”€ Anonymous Inner Class
 ```
 
 ## 1. Static Nested Class
@@ -27,8 +27,8 @@ public class OuterClass {
     // Static nested class
     public static class StaticNested {
         public void display() {
-            System.out.println(staticVar);  // ✅ Can access static
-            // System.out.println(instanceVar);  // ❌ Can't access instance
+            System.out.println(staticVar);  // âœ… Can access static
+            // System.out.println(instanceVar);  // âŒ Can't access instance
         }
     }
 }
@@ -111,8 +111,8 @@ public class Outer {
         private String innerVar = "inner";
         
         public void show() {
-            System.out.println(outerVar);   // ✅ Access outer instance
-            System.out.println(innerVar);   // ✅ Access own variable
+            System.out.println(outerVar);   // âœ… Access outer instance
+            System.out.println(innerVar);   // âœ… Access own variable
         }
     }
 }
@@ -183,7 +183,7 @@ public class Processor {
         // Local inner class - only exists in this method
         class LocalProcessor {
             public void execute() {
-                System.out.println(finalVar);  // ✅ Access final variables
+                System.out.println(finalVar);  // âœ… Access final variables
             }
         }
         
@@ -355,7 +355,7 @@ game.startGame();
 ### 1. Trying to Access Non-Final Variable in Local Class
 
 ```java
-// ❌ WRONG
+// âŒ WRONG
 public void process() {
     String var = "value";  // Not final
     var = "changed";
@@ -367,7 +367,7 @@ public void process() {
     }
 }
 
-// ✅ RIGHT
+// âœ… RIGHT
 public void process() {
     final String var = "value";  // Final
     
@@ -382,10 +382,10 @@ public void process() {
 ### 2. Instance Inner Without Outer Instance
 
 ```java
-// ❌ WRONG
+// âŒ WRONG
 Outer.Inner inner = new Outer.Inner();  // No outer instance
 
-// ✅ RIGHT
+// âœ… RIGHT
 Outer outer = new Outer();
 Outer.Inner inner = outer.new Inner();  // Create with outer
 ```
@@ -393,7 +393,7 @@ Outer.Inner inner = outer.new Inner();  // Create with outer
 ### 3. Overcomplicating with Anonymous Classes
 
 ```java
-// ❌ COMPLEX - unnecessary anonymous class
+// âŒ COMPLEX - unnecessary anonymous class
 button.setOnClickListener(new Button.ClickListener() {
     @Override
     public void onClick() {
@@ -401,33 +401,32 @@ button.setOnClickListener(new Button.ClickListener() {
     }
 });
 
-// ✅ SIMPLE - use lambda
+// âœ… SIMPLE - use lambda
 button.setOnClickListener(() -> doSomething());
 ```
 
 ## When to Use
 
-✅ **Use Nested Classes for:**
+âœ… **Use Nested Classes for:**
 - Builder pattern
 - Event listeners and handlers
 - Comparison/filtering logic
 - Logical grouping of related classes
 
-❌ **Don't Use for:**
+âŒ **Don't Use for:**
 - Regular application logic (use separate classes)
 - If complexity increases significantly
 - Deep nesting (limits readability)
 
 ## Key Takeaways
 
-- ✅ Static nested class: standalone class inside another class
-- ✅ Member inner class: associated with outer instance
-- ✅ Local inner class: defined inside method
-- ✅ Anonymous inner class: no name, created inline
-- ✅ Local/anonymous classes can access final variables
-- ✅ Lambdas are preferred over anonymous classes now
-- ✅ Builder pattern uses static nested class
+- âœ… Static nested class: standalone class inside another class
+- âœ… Member inner class: associated with outer instance
+- âœ… Local inner class: defined inside method
+- âœ… Anonymous inner class: no name, created inline
+- âœ… Local/anonymous classes can access final variables
+- âœ… Lambdas are preferred over anonymous classes now
+- âœ… Builder pattern uses static nested class
 
 ---
 
-**Next →** Initializer Blocks: [Initializer Blocks](/4-Language-Features/05-InitializerBlock.md)

@@ -1,4 +1,4 @@
-# Math Operations: Working with Numbers
+﻿# Math Operations: Working with Numbers
 
 ## Java's Math Class
 
@@ -178,13 +178,13 @@ if (divisor != 0) {
 
 ## Key Takeaways
 
-- ✅ Math class provides built-in math functions
-- ✅ Follow order of operations (PEMDAS)
-- ✅ Use parentheses to clarify calculations
-- ✅ Integer division loses decimals (use double)
-- ✅ Use % operator for remainder
-- ✅ Math.random() for random numbers
-- ✅ Always check for division by zero
+- âœ… Math class provides built-in math functions
+- âœ… Follow order of operations (PEMDAS)
+- âœ… Use parentheses to clarify calculations
+- âœ… Integer division loses decimals (use double)
+- âœ… Use % operator for remainder
+- âœ… Math.random() for random numbers
+- âœ… Always check for division by zero
 
 ## Next Steps
 
@@ -192,4 +192,3 @@ Continue to [Arrays](./06-Arrays.md) to store multiple values.
 
 ---
 
-**Math is fundamental to programming. Understand it deeply!**

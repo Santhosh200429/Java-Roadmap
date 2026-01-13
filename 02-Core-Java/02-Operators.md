@@ -1,8 +1,8 @@
-# Operators: Performing Operations on Data
+﻿# Operators: Performing Operations on Data
 
 ## What are Operators?
 
-**Operators** are symbols that perform operations on variables and values. They're like the mathematical symbols you learned in school (+ - × ÷) but for programming.
+**Operators** are symbols that perform operations on variables and values. They're like the mathematical symbols you learned in school (+ - Ã— Ã·) but for programming.
 
 Think of them as actions you perform on data:
 - `+` adds numbers
@@ -116,8 +116,8 @@ System.out.println(age >= 20);   // true
 **Important**: Use `==` to compare, not `=` (which assigns):
 
 ```java
-if (age = 20) { }   // ❌ This ASSIGNS 20 to age (wrong!)
-if (age == 20) { }  // ✅ This COMPARES age to 20 (correct!)
+if (age = 20) { }   // âŒ This ASSIGNS 20 to age (wrong!)
+if (age == 20) { }  // âœ… This COMPARES age to 20 (correct!)
 ```
 
 ### 4. Logical Operators (Combining Conditions)
@@ -138,12 +138,12 @@ double gpa = 3.5;
 
 if (age >= 18 && gpa >= 3.0) {
     System.out.println("Eligible for scholarship");  // Prints
-    // Both conditions true: age 20 >= 18 ✓, gpa 3.5 >= 3.0 ✓
+    // Both conditions true: age 20 >= 18 âœ“, gpa 3.5 >= 3.0 âœ“
 }
 
 if (age >= 18 && gpa >= 4.0) {
     System.out.println("Honors scholarship");  // Doesn't print
-    // Second condition false: gpa 3.5 NOT >= 4.0 ✗
+    // Second condition false: gpa 3.5 NOT >= 4.0 âœ—
 }
 ```
 
@@ -155,7 +155,7 @@ boolean hasLicense = false;
 
 if (age >= 25 || hasLicense) {
     System.out.println("Can rent car");  // Prints
-    // Second condition true: hasLicense is true ✓
+    // Second condition true: hasLicense is true âœ“
 }
 
 if (age >= 25 || hasLicense) {
@@ -295,8 +295,8 @@ public class NumberComparison {
 ### Mistake 1: Using = Instead of ==
 
 ```java
-if (age = 20) { }   // ❌ Assigns 20 (wrong!)
-if (age == 20) { }  // ✅ Compares (correct!)
+if (age = 20) { }   // âŒ Assigns 20 (wrong!)
+if (age == 20) { }  // âœ… Compares (correct!)
 ```
 
 ### Mistake 2: Integer Division Loses Decimals
@@ -320,9 +320,9 @@ if ((age > 18 && hasLicense) || isRestricted) { } // Clear!
 String name1 = "John";
 String name2 = "John";
 
-if (name1 = name2) { }   // ❌ Assigns (wrong!)
-if (name1 == name2) { }  // ⚠️ Compares references (not values!)
-if (name1.equals(name2)) { } // ✅ Compares actual text (correct!)
+if (name1 = name2) { }   // âŒ Assigns (wrong!)
+if (name1 == name2) { }  // âš ï¸ Compares references (not values!)
+if (name1.equals(name2)) { } // âœ… Compares actual text (correct!)
 ```
 
 For Strings, use `.equals()` method, not `==`.
@@ -347,14 +347,14 @@ Write a program that:
 
 ## Key Takeaways
 
-- ✅ Arithmetic operators: + - * / %
-- ✅ Assignment operators: = += -= *= /=
-- ✅ Comparison operators: == != > < >= <=
-- ✅ Logical operators: && || !
-- ✅ Use == to compare (not = which assigns)
-- ✅ Operator precedence matters (use parentheses when unsure)
-- ✅ Increment/decrement: ++ and --
-- ✅ Ternary operator: condition ? true : false
+- âœ… Arithmetic operators: + - * / %
+- âœ… Assignment operators: = += -= *= /=
+- âœ… Comparison operators: == != > < >= <=
+- âœ… Logical operators: && || !
+- âœ… Use == to compare (not = which assigns)
+- âœ… Operator precedence matters (use parentheses when unsure)
+- âœ… Increment/decrement: ++ and --
+- âœ… Ternary operator: condition ? true : false
 
 ## Next Steps
 
@@ -362,4 +362,3 @@ Now that you understand operators, learn about [Conditionals](./03-Conditionals.
 
 ---
 
-**Operators are the tools to manipulate data. Master them and you'll code faster!**

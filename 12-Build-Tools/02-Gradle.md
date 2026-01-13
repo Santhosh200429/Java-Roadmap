@@ -1,4 +1,4 @@
-# Gradle: Alternative Build Tool
+﻿# Gradle: Alternative Build Tool
 
 ## What is Gradle?
 
@@ -35,14 +35,14 @@ gradle --version       # Verify
 
 ```
 myapp/
-├── build.gradle          # Build configuration
-├── settings.gradle       # Project settings
-├── gradle.properties     # Properties
-├── src/
-│   ├── main/java/        # Source code
-│   └── test/java/        # Test code
-├── lib/                  # Dependencies (downloaded)
-└── build/                # Output directory
+â”œâ”€â”€ build.gradle          # Build configuration
+â”œâ”€â”€ settings.gradle       # Project settings
+â”œâ”€â”€ gradle.properties     # Properties
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ main/java/        # Source code
+â”‚   â””â”€â”€ test/java/        # Test code
+â”œâ”€â”€ lib/                  # Dependencies (downloaded)
+â””â”€â”€ build/                # Output directory
 ```
 
 ## Basic build.gradle
@@ -226,13 +226,13 @@ include 'api'
 ### Project Structure
 ```
 student-system/
-├── settings.gradle
-├── core/
-│   └── build.gradle
-├── ui/
-│   └── build.gradle
-└── api/
-    └── build.gradle
+â”œâ”€â”€ settings.gradle
+â”œâ”€â”€ core/
+â”‚   â””â”€â”€ build.gradle
+â”œâ”€â”€ ui/
+â”‚   â””â”€â”€ build.gradle
+â””â”€â”€ api/
+    â””â”€â”€ build.gradle
 ```
 
 ### core/build.gradle
@@ -345,15 +345,14 @@ task printInfo {
 
 ## Key Takeaways
 
-- ✅ Gradle simpler than Maven (less XML)
-- ✅ `build.gradle` uses Groovy/Kotlin syntax
-- ✅ `gradle build` compiles and packages
-- ✅ `gradle run` executes application
-- ✅ `gradle test` runs tests
-- ✅ Dependency scopes: implementation, testImplementation, runtimeOnly
-- ✅ Gradle Wrapper ensures consistent version
-- ✅ Tasks can depend on other tasks
+- âœ… Gradle simpler than Maven (less XML)
+- âœ… `build.gradle` uses Groovy/Kotlin syntax
+- âœ… `gradle build` compiles and packages
+- âœ… `gradle run` executes application
+- âœ… `gradle test` runs tests
+- âœ… Dependency scopes: implementation, testImplementation, runtimeOnly
+- âœ… Gradle Wrapper ensures consistent version
+- âœ… Tasks can depend on other tasks
 
 ---
 
-**Next →** Testing: [JUnit Testing](/13-Testing/01-JUnit.md)

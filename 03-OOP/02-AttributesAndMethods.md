@@ -1,4 +1,4 @@
-# Attributes and Methods: Properties and Behavior
+﻿# Attributes and Methods: Properties and Behavior
 
 ## Attributes (Properties)
 
@@ -272,19 +272,19 @@ Java figures out which method to call based on argument type.
 ### Mistake 1: Forgetting 'public'
 
 ```java
-void printMessage() { }     // ❌ Can't call from outside class
-public void printMessage() { } // ✅ Can call from anywhere
+void printMessage() { }     // âŒ Can't call from outside class
+public void printMessage() { } // âœ… Can call from anywhere
 ```
 
 ### Mistake 2: Wrong Return Type
 
 ```java
 public int getValue() {
-    return "Hello";  // ❌ Can't return String when int expected
+    return "Hello";  // âŒ Can't return String when int expected
 }
 
 public String getValue() {
-    return "Hello";  // ✅ Correct
+    return "Hello";  // âœ… Correct
 }
 ```
 
@@ -293,12 +293,12 @@ public String getValue() {
 ```java
 public int add(int a, int b) {
     int sum = a + b;
-    // ❌ Missing return statement
+    // âŒ Missing return statement
 }
 
 public int add(int a, int b) {
     int sum = a + b;
-    return sum;  // ✅ Correct
+    return sum;  // âœ… Correct
 }
 ```
 
@@ -307,24 +307,24 @@ public int add(int a, int b) {
 ```java
 public void printName(String name) {
     System.out.println(name);
-    return name;  // ❌ Can't return from void
+    return name;  // âŒ Can't return from void
 }
 
 public void printName(String name) {
     System.out.println(name);
-    return;  // ✅ Just 'return' (no value) or omit it
+    return;  // âœ… Just 'return' (no value) or omit it
 }
 ```
 
 ## Key Takeaways
 
-- ✅ Attributes store object data
-- ✅ Methods define object behavior
-- ✅ Return type can be any type or void
-- ✅ Parameters allow methods to accept data
-- ✅ Getters and Setters provide controlled access
-- ✅ Overloading allows same method name with different parameters
-- ✅ Always specify visibility (public/private)
+- âœ… Attributes store object data
+- âœ… Methods define object behavior
+- âœ… Return type can be any type or void
+- âœ… Parameters allow methods to accept data
+- âœ… Getters and Setters provide controlled access
+- âœ… Overloading allows same method name with different parameters
+- âœ… Always specify visibility (public/private)
 
 ## Next Steps
 
@@ -332,4 +332,3 @@ Learn about [Inheritance](./03-Inheritance.md) to reuse code.
 
 ---
 
-**Attributes and methods define what objects are and do. Master them!**

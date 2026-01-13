@@ -1,4 +1,4 @@
-# Virtual Threads: Modern Lightweight Concurrency (Java 21+)
+﻿# Virtual Threads: Modern Lightweight Concurrency (Java 21+)
 
 ## What are Virtual Threads?
 
@@ -250,7 +250,7 @@ executor.submit(() -> blockingIO());  // Just works!
 ```java
 // 1. Pinning (virtual thread blocked)
 // If blocking in synchronized block, virtual thread pins to platform thread
-synchronized(this) {  // ❌ Avoid in virtual threads
+synchronized(this) {  // âŒ Avoid in virtual threads
     blockingIO();     // Virtual thread pinned!
 }
 
@@ -312,14 +312,14 @@ public class PerformanceTest {
 
 ## When to Use Virtual Threads
 
-### ✅ Perfect For:
+### âœ… Perfect For:
 - I/O-bound applications (network, database, files)
 - High-concurrency scenarios (10,000+ simultaneous operations)
 - Web servers and microservices
 - Batch processing with blocking calls
 - Server applications handling many clients
 
-### ❌ Not Suitable For:
+### âŒ Not Suitable For:
 - CPU-intensive computing
 - Real-time systems (GC pauses still occur)
 - Code with lots of synchronized blocks
@@ -383,7 +383,7 @@ public class VirtualThreadBatchProcessor {
 ### 1. Using Synchronized Blocks
 
 ```java
-// ❌ WRONG - causes pinning
+// âŒ WRONG - causes pinning
 ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
 executor.submit(() -> {
     synchronized(lock) {
@@ -391,7 +391,7 @@ executor.submit(() -> {
     }
 });
 
-// ✅ RIGHT - use ReentrantLock
+// âœ… RIGHT - use ReentrantLock
 Lock lock = new ReentrantLock();
 executor.submit(() -> {
     lock.lock();
@@ -406,7 +406,7 @@ executor.submit(() -> {
 ### 2. Using for CPU-Bound Work
 
 ```java
-// ❌ WRONG - virtual threads don't help with computation
+// âŒ WRONG - virtual threads don't help with computation
 ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
 executor.submit(() -> {
     for (int i = 0; i < 1_000_000; i++) {
@@ -414,7 +414,7 @@ executor.submit(() -> {
     }
 });
 
-// ✅ RIGHT - use fixed thread pool for CPU work
+// âœ… RIGHT - use fixed thread pool for CPU work
 ExecutorService executor = Executors.newFixedThreadPool(
     Runtime.getRuntime().availableProcessors()
 );
@@ -423,12 +423,12 @@ ExecutorService executor = Executors.newFixedThreadPool(
 ### 3. Creating Too Many
 
 ```java
-// ❌ WRONG - creating millions without limiting
+// âŒ WRONG - creating millions without limiting
 for (int i = 0; i < 10_000_000; i++) {
     Thread.startVirtualThread(() -> doWork());  // OutOfMemory!
 }
 
-// ✅ RIGHT - use executor to manage
+// âœ… RIGHT - use executor to manage
 ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
 for (int i = 0; i < 10_000_000; i++) {
     executor.submit(() -> doWork());  // Managed properly
@@ -437,15 +437,14 @@ for (int i = 0; i < 10_000_000; i++) {
 
 ## Key Takeaways
 
-- ✅ Virtual threads are lightweight, JVM-managed threads
-- ✅ Enable millions of concurrent tasks easily
-- ✅ Perfect for I/O-bound applications
-- ✅ Use `Executors.newVirtualThreadPerTaskExecutor()`
-- ✅ Not for CPU-intensive work
-- ✅ Avoid synchronized blocks (causes pinning)
-- ✅ Massive scalability improvement over platform threads
-- ✅ Java 21+ feature
+- âœ… Virtual threads are lightweight, JVM-managed threads
+- âœ… Enable millions of concurrent tasks easily
+- âœ… Perfect for I/O-bound applications
+- âœ… Use `Executors.newVirtualThreadPerTaskExecutor()`
+- âœ… Not for CPU-intensive work
+- âœ… Avoid synchronized blocks (causes pinning)
+- âœ… Massive scalability improvement over platform threads
+- âœ… Java 21+ feature
 
 ---
 
-**Next →** Initializer Blocks: [Code Initialization](/4-Language-Features/05-InitializerBlock.md)

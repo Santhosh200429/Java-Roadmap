@@ -1,4 +1,4 @@
-# I/O Operations: Reading and Writing Data
+﻿# I/O Operations: Reading and Writing Data
 
 ## What is I/O?
 
@@ -12,10 +12,10 @@ A **stream** is a sequence of data flowing from source to destination.
 
 ```
 Reading File (Input Stream)
-File → InputStream → Your Program
+File â†’ InputStream â†’ Your Program
 
 Writing File (Output Stream)
-Your Program → OutputStream → File
+Your Program â†’ OutputStream â†’ File
 ```
 
 ## File I/O Types
@@ -325,17 +325,17 @@ public class FileAppender {
 
 | Task | Stream | Reader/Writer |
 |------|--------|---------------|
-| Binary files | ✅ Use Stream | ❌ No |
-| Text files | ⚠️ Works but harder | ✅ Use Reader/Writer |
-| Character encoding | ❌ Not automatic | ✅ Automatic |
-| Performance | ⚠️ Slower | ✅ Faster |
+| Binary files | âœ… Use Stream | âŒ No |
+| Text files | âš ï¸ Works but harder | âœ… Use Reader/Writer |
+| Character encoding | âŒ Not automatic | âœ… Automatic |
+| Performance | âš ï¸ Slower | âœ… Faster |
 
 ## Common Mistakes
 
 ### 1. Forgetting to Close
 
 ```java
-// ❌ WRONG - resource leak
+// âŒ WRONG - resource leak
 public void readFile() throws IOException {
     BufferedReader br = new BufferedReader(
         new FileReader("data.txt")
@@ -344,7 +344,7 @@ public void readFile() throws IOException {
     // Never closed! File locked, memory leak
 }
 
-// ✅ RIGHT - try-with-resources
+// âœ… RIGHT - try-with-resources
 public void readFile() throws IOException {
     try (BufferedReader br = new BufferedReader(
         new FileReader("data.txt"))) {
@@ -356,10 +356,10 @@ public void readFile() throws IOException {
 ### 2. Wrong Encoding
 
 ```java
-// ❌ WRONG - assumes default encoding
+// âŒ WRONG - assumes default encoding
 FileReader fr = new FileReader("utf8_file.txt");
 
-// ✅ RIGHT - specify encoding
+// âœ… RIGHT - specify encoding
 InputStreamReader isr = new InputStreamReader(
     new FileInputStream("utf8_file.txt"), 
     StandardCharsets.UTF_8
@@ -370,7 +370,7 @@ BufferedReader br = new BufferedReader(isr);
 ### 3. Not Handling EOF Properly
 
 ```java
-// ❌ WRONG - doesn't handle end-of-file
+// âŒ WRONG - doesn't handle end-of-file
 BufferedReader br = new BufferedReader(
     new FileReader("data.txt")
 );
@@ -378,7 +378,7 @@ String line = br.readLine();
 // Crashes if file empty!
 System.out.println(line.length());
 
-// ✅ RIGHT
+// âœ… RIGHT
 String line;
 while ((line = br.readLine()) != null) {
     System.out.println(line.length());
@@ -411,14 +411,13 @@ public class ModernFileIO {
 
 ## Key Takeaways
 
-- ✅ Byte streams for binary, Reader/Writer for text
-- ✅ Use BufferedInputStream/Reader for efficiency
-- ✅ Always close resources (use try-with-resources)
-- ✅ Handle EOF condition (-1 or null)
-- ✅ Modern Files utility for simple operations
-- ✅ Specify encoding for text files
-- ✅ Append mode for logging files
+- âœ… Byte streams for binary, Reader/Writer for text
+- âœ… Use BufferedInputStream/Reader for efficiency
+- âœ… Always close resources (use try-with-resources)
+- âœ… Handle EOF condition (-1 or null)
+- âœ… Modern Files utility for simple operations
+- âœ… Specify encoding for text files
+- âœ… Append mode for logging files
 
 ---
 
-**Next →** Networking: [Sockets & Networking](/8-I-O-Networking/04-Sockets.md)

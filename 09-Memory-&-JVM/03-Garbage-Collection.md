@@ -1,4 +1,4 @@
-# Garbage Collection in Java
+﻿# Garbage Collection in Java
 
 ## What is Garbage Collection?
 
@@ -6,13 +6,13 @@
 
 ```
 Object Creation
-     ↓
+     â†“
 Object Usage
-     ↓
+     â†“
 Object no longer needed (unreachable)
-     ↓
+     â†“
 GC detects unreachable object
-     ↓
+     â†“
 Memory reclaimed
 ```
 
@@ -44,12 +44,12 @@ container.clear();                    // No longer reachable
 
 ```
 Heap
-├─ Young Generation (90% of collections happen here)
-│  ├─ Eden Space (most objects allocated)
-│  ├─ Survivor 0 (survived one collection)
-│  └─ Survivor 1 (survived multiple collections)
-│
-└─ Old Generation (long-lived objects)
+â”œâ”€ Young Generation (90% of collections happen here)
+â”‚  â”œâ”€ Eden Space (most objects allocated)
+â”‚  â”œâ”€ Survivor 0 (survived one collection)
+â”‚  â””â”€ Survivor 1 (survived multiple collections)
+â”‚
+â””â”€ Old Generation (long-lived objects)
 ```
 
 ## GC Algorithms
@@ -58,13 +58,13 @@ Heap
 
 ```
 Step 1: Mark all reachable objects
-  Root → A → B → C
-         ↓       ↓
+  Root â†’ A â†’ B â†’ C
+         â†“       â†“
          D       E
   (A, B, C, D, E are marked)
 
 Step 2: Sweep unreachable
-  F, G, H are unmarked → Reclaimed
+  F, G, H are unmarked â†’ Reclaimed
 ```
 
 ### 2. Generational GC
@@ -293,14 +293,14 @@ java -XX:ConcGCThreads=2 MyApp
 ### 1. Avoid Full GC
 
 ```java
-// ❌ Creates garbage frequently
+// âŒ Creates garbage frequently
 public void badMethod() {
     for (int i = 0; i < 1_000_000; i++) {
         String s = "Value: " + i;  // Creates millions of objects
     }
 }
 
-// ✅ Better approach
+// âœ… Better approach
 StringBuilder sb = new StringBuilder();
 for (int i = 0; i < 1_000_000; i++) {
     sb.append("Value: ").append(i).append("\n");
@@ -310,14 +310,14 @@ for (int i = 0; i < 1_000_000; i++) {
 ### 2. Avoid Memory Leaks
 
 ```java
-// ❌ Memory leak - references keep growing
+// âŒ Memory leak - references keep growing
 static List<String> cache = new ArrayList<>();
 
 public void addToCache(String value) {
     cache.add(value);  // Never removed!
 }
 
-// ✅ Better - use LinkedHashMap with max size
+// âœ… Better - use LinkedHashMap with max size
 static Map<String, String> cache = new LinkedHashMap<String, String>(100) {
     protected boolean removeEldestEntry(Map.Entry eldest) {
         return size() > 100;
@@ -328,7 +328,7 @@ static Map<String, String> cache = new LinkedHashMap<String, String>(100) {
 ### 3. Avoid Long Object References
 
 ```java
-// ❌ Keeps old objects in memory
+// âŒ Keeps old objects in memory
 class Node {
     Object value;
     Node next;
@@ -338,7 +338,7 @@ class Node {
     }
 }
 
-// ✅ Better - use try-with-resources
+// âœ… Better - use try-with-resources
 try (Resource resource = new Resource()) {
     // Use resource
     // Automatically closed and GC'd
@@ -394,17 +394,16 @@ public class StreamingProcessor {
 
 ## Key Takeaways
 
-- ✅ GC automatically reclaims unreachable memory
-- ✅ Young generation collects frequently and fast
-- ✅ Old generation collects rarely and slowly
-- ✅ G1 is good default for most applications
-- ✅ ZGC for ultra-low latency requirements
-- ✅ Avoid creating excessive objects
-- ✅ Avoid memory leaks and long-lived references
-- ✅ Monitor GC with logging and tools
-- ✅ Tune heap size based on application needs
-- ✅ Streaming APIs reduce GC pressure
+- âœ… GC automatically reclaims unreachable memory
+- âœ… Young generation collects frequently and fast
+- âœ… Old generation collects rarely and slowly
+- âœ… G1 is good default for most applications
+- âœ… ZGC for ultra-low latency requirements
+- âœ… Avoid creating excessive objects
+- âœ… Avoid memory leaks and long-lived references
+- âœ… Monitor GC with logging and tools
+- âœ… Tune heap size based on application needs
+- âœ… Streaming APIs reduce GC pressure
 
 ---
 
-**Next →** Complete! Java Learning Roadmap 100% done! 🎉

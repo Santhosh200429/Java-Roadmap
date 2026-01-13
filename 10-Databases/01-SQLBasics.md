@@ -1,4 +1,4 @@
-# SQL Basics for Java Developers
+﻿# SQL Basics for Java Developers
 
 ## SQL Overview
 
@@ -16,16 +16,16 @@
 
 ```
 Database
-├── Table: users
-│   ├── Columns: id, name, email, age
-│   ├── Row 1: [1, "Alice", "alice@email.com", 25]
-│   ├── Row 2: [2, "Bob", "bob@email.com", 30]
-│   └── Row 3: [3, "Charlie", "charlie@email.com", 28]
-│
-└── Table: orders
-    ├── Columns: orderId, userId, amount, date
-    ├── Row 1: [101, 1, 99.99, 2024-01-15]
-    └── Row 2: [102, 2, 149.99, 2024-01-20]
+â”œâ”€â”€ Table: users
+â”‚   â”œâ”€â”€ Columns: id, name, email, age
+â”‚   â”œâ”€â”€ Row 1: [1, "Alice", "alice@email.com", 25]
+â”‚   â”œâ”€â”€ Row 2: [2, "Bob", "bob@email.com", 30]
+â”‚   â””â”€â”€ Row 3: [3, "Charlie", "charlie@email.com", 28]
+â”‚
+â””â”€â”€ Table: orders
+    â”œâ”€â”€ Columns: orderId, userId, amount, date
+    â”œâ”€â”€ Row 1: [101, 1, 99.99, 2024-01-15]
+    â””â”€â”€ Row 2: [102, 2, 149.99, 2024-01-20]
 ```
 
 ### Creating a Table
@@ -335,7 +335,7 @@ CREATE INDEX idx_email ON users(email);
 CREATE INDEX idx_name_age ON users(name, age);
 
 -- Make searches faster
-SELECT * FROM users WHERE email = 'alice@email.com';  -- ✓ Fast!
+SELECT * FROM users WHERE email = 'alice@email.com';  -- âœ“ Fast!
 ```
 
 ## Transactions
@@ -484,18 +484,17 @@ COMMIT;
 
 ## Key Takeaways
 
-- ✅ SQL is standard for all relational databases
-- ✅ CRUD: INSERT, SELECT, UPDATE, DELETE
-- ✅ WHERE filters results
-- ✅ ORDER BY sorts; LIMIT restricts
-- ✅ Aggregates: COUNT, SUM, AVG, MIN, MAX
-- ✅ GROUP BY groups similar records
-- ✅ JOINs combine multiple tables
-- ✅ Indexes speed up searches
-- ✅ Transactions ensure consistency
-- ✅ Always use parameterized queries to prevent SQL injection
-- ✅ Foreign keys enforce referential integrity
+- âœ… SQL is standard for all relational databases
+- âœ… CRUD: INSERT, SELECT, UPDATE, DELETE
+- âœ… WHERE filters results
+- âœ… ORDER BY sorts; LIMIT restricts
+- âœ… Aggregates: COUNT, SUM, AVG, MIN, MAX
+- âœ… GROUP BY groups similar records
+- âœ… JOINs combine multiple tables
+- âœ… Indexes speed up searches
+- âœ… Transactions ensure consistency
+- âœ… Always use parameterized queries to prevent SQL injection
+- âœ… Foreign keys enforce referential integrity
 
 ---
 
-**Next →** JDBC: [Java Database Connection](/10-Databases/02-JDBC.md)

@@ -1,4 +1,4 @@
-# Docker: Containerizing Java Applications
+﻿# Docker: Containerizing Java Applications
 
 ## What is Docker?
 
@@ -22,7 +22,7 @@
 - **Container**: Running instance (like a baked cookie)
 
 ```
-Docker Image → Docker Container
+Docker Image â†’ Docker Container
 (Template)    (Running Instance)
 ```
 
@@ -239,10 +239,10 @@ docker-compose ps
 
 ### 1. Minimal Base Image
 ```dockerfile
-# ❌ Large
+# âŒ Large
 FROM openjdk:17
 
-# ✅ Smaller
+# âœ… Smaller
 FROM openjdk:17-jdk-slim
 ```
 
@@ -258,7 +258,7 @@ COPY --from=builder /build/target/*.jar app.jar
 
 ### 3. Cache Layers
 ```dockerfile
-# ✅ Dependencies cached separately
+# âœ… Dependencies cached separately
 FROM maven:3.8
 COPY pom.xml .
 RUN mvn dependency:go-offline
@@ -296,14 +296,13 @@ docker run -it myapp /bin/bash
 
 ## Key Takeaways
 
-- ✅ Docker packages application + dependencies
-- ✅ Dockerfile defines build instructions
-- ✅ Image is template, container is instance
-- ✅ `docker build` creates image
-- ✅ `docker run` starts container
-- ✅ Multi-stage builds reduce image size
-- ✅ Docker Compose manages multiple containers
+- âœ… Docker packages application + dependencies
+- âœ… Dockerfile defines build instructions
+- âœ… Image is template, container is instance
+- âœ… `docker build` creates image
+- âœ… `docker run` starts container
+- âœ… Multi-stage builds reduce image size
+- âœ… Docker Compose manages multiple containers
 
 ---
 
-**Next →** CI/CD: [Continuous Integration](/14-DevOps/02-CI-CD.md)

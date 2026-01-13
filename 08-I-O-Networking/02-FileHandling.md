@@ -1,4 +1,4 @@
-# File Handling: Reading and Writing Files
+﻿# File Handling: Reading and Writing Files
 
 ## Reading Files
 
@@ -122,14 +122,13 @@ public class Logger {
 
 ## Key Takeaways
 
-- ✅ BufferedReader for reading files
-- ✅ PrintWriter for writing files
-- ✅ Use try-catch for IOException handling
-- ✅ Always close files with close()
-- ✅ Modern Java has Files class for simpler I/O
-- ✅ Check if file exists before reading
-- ✅ Create directories before creating files
+- âœ… BufferedReader for reading files
+- âœ… PrintWriter for writing files
+- âœ… Use try-catch for IOException handling
+- âœ… Always close files with close()
+- âœ… Modern Java has Files class for simpler I/O
+- âœ… Check if file exists before reading
+- âœ… Create directories before creating files
 
 ---
 
-**File I/O is essential for data persistence.**

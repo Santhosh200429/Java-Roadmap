@@ -1,4 +1,4 @@
-# Thread Synchronization: Thread-Safe Code
+﻿# Thread Synchronization: Thread-Safe Code
 
 ## What is Synchronization?
 
@@ -23,8 +23,8 @@ class BankAccount {
 // Scenario with 2 threads, balance = 1000
 Thread 1: Check balance >= 100? YES
 Thread 2: Check balance >= 100? YES
-Thread 1: Deduct 100 → balance = 900
-Thread 2: Deduct 100 → balance = 900  // WRONG! Should be 800
+Thread 1: Deduct 100 â†’ balance = 900
+Thread 2: Deduct 100 â†’ balance = 900  // WRONG! Should be 800
 ```
 
 ## Synchronized Methods
@@ -70,8 +70,8 @@ class Counter {
 }
 
 // Thread 1: Tries to acquire lock
-// If lock available → enters → increments → releases
-// If lock taken → waits until available
+// If lock available â†’ enters â†’ increments â†’ releases
+// If lock taken â†’ waits until available
 // Thread 2: Same process (must wait for Thread 1)
 ```
 
@@ -341,7 +341,7 @@ class PrintBuffer {
 
 ### 1. Forgetting to Synchronize All Access
 ```java
-// ❌ WRONG - balance accessed unsynchronized
+// âŒ WRONG - balance accessed unsynchronized
 class Account {
     private int balance;
     
@@ -354,7 +354,7 @@ class Account {
     }
 }
 
-// ✅ RIGHT
+// âœ… RIGHT
 class Account {
     private int balance;
     
@@ -370,7 +370,7 @@ class Account {
 
 ### 2. Synchronizing Too Much
 ```java
-// ❌ INEFFICIENT - locks entire class
+// âŒ INEFFICIENT - locks entire class
 public class DataProcessor {
     public synchronized void process() {
         readFile();           // No thread issues
@@ -381,7 +381,7 @@ public class DataProcessor {
     }
 }
 
-// ✅ BETTER - lock only critical section
+// âœ… BETTER - lock only critical section
 public class DataProcessor {
     private Object lock = new Object();
     
@@ -397,7 +397,7 @@ public class DataProcessor {
 
 ### 3. Calling wait() Without Loop
 ```java
-// ❌ WRONG
+// âŒ WRONG
 synchronized void getData() throws InterruptedException {
     if (data == null) {  // What if notified spuriously?
         wait();
@@ -405,7 +405,7 @@ synchronized void getData() throws InterruptedException {
     return data;  // Data still null!
 }
 
-// ✅ RIGHT
+// âœ… RIGHT
 synchronized void getData() throws InterruptedException {
     while (data == null) {  // Keep checking
         wait();
@@ -441,14 +441,13 @@ public void updateMany() {
 
 ## Key Takeaways
 
-- ✅ Synchronization prevents race conditions
-- ✅ `synchronized` method/block acquires object lock
-- ✅ Only one thread executes synchronized block at a time
-- ✅ `wait()` releases lock and waits for notification
-- ✅ `notifyAll()` wakes up waiting threads
-- ✅ Synchronize all shared variable access
-- ✅ Only synchronize critical sections for performance
+- âœ… Synchronization prevents race conditions
+- âœ… `synchronized` method/block acquires object lock
+- âœ… Only one thread executes synchronized block at a time
+- âœ… `wait()` releases lock and waits for notification
+- âœ… `notifyAll()` wakes up waiting threads
+- âœ… Synchronize all shared variable access
+- âœ… Only synchronize critical sections for performance
 
 ---
 
-**Next →** Thread Pools & Executors: [Concurrency Utils](/7-Concurrency/04-ConcurrencyUtils.md)

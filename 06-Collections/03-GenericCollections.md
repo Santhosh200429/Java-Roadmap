@@ -1,4 +1,4 @@
-# Generic Collections: Type-Safe Programming
+﻿# Generic Collections: Type-Safe Programming
 
 ## What are Generics?
 
@@ -21,7 +21,7 @@ Integer number = (Integer) list.get(1);
 ```java
 List<String> list = new ArrayList<String>();
 list.add("Hello");
-list.add(123);  // ❌ Compile error - wrong type!
+list.add(123);  // âŒ Compile error - wrong type!
 
 String word = list.get(0);  // No casting needed
 ```
@@ -159,8 +159,8 @@ stringList.getClass() == intList.getClass();  // true!
 
 This is why you can't do:
 ```java
-if (obj instanceof List<String>) { }  // ❌ Error - can't check generic type
-if (obj instanceof List) { }          // ✅ OK
+if (obj instanceof List<String>) { }  // âŒ Error - can't check generic type
+if (obj instanceof List) { }          // âœ… OK
 ```
 
 ## Benefits of Generics
@@ -203,13 +203,12 @@ public class GenericExample {
 
 ## Key Takeaways
 
-- ✅ Generics provide type safety
-- ✅ Specify type in angle brackets: List<Type>
-- ✅ No casting needed with generics
-- ✅ Can create generic methods and classes
-- ✅ Wildcard ? allows flexible types
-- ✅ Always use generics for collections
+- âœ… Generics provide type safety
+- âœ… Specify type in angle brackets: List<Type>
+- âœ… No casting needed with generics
+- âœ… Can create generic methods and classes
+- âœ… Wildcard ? allows flexible types
+- âœ… Always use generics for collections
 
 ---
 
-**Generics make collections type-safe and your code more reliable!**

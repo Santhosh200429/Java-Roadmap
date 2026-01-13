@@ -1,4 +1,4 @@
-# Type Casting: Converting Between Data Types
+﻿# Type Casting: Converting Between Data Types
 
 ## What is Type Casting?
 
@@ -13,15 +13,15 @@
 Converting a smaller type to a larger type. Java does this automatically because no information is lost.
 
 ```
-byte → short → int → long → float → double
+byte â†’ short â†’ int â†’ long â†’ float â†’ double
    (smaller)              (larger)
 ```
 
 **Examples**:
 ```java
 int number = 100;
-long bigNumber = number;        // ✅ Automatic - int to long
-double decimal = 50;            // ✅ Automatic - int to double
+long bigNumber = number;        // âœ… Automatic - int to long
+double decimal = 50;            // âœ… Automatic - int to double
 float price = 19.99f;           // Explicit float needed for decimals
 
 System.out.println(bigNumber);  // 100
@@ -33,7 +33,7 @@ System.out.println(decimal);    // 50.0
 Converting a larger type to smaller type. You must explicitly cast because information might be lost.
 
 ```
-double → float → long → int → short → byte
+double â†’ float â†’ long â†’ int â†’ short â†’ byte
    (larger)              (smaller)
 ```
 
@@ -128,11 +128,11 @@ Fahrenheit (rounded): 77
 ### Mistake 1: Wrong Direction with Precision Loss
 
 ```java
-// ❌ Loses decimal part
+// âŒ Loses decimal part
 double result = 10.5;
 int value = result;  // Error - can't implicit cast
 
-// ✅ Explicit cast - but lose decimals
+// âœ… Explicit cast - but lose decimals
 int value = (int) result;  // Value is 10
 ```
 
@@ -140,29 +140,29 @@ int value = (int) result;  // Value is 10
 
 ```java
 String text = "Hello";
-int number = Integer.parseInt(text);  // ❌ Crash! "Hello" isn't a number
+int number = Integer.parseInt(text);  // âŒ Crash! "Hello" isn't a number
 
 String text2 = "25";
-int number2 = Integer.parseInt(text2);  // ✅ Works - "25" is a number
+int number2 = Integer.parseInt(text2);  // âœ… Works - "25" is a number
 ```
 
 ### Mistake 3: Forgetting Cast Operator
 
 ```java
 double decimal = 10.5;
-int number = decimal;  // ❌ Error - must cast explicitly
-int number = (int) decimal;  // ✅ Correct
+int number = decimal;  // âŒ Error - must cast explicitly
+int number = (int) decimal;  // âœ… Correct
 ```
 
 ## Key Takeaways
 
-- ✅ Widening (small → large): Automatic, safe
-- ✅ Narrowing (large → small): Explicit (int), risky
-- ✅ Use parentheses for casting: (type) value
-- ✅ Integer division loses decimals
-- ✅ Large values overflow when cast to small types
-- ✅ String to int: Integer.parseInt()
-- ✅ int to String: String.valueOf()
+- âœ… Widening (small â†’ large): Automatic, safe
+- âœ… Narrowing (large â†’ small): Explicit (int), risky
+- âœ… Use parentheses for casting: (type) value
+- âœ… Integer division loses decimals
+- âœ… Large values overflow when cast to small types
+- âœ… String to int: Integer.parseInt()
+- âœ… int to String: String.valueOf()
 
 ## Next Steps
 
@@ -170,4 +170,3 @@ Proceed to [Math Operations](./05-MathOperations.md) for more advanced calculati
 
 ---
 
-**Type casting connects different data types. Use it wisely!**

@@ -1,4 +1,4 @@
-# List, Set, and Map Collections
+﻿# List, Set, and Map Collections
 
 ## List - Ordered Collections
 
@@ -188,7 +188,7 @@ strings.add("Hello");
 String word = strings.get(0);  // No casting needed
 
 // Wrong type - compiler error
-strings.add(123);  // ❌ Error - expected String
+strings.add(123);  // âŒ Error - expected String
 
 // Without generics (old way - not recommended)
 List list = new ArrayList();  // No type checking
@@ -245,14 +245,13 @@ Charlie: A
 
 ## Key Takeaways
 
-- ✅ ArrayList = ordered, fast access
-- ✅ LinkedList = ordered, fast insertion
-- ✅ HashSet = unique, fast, unordered
-- ✅ TreeSet = unique, sorted, slower
-- ✅ HashMap = key-value, fastest
-- ✅ TreeMap = key-value, sorted
-- ✅ Use generics for type safety
+- âœ… ArrayList = ordered, fast access
+- âœ… LinkedList = ordered, fast insertion
+- âœ… HashSet = unique, fast, unordered
+- âœ… TreeSet = unique, sorted, slower
+- âœ… HashMap = key-value, fastest
+- âœ… TreeMap = key-value, sorted
+- âœ… Use generics for type safety
 
 ---
 
-**Master these collections and you can solve any storage problem!**

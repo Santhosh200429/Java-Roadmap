@@ -1,4 +1,4 @@
-# Enums: Fixed Set of Constants
+﻿# Enums: Fixed Set of Constants
 
 ## What is an Enum?
 
@@ -10,14 +10,14 @@ An **enum** is a special type that represents a fixed set of constants. Use it w
 
 Instead of this:
 ```java
-// ❌ Error-prone
+// âŒ Error-prone
 String status = "PENDING";
 String priority = "MODERATE";  // Typo? No compile-time check
 ```
 
 Use this:
 ```java
-// ✅ Type-safe
+// âœ… Type-safe
 Status status = Status.PENDING;
 Priority priority = Priority.HIGH;  // Compiler catches typos
 ```
@@ -424,20 +424,20 @@ switch (day1) {
 
 ### 1. Creating Enum Instances (Can't!)
 ```java
-// ❌ WRONG
+// âŒ WRONG
 Direction dir = new Direction.NORTH;
 
-// ✅ RIGHT
+// âœ… RIGHT
 Direction dir = Direction.NORTH;
 ```
 
 ### 2. Comparing with String
 ```java
-// ❌ WRONG
+// âŒ WRONG
 String status = "PENDING";
 if (status == Status.PENDING) { }  // Always false
 
-// ✅ RIGHT
+// âœ… RIGHT
 if (Status.PENDING.toString().equals(status)) { }
 // OR
 Status status = Status.valueOf("PENDING");
@@ -445,10 +445,10 @@ Status status = Status.valueOf("PENDING");
 
 ### 3. Empty Enum
 ```java
-// ❌ WRONG
+// âŒ WRONG
 enum Empty { }  // No constants
 
-// ✅ RIGHT
+// âœ… RIGHT
 enum Status {
     ACTIVE,
     INACTIVE
@@ -457,14 +457,13 @@ enum Status {
 
 ## Key Takeaways
 
-- ✅ Enums represent fixed set of constants
-- ✅ Type-safe - compiler checks values
-- ✅ Can have fields, methods, constructors
-- ✅ Use in switch statements
-- ✅ Compare with ==
-- ✅ Use .values() to get all
-- ✅ Can implement interfaces
+- âœ… Enums represent fixed set of constants
+- âœ… Type-safe - compiler checks values
+- âœ… Can have fields, methods, constructors
+- âœ… Use in switch statements
+- âœ… Compare with ==
+- âœ… Use .values() to get all
+- âœ… Can implement interfaces
 
 ---
 
-**Next →** Records: [Java Records](/4-Language-Features/03-Record.md)

@@ -1,4 +1,4 @@
-# Maven: Build Automation and Dependency Management
+﻿# Maven: Build Automation and Dependency Management
 
 ## What is Maven?
 
@@ -14,15 +14,15 @@ Maven follows a standard structure:
 
 ```
 myproject/
-├── pom.xml              ← Project configuration
-├── src/
-│   ├── main/
-│   │   ├── java/       ← Source code
-│   │   └── resources/  ← Configuration files
-│   └── test/
-│       ├── java/       ← Test code
-│       └── resources/  ← Test configuration
-└── target/             ← Compiled output
+â”œâ”€â”€ pom.xml              â† Project configuration
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ main/
+â”‚   â”‚   â”œâ”€â”€ java/       â† Source code
+â”‚   â”‚   â””â”€â”€ resources/  â† Configuration files
+â”‚   â””â”€â”€ test/
+â”‚       â”œâ”€â”€ java/       â† Test code
+â”‚       â””â”€â”€ resources/  â† Test configuration
+â””â”€â”€ target/             â† Compiled output
 ```
 
 ## pom.xml File
@@ -169,7 +169,7 @@ Control when dependencies are needed:
 Maven has built-in phases:
 
 ```
-validate → compile → test → package → install → deploy
+validate â†’ compile â†’ test â†’ package â†’ install â†’ deploy
 ```
 
 When you run `mvn package`, all previous phases run automatically.
@@ -261,14 +261,13 @@ Maven ensures consistency - same pom.xml, same result everywhere.
 
 ## Key Takeaways
 
-- ✅ Maven automates building and testing
-- ✅ pom.xml defines project configuration
-- ✅ Dependencies downloaded from Maven Central
-- ✅ Standard project structure
-- ✅ Lifecycle: compile → test → package → deploy
-- ✅ Scope controls when dependencies are used
-- ✅ mvn commands: clean, compile, test, package, install
+- âœ… Maven automates building and testing
+- âœ… pom.xml defines project configuration
+- âœ… Dependencies downloaded from Maven Central
+- âœ… Standard project structure
+- âœ… Lifecycle: compile â†’ test â†’ package â†’ deploy
+- âœ… Scope controls when dependencies are used
+- âœ… mvn commands: clean, compile, test, package, install
 
 ---
 
-**Maven is essential for professional Java development.**

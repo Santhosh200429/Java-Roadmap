@@ -1,4 +1,4 @@
-# ArrayList vs Array in Java
+﻿# ArrayList vs Array in Java
 
 ## Quick Comparison
 
@@ -28,7 +28,7 @@ public class ArrayExample {
         System.out.println(arr.length);  // 5
         
         // Cannot add 6th element
-        // arr[5] = 30;  // ✗ ArrayIndexOutOfBoundsException
+        // arr[5] = 30;  // âœ— ArrayIndexOutOfBoundsException
     }
 }
 ```
@@ -36,16 +36,16 @@ public class ArrayExample {
 ### Primitives Allowed
 
 ```java
-// ✓ Arrays support primitives
+// âœ“ Arrays support primitives
 int[] numbers = {1, 2, 3};
 double[] decimals = {1.5, 2.5};
 boolean[] flags = {true, false};
 
-// ✗ ArrayList doesn't support primitives
-// ArrayList<int> list = new ArrayList<>();  // ✗ Compiler error
+// âœ— ArrayList doesn't support primitives
+// ArrayList<int> list = new ArrayList<>();  // âœ— Compiler error
 
 // Must use wrapper classes
-ArrayList<Integer> list = new ArrayList<>();  // ✓ Works
+ArrayList<Integer> list = new ArrayList<>();  // âœ“ Works
 ```
 
 ### Array Memory Layout
@@ -54,10 +54,10 @@ ArrayList<Integer> list = new ArrayList<>();  // ✓ Works
 int[] arr = {10, 20, 30};
 
 Memory:
-┌─────┬─────┬─────┐
-│ 10  │ 20  │ 30  │  (contiguous memory, cache-friendly)
-└─────┴─────┴─────┘
-  ↑
+â”Œâ”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”
+â”‚ 10  â”‚ 20  â”‚ 30  â”‚  (contiguous memory, cache-friendly)
+â””â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”˜
+  â†‘
 arr (reference to start)
 
 Access: O(1) - Direct memory lookup
@@ -116,14 +116,14 @@ public class ArrayListExample {
 ### Objects Only
 
 ```java
-// ✓ Objects
+// âœ“ Objects
 ArrayList<String> strings = new ArrayList<>();
 ArrayList<Person> people = new ArrayList<>();
 
-// ✗ Primitives (must use wrapper)
-// ArrayList<int> numbers = new ArrayList<>();  // ✗ Error
+// âœ— Primitives (must use wrapper)
+// ArrayList<int> numbers = new ArrayList<>();  // âœ— Error
 
-// ✓ Wrapper classes (autoboxing)
+// âœ“ Wrapper classes (autoboxing)
 ArrayList<Integer> numbers = new ArrayList<>();
 numbers.add(5);  // Autoboxed to Integer(5)
 int value = numbers.get(0);  // Unboxed to int
@@ -443,24 +443,24 @@ List<String> list5 = List.of("A", "B", "C");  // Immutable
 ### Mistake 1: Primitives in ArrayList
 
 ```java
-// ✗ Wrong
+// âœ— Wrong
 ArrayList<int> numbers = new ArrayList<>();  // Compilation error!
 
-// ✓ Correct
+// âœ“ Correct
 ArrayList<Integer> numbers = new ArrayList<>();
 ```
 
 ### Mistake 2: Modifying While Iterating
 
 ```java
-// ✗ Wrong
+// âœ— Wrong
 for (String item : list) {
     if (item.equals("remove")) {
         list.remove(item);  // ConcurrentModificationException!
     }
 }
 
-// ✓ Correct
+// âœ“ Correct
 Iterator<String> it = list.iterator();
 while (it.hasNext()) {
     if (it.next().equals("remove")) {
@@ -472,11 +472,11 @@ while (it.hasNext()) {
 ### Mistake 3: Forgetting Null Check
 
 ```java
-// ✗ Risk
+// âœ— Risk
 Integer value = list.get(index);
 int result = value + 10;  // NullPointerException if value is null!
 
-// ✓ Safe
+// âœ“ Safe
 Integer value = list.get(index);
 if (value != null) {
     int result = value + 10;
@@ -485,17 +485,16 @@ if (value != null) {
 
 ## Key Takeaways
 
-- ✅ Arrays are fixed-size, faster, support primitives
-- ✅ ArrayList is dynamic, flexible, object-only
-- ✅ Use Array for performance-critical code with known size
-- ✅ Use ArrayList for convenience and unknown size
-- ✅ Array random access: O(1)
-- ✅ ArrayList insertion/deletion: O(n)
-- ✅ Arrays don't grow; ArrayList does automatically
-- ✅ ArrayList has no wrapper for primitives (use Integer, Long, etc.)
-- ✅ Never modify collection while iterating (use Iterator)
-- ✅ ArrayList is usually better for normal code; Array for performance
+- âœ… Arrays are fixed-size, faster, support primitives
+- âœ… ArrayList is dynamic, flexible, object-only
+- âœ… Use Array for performance-critical code with known size
+- âœ… Use ArrayList for convenience and unknown size
+- âœ… Array random access: O(1)
+- âœ… ArrayList insertion/deletion: O(n)
+- âœ… Arrays don't grow; ArrayList does automatically
+- âœ… ArrayList has no wrapper for primitives (use Integer, Long, etc.)
+- âœ… Never modify collection while iterating (use Iterator)
+- âœ… ArrayList is usually better for normal code; Array for performance
 
 ---
 
-**Previous ←** Iterator: [Collections Iteration](/6-Collections/04-Iterator.md)

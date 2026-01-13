@@ -1,4 +1,4 @@
-# Hibernate: Object-Relational Mapping (ORM)
+﻿# Hibernate: Object-Relational Mapping (ORM)
 
 ## What is Hibernate?
 
@@ -440,14 +440,13 @@ public class StudentManagement {
 
 ## Key Takeaways
 
-- ✅ Hibernate converts Java objects to database
-- ✅ @Entity marks class as database table
-- ✅ @Id marks primary key
-- ✅ HQL queries on objects, not tables
-- ✅ Automatic relationship handling
-- ✅ Transactions ensure data consistency
-- ✅ Less SQL, more Java!
+- âœ… Hibernate converts Java objects to database
+- âœ… @Entity marks class as database table
+- âœ… @Id marks primary key
+- âœ… HQL queries on objects, not tables
+- âœ… Automatic relationship handling
+- âœ… Transactions ensure data consistency
+- âœ… Less SQL, more Java!
 
 ---
 
-**Next →** Spring Boot: [REST Controllers](/11-Frameworks/SpringBoot/02-REST-Controllers.md)

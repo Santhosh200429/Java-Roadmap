@@ -1,4 +1,4 @@
-# Loops: Repeating Code Multiple Times
+﻿# Loops: Repeating Code Multiple Times
 
 ## What are Loops?
 
@@ -38,15 +38,15 @@ public class MultiplicationTable {
         int num = 5;
         
         for (int i = 1; i <= 10; i++) {
-            System.out.println(num + " × " + i + " = " + (num * i));
+            System.out.println(num + " Ã— " + i + " = " + (num * i));
         }
     }
 }
 
 // Output:
-// 5 × 1 = 5
-// 5 × 2 = 10
-// 5 × 3 = 15
+// 5 Ã— 1 = 5
+// 5 Ã— 2 = 10
+// 5 Ã— 3 = 15
 // ... up to 10
 ```
 
@@ -278,13 +278,13 @@ public class GradeCalculator {
 
 ### 1. Infinite Loop
 ```java
-// ❌ WRONG - i never changes
+// âŒ WRONG - i never changes
 while (true) {
     System.out.println("Infinite");
     // No break statement!
 }
 
-// ✅ RIGHT
+// âœ… RIGHT
 for (int i = 0; i < 5; i++) {
     System.out.println(i);
 }
@@ -292,12 +292,12 @@ for (int i = 0; i < 5; i++) {
 
 ### 2. Off-by-One Error
 ```java
-// ❌ WRONG - prints 1,2,3,4,5,6 (6 times)
+// âŒ WRONG - prints 1,2,3,4,5,6 (6 times)
 for (int i = 1; i <= 5; i++) {
     System.out.println(i);
 }
 
-// ✅ RIGHT
+// âœ… RIGHT
 for (int i = 0; i < 5; i++) {
     System.out.println(i);
 }
@@ -305,14 +305,14 @@ for (int i = 0; i < 5; i++) {
 
 ### 3. Using Wrong Loop Type
 ```java
-// ❌ Awkward
+// âŒ Awkward
 int count = 0;
 while (count < 5) {
     System.out.println(count);
     count++;
 }
 
-// ✅ Better
+// âœ… Better
 for (int count = 0; count < 5; count++) {
     System.out.println(count);
 }
@@ -329,14 +329,13 @@ for (int count = 0; count < 5; count++) {
 
 ## Key Takeaways
 
-- ✅ `for` loops: use when you know count
-- ✅ `while` loops: use when count unknown
-- ✅ `do-while`: runs at least once
-- ✅ `break`: exits loop immediately
-- ✅ `continue`: skips to next iteration
-- ✅ Enhanced `for` cleanest for arrays/lists
-- ✅ Nested loops for multi-dimensional data
+- âœ… `for` loops: use when you know count
+- âœ… `while` loops: use when count unknown
+- âœ… `do-while`: runs at least once
+- âœ… `break`: exits loop immediately
+- âœ… `continue`: skips to next iteration
+- âœ… Enhanced `for` cleanest for arrays/lists
+- âœ… Nested loops for multi-dimensional data
 
 ---
 
-**Next →** Collections: [Intro to Collections](/6-Collections/01-IntroToCollections.md)

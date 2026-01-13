@@ -1,4 +1,4 @@
-# Bazel Build System
+﻿# Bazel Build System
 
 ## What is Bazel?
 
@@ -16,11 +16,11 @@
 ```
 Feature          | Maven  | Gradle | Bazel
 -----------------|--------|--------|--------
-Speed            | Good   | Good   | Fast ⭐
-Scalability      | Good   | Good   | Excellent ⭐
+Speed            | Good   | Good   | Fast â­
+Scalability      | Good   | Good   | Excellent â­
 Configuration    | XML    | Groovy | Starlark
-Build Cache      | No     | Yes    | Yes ⭐
-Reproducibility  | Good   | Good   | Excellent ⭐
+Build Cache      | No     | Yes    | Yes â­
+Reproducibility  | Good   | Good   | Excellent â­
 Learning Curve   | Easy   | Medium | Hard
 ```
 
@@ -46,24 +46,24 @@ bazel version
 
 ```
 my-java-project/
-├── WORKSPACE              # Root file defining project
-├── BUILD                  # Build rules for root
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/example/
-│   │   │       ├── BUILD
-│   │   │       ├── Main.java
-│   │   │       └── Helper.java
-│   │   └── resources/
-│   │       └── BUILD
-│   └── test/
-│       ├── java/
-│       │   └── com/example/
-│       │       ├── BUILD
-│       │       └── HelperTest.java
-│       └── resources/
-└── bazelisk.json          # Bazel version management
+â”œâ”€â”€ WORKSPACE              # Root file defining project
+â”œâ”€â”€ BUILD                  # Build rules for root
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ main/
+â”‚   â”‚   â”œâ”€â”€ java/
+â”‚   â”‚   â”‚   â””â”€â”€ com/example/
+â”‚   â”‚   â”‚       â”œâ”€â”€ BUILD
+â”‚   â”‚   â”‚       â”œâ”€â”€ Main.java
+â”‚   â”‚   â”‚       â””â”€â”€ Helper.java
+â”‚   â”‚   â””â”€â”€ resources/
+â”‚   â”‚       â””â”€â”€ BUILD
+â”‚   â””â”€â”€ test/
+â”‚       â”œâ”€â”€ java/
+â”‚       â”‚   â””â”€â”€ com/example/
+â”‚       â”‚       â”œâ”€â”€ BUILD
+â”‚       â”‚       â””â”€â”€ HelperTest.java
+â”‚       â””â”€â”€ resources/
+â””â”€â”€ bazelisk.json          # Bazel version management
 ```
 
 ## WORKSPACE File
@@ -423,14 +423,14 @@ deps = ["@maven//:junit_junit"]
 
 ## When to Use Bazel
 
-### ✅ Use Bazel When:
+### âœ… Use Bazel When:
 - Large monorepo with multiple languages
 - Need reproducible builds
 - Want fast incremental builds
 - Complex dependency graphs
 - Enterprise-scale projects
 
-### ❌ Better Alternatives When:
+### âŒ Better Alternatives When:
 - Small single-language project
 - Team unfamiliar with Bazel
 - Simple Maven/Gradle setup works
@@ -438,17 +438,16 @@ deps = ["@maven//:junit_junit"]
 
 ## Key Takeaways
 
-- ✅ Bazel is fast, scalable build system
-- ✅ Fast incremental builds and parallel execution
-- ✅ WORKSPACE file defines project scope
-- ✅ BUILD files define build targets
-- ✅ Maven dependencies via maven_install
-- ✅ java_library for libraries
-- ✅ java_binary for applications
-- ✅ java_test for unit tests
-- ✅ Reproducible builds across machines
-- ✅ Good for large, complex projects
+- âœ… Bazel is fast, scalable build system
+- âœ… Fast incremental builds and parallel execution
+- âœ… WORKSPACE file defines project scope
+- âœ… BUILD files define build targets
+- âœ… Maven dependencies via maven_install
+- âœ… java_library for libraries
+- âœ… java_binary for applications
+- âœ… java_test for unit tests
+- âœ… Reproducible builds across machines
+- âœ… Good for large, complex projects
 
 ---
 
-**Next →** Understanding Modules: [Java Module System](/6-Modules/01-UnderstandingModules.md)

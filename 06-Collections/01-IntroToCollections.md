@@ -1,4 +1,4 @@
-# Introduction to Collections Framework
+﻿# Introduction to Collections Framework
 
 ## What are Collections?
 
@@ -14,22 +14,22 @@ Collections: Dynamic size, flexible, rich methods, type-safe
 
 ```
 Collection (Interface)
-├── List (Ordered, allow duplicates)
-│   ├── ArrayList
-│   ├── LinkedList
-│   └── Vector
-├── Set (Unique values, no duplicates)
-│   ├── HashSet
-│   ├── TreeSet
-│   └── LinkedHashSet
-└── Queue
-    ├── PriorityQueue
-    └── Deque
+â”œâ”€â”€ List (Ordered, allow duplicates)
+â”‚   â”œâ”€â”€ ArrayList
+â”‚   â”œâ”€â”€ LinkedList
+â”‚   â””â”€â”€ Vector
+â”œâ”€â”€ Set (Unique values, no duplicates)
+â”‚   â”œâ”€â”€ HashSet
+â”‚   â”œâ”€â”€ TreeSet
+â”‚   â””â”€â”€ LinkedHashSet
+â””â”€â”€ Queue
+    â”œâ”€â”€ PriorityQueue
+    â””â”€â”€ Deque
 
 Map (Key-Value pairs)
-├── HashMap
-├── TreeMap
-└── LinkedHashMap
+â”œâ”€â”€ HashMap
+â”œâ”€â”€ TreeMap
+â””â”€â”€ LinkedHashMap
 ```
 
 ## When to Use Each
@@ -117,13 +117,12 @@ public class StudentManager {
 
 ## Key Takeaways
 
-- ✅ Collections = flexible containers for objects
-- ✅ List = ordered, allows duplicates
-- ✅ Set = unique values, no duplicates
-- ✅ Map = key-value pairs
-- ✅ Use Collections instead of arrays for flexibility
-- ✅ Each has different performance characteristics
+- âœ… Collections = flexible containers for objects
+- âœ… List = ordered, allows duplicates
+- âœ… Set = unique values, no duplicates
+- âœ… Map = key-value pairs
+- âœ… Use Collections instead of arrays for flexibility
+- âœ… Each has different performance characteristics
 
 ---
 
-**Collections are essential for real-world Java applications.**

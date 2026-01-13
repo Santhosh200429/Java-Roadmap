@@ -1,4 +1,4 @@
-# Threads: Introduction to Concurrency
+﻿# Threads: Introduction to Concurrency
 
 ## What is Concurrency?
 
@@ -11,10 +11,10 @@
 A **thread** is a lightweight process that runs independently but shares memory with other threads in the same program.
 
 ```
-Single-threaded:    Task1 → Task2 → Task3 (sequential)
-Multi-threaded:     Task1 ↓
-                    Task2 ↓  (concurrent)
-                    Task3 ↓
+Single-threaded:    Task1 â†’ Task2 â†’ Task3 (sequential)
+Multi-threaded:     Task1 â†“
+                    Task2 â†“  (concurrent)
+                    Task3 â†“
 ```
 
 ## Creating Threads
@@ -108,12 +108,12 @@ public class ThreadExample {
 
 ```
          start()
-          ↓
-    [Ready] → [Running] → [Done]
-        ↑         ↓
+          â†“
+    [Ready] â†’ [Running] â†’ [Done]
+        â†‘         â†“
         |  sleep()
-        |    ↓
-        └─[Waiting]
+        |    â†“
+        â””â”€[Waiting]
 ```
 
 - **New**: Thread created but not started
@@ -127,7 +127,7 @@ public class ThreadExample {
 When threads access shared data, problems occur:
 
 ```java
-// ❌ Not thread-safe
+// âŒ Not thread-safe
 public class Counter {
     int count = 0;
     
@@ -136,7 +136,7 @@ public class Counter {
     }
 }
 
-// ✅ Thread-safe
+// âœ… Thread-safe
 public class SafeCounter {
     int count = 0;
     
@@ -171,14 +171,13 @@ public class Download {
 
 ## Key Takeaways
 
-- ✅ Threads enable concurrent execution
-- ✅ Extend Thread or implement Runnable
-- ✅ Call start() to begin thread (not run())
-- ✅ Use join() to wait for thread completion
-- ✅ Thread.sleep() pauses execution
-- ✅ Use synchronized for thread safety
-- ✅ Only one thread accesses synchronized blocks
+- âœ… Threads enable concurrent execution
+- âœ… Extend Thread or implement Runnable
+- âœ… Call start() to begin thread (not run())
+- âœ… Use join() to wait for thread completion
+- âœ… Thread.sleep() pauses execution
+- âœ… Use synchronized for thread safety
+- âœ… Only one thread accesses synchronized blocks
 
 ---
 
-**Threading enables responsive, efficient multi-task programs.**

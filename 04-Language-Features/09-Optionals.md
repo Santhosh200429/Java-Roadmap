@@ -1,4 +1,4 @@
-# Optionals in Java
+﻿# Optionals in Java
 
 ## What are Optionals?
 
@@ -7,7 +7,7 @@
 **Problem it solves**: Null pointer exceptions (the "billion-dollar mistake")
 
 ```java
-// ❌ OLD WAY (error-prone)
+// âŒ OLD WAY (error-prone)
 String name = getUserName(123);
 if (name != null) {
     System.out.println(name);
@@ -15,7 +15,7 @@ if (name != null) {
     System.out.println("Name not found");
 }
 
-// ✅ NEW WAY (safe and clean)
+// âœ… NEW WAY (safe and clean)
 Optional<String> name = getUserName(123);
 name.ifPresentOrElse(
     System.out::println,
@@ -115,11 +115,11 @@ maybeEmail.ifPresentOrElse(
 ```java
 Optional<String> value = Optional.of("Success");
 
-// ✅ Safe only when you know value exists
+// âœ… Safe only when you know value exists
 String result = value.get();  // "Success"
 
 Optional<String> empty = Optional.empty();
-// ❌ DANGER!
+// âŒ DANGER!
 empty.get();  // NoSuchElementException!
 
 // Only use get() when you're absolutely sure value exists
@@ -466,33 +466,33 @@ public class OptionalWithStreams {
 ### 1. Using get() Without Check
 
 ```java
-// ❌ WRONG
+// âŒ WRONG
 Optional<String> value = Optional.empty();
 String result = value.get();  // NoSuchElementException!
 
-// ✅ RIGHT
+// âœ… RIGHT
 String result = value.orElse("default");
 ```
 
 ### 2. Using Optional.of() With Null
 
 ```java
-// ❌ WRONG
+// âŒ WRONG
 Optional<String> opt = Optional.of(null);  // NullPointerException!
 
-// ✅ RIGHT
+// âœ… RIGHT
 Optional<String> opt = Optional.ofNullable(null);  // Optional.empty
 ```
 
 ### 3. Optional as Method Parameter
 
 ```java
-// ❌ NOT RECOMMENDED
+// âŒ NOT RECOMMENDED
 void process(Optional<String> name) {
     // Complicated to use
 }
 
-// ✅ RECOMMENDED
+// âœ… RECOMMENDED
 void process(String name) {
     Optional.ofNullable(name)
         .ifPresent(n -> doSomething(n));
@@ -502,23 +502,23 @@ void process(String name) {
 ### 4. Using Optional for Collections
 
 ```java
-// ❌ WRONG - for lists use empty list
+// âŒ WRONG - for lists use empty list
 Optional<List<String>> items = Optional.of(new ArrayList<>());
 
-// ✅ RIGHT - use empty collection directly
+// âœ… RIGHT - use empty collection directly
 List<String> items = new ArrayList<>();
 if (!items.isEmpty()) { ... }
 ```
 
 ## When to Use Optional
 
-### ✅ Perfect For:
+### âœ… Perfect For:
 - Return values from methods (indicates value may be absent)
 - Stream operations (filtering, mapping)
 - Chaining transformations
 - Replacing null checks
 
-### ❌ Avoid Using For:
+### âŒ Avoid Using For:
 - Method parameters (confuses API)
 - Instance variables (unnecessary overhead)
 - Collections (use empty collections instead)
@@ -526,15 +526,14 @@ if (!items.isEmpty()) { ... }
 
 ## Key Takeaways
 
-- ✅ Optional prevents null pointer exceptions
-- ✅ Use Optional.of() for non-null values
-- ✅ Use Optional.ofNullable() for values that might be null
-- ✅ Use ifPresent() or ifPresentOrElse() instead of isPresent() + get()
-- ✅ Use map() and flatMap() to transform values
-- ✅ Use orElse(), orElseGet(), orElseThrow() to handle empty cases
-- ✅ Don't use Optional as method parameter
-- ✅ Never call get() without checking first
+- âœ… Optional prevents null pointer exceptions
+- âœ… Use Optional.of() for non-null values
+- âœ… Use Optional.ofNullable() for values that might be null
+- âœ… Use ifPresent() or ifPresentOrElse() instead of isPresent() + get()
+- âœ… Use map() and flatMap() to transform values
+- âœ… Use orElse(), orElseGet(), orElseThrow() to handle empty cases
+- âœ… Don't use Optional as method parameter
+- âœ… Never call get() without checking first
 
 ---
 
-**Next →** PassByValue: [Parameter Passing](/4-Language-Features/07-PassByValue.md)

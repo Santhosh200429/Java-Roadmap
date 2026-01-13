@@ -1,4 +1,4 @@
-# Lifecycle of a Java Program: From Code to Execution
+﻿# Lifecycle of a Java Program: From Code to Execution
 
 ## Understanding the Journey
 
@@ -27,8 +27,8 @@ When you press "Run" or use `javac`, the Java compiler converts your code into *
 
 ```
 Command: javac HelloWorld.java
-↓
-Converts: HelloWorld.java (text) → HelloWorld.class (bytecode)
+â†“
+Converts: HelloWorld.java (text) â†’ HelloWorld.class (bytecode)
 ```
 
 **What's happening**: 
@@ -44,7 +44,7 @@ Converts: HelloWorld.java (text) → HelloWorld.class (bytecode)
 The Java Virtual Machine (JVM) reads the `.class` file and loads it into memory.
 
 ```
-JVM loads: HelloWorld.class → RAM (computer memory)
+JVM loads: HelloWorld.class â†’ RAM (computer memory)
 ```
 
 **What's happening**:
@@ -58,9 +58,9 @@ The JVM connects all the references in your code to actual locations in memory.
 
 ```
 JVM verifies:
-- Does HelloWorld class exist? ✅
-- Does System class exist? ✅
-- Does println method exist? ✅
+- Does HelloWorld class exist? âœ…
+- Does System class exist? âœ…
+- Does println method exist? âœ…
 ```
 
 **What's happening**:
@@ -76,7 +76,7 @@ The JVM actually runs your bytecode line by line.
 Execution:
 Line 1: public class HelloWorld { ... (skipped)
 Line 2: public static void main { ... (skipped)
-Line 3: System.out.println("Hello, World!");  ← RUNS
+Line 3: System.out.println("Hello, World!");  â† RUNS
 Output: Hello, World!
 ```
 
@@ -88,34 +88,34 @@ Output: Hello, World!
 ## Visual Diagram of the Entire Process
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│ YOU: Write Java code in IDE                             │
-│ File: HelloWorld.java (text)                             │
-└─────────────────────────┬───────────────────────────────┘
-                          │
-                          ▼ (Click "Compile")
-┌─────────────────────────────────────────────────────────┐
-│ JAVAC (Compiler): Converts code to bytecode             │
-│ Creates: HelloWorld.class (bytecode)                     │
-│ Checks for syntax errors                                 │
-└─────────────────────────┬───────────────────────────────┘
-                          │
-                          ▼ (Click "Run")
-┌─────────────────────────────────────────────────────────┐
-│ JVM: Starts up and loads bytecode                        │
-│ Step 1: Loading - reads .class file                      │
-│ Step 2: Linking - verifies everything                    │
-│ Step 3: Initialization - prepares classes                │
-└─────────────────────────┬───────────────────────────────┘
-                          │
-                          ▼
-┌─────────────────────────────────────────────────────────┐
-│ JVM: Executes bytecode line by line                      │
-│ Finds main() method and runs it                          │
-│ Output: Hello, World!                                     │
-└─────────────────────────────────────────────────────────┘
-                          │
-                          ▼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ YOU: Write Java code in IDE                             â”‚
+â”‚ File: HelloWorld.java (text)                             â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                          â”‚
+                          â–¼ (Click "Compile")
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ JAVAC (Compiler): Converts code to bytecode             â”‚
+â”‚ Creates: HelloWorld.class (bytecode)                     â”‚
+â”‚ Checks for syntax errors                                 â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                          â”‚
+                          â–¼ (Click "Run")
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ JVM: Starts up and loads bytecode                        â”‚
+â”‚ Step 1: Loading - reads .class file                      â”‚
+â”‚ Step 2: Linking - verifies everything                    â”‚
+â”‚ Step 3: Initialization - prepares classes                â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                          â”‚
+                          â–¼
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ JVM: Executes bytecode line by line                      â”‚
+â”‚ Finds main() method and runs it                          â”‚
+â”‚ Output: Hello, World!                                     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                          â”‚
+                          â–¼
                    Program finishes
 ```
 
@@ -134,49 +134,49 @@ public class HelloWorld {
 
 ```
 STEP 2: COMPILATION (javac HelloWorld.java)
-┌────────────────────────────────────┐
-│ Compiler checks:                   │
-│ ✅ Class name matches filename     │
-│ ✅ main method exists              │
-│ ✅ System class available          │
-│ ✅ Syntax is correct               │
-│                                    │
-│ Result: HelloWorld.class created   │
-└────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Compiler checks:                   â”‚
+â”‚ âœ… Class name matches filename     â”‚
+â”‚ âœ… main method exists              â”‚
+â”‚ âœ… System class available          â”‚
+â”‚ âœ… Syntax is correct               â”‚
+â”‚                                    â”‚
+â”‚ Result: HelloWorld.class created   â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ```
 STEP 3: LOADING (JVM loads HelloWorld.class)
-┌────────────────────────────────────┐
-│ JVM does:                          │
-│ 1. Read .class file from disk      │
-│ 2. Store in RAM                    │
-│ 3. Verify bytecode is valid        │
-└────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ JVM does:                          â”‚
+â”‚ 1. Read .class file from disk      â”‚
+â”‚ 2. Store in RAM                    â”‚
+â”‚ 3. Verify bytecode is valid        â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ```
 STEP 4: LINKING (JVM links references)
-┌────────────────────────────────────┐
-│ JVM checks:                        │
-│ ✅ System class exists             │
-│ ✅ out field exists on System      │
-│ ✅ println method exists on out    │
-│ ✅ String type is correct          │
-└────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ JVM checks:                        â”‚
+â”‚ âœ… System class exists             â”‚
+â”‚ âœ… out field exists on System      â”‚
+â”‚ âœ… println method exists on out    â”‚
+â”‚ âœ… String type is correct          â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ```
 STEP 5: EXECUTION (JVM runs main)
-┌────────────────────────────────────┐
-│ JVM executes:                      │
-│ 1. Find main method                │
-│ 2. Create Stack Frame for main     │
-│ 3. Execute println("Hello, World")│
-│ 4. Print to console                │
-│ Output: Hello, World!              │
-│ 5. Exit program                    │
-└────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ JVM executes:                      â”‚
+â”‚ 1. Find main method                â”‚
+â”‚ 2. Create Stack Frame for main     â”‚
+â”‚ 3. Execute println("Hello, World")â”‚
+â”‚ 4. Print to console                â”‚
+â”‚ Output: Hello, World!              â”‚
+â”‚ 5. Exit program                    â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ## What is the JVM? (Java Virtual Machine)
@@ -194,26 +194,26 @@ Every program must be written for specific OS
 
 **Solution With JVM**:
 ```
-Write once (HelloWorld.java) → Compile once (HelloWorld.class)
+Write once (HelloWorld.java) â†’ Compile once (HelloWorld.class)
 Run anywhere:
-├─ Windows Computer → JVM converts to Windows instructions
-├─ Mac Computer → JVM converts to Mac instructions
-└─ Linux Computer → JVM converts to Linux instructions
+â”œâ”€ Windows Computer â†’ JVM converts to Windows instructions
+â”œâ”€ Mac Computer â†’ JVM converts to Mac instructions
+â””â”€ Linux Computer â†’ JVM converts to Linux instructions
 ```
 
 ### How it works
 
 ```
 Your Code (HelloWorld.java)
-        ↓
+        â†“
    Compiler (javac)
-        ↓
+        â†“
    Bytecode (HelloWorld.class)
-        ↓
+        â†“
   JVM reads bytecode
-        ↓
+        â†“
   Converts to computer's native language
-        ↓
+        â†“
   Computer executes it
 ```
 
@@ -224,9 +224,9 @@ Your Code (HelloWorld.java)
 Errors caught by javac during compilation:
 
 ```java
-System.out.println("Hello")  // ❌ Missing semicolon
-System.out.println("Hello"); // ❌ Typo: println instead of println
-int x = "text";              // ❌ Can't assign String to int
+System.out.println("Hello")  // âŒ Missing semicolon
+System.out.println("Hello"); // âŒ Typo: println instead of println
+int x = "text";              // âŒ Can't assign String to int
 
 // Error message appears:
 // error: ';' expected
@@ -242,7 +242,7 @@ Errors that only happen when program runs:
 
 ```java
 int[] numbers = new int[3];  // Array with 3 elements
-System.out.println(numbers[5]); // ❌ Index out of bounds!
+System.out.println(numbers[5]); // âŒ Index out of bounds!
 // Program compiles fine, but crashes when running
 ```
 
@@ -258,7 +258,7 @@ Code runs without errors, but produces wrong output:
 ```java
 int age = 25;
 if (age > 20) {
-    System.out.println("You are young"); // ❌ Logic is wrong!
+    System.out.println("You are young"); // âŒ Logic is wrong!
 }
 // This prints "You are young" but you meant "old"
 ```
@@ -311,7 +311,7 @@ public class Calculator {
 - javac compiles Calculator.java
 - Creates Calculator.class with bytecode
 - Checks: variables declared? types match? valid syntax?
-- Result: ✅ Compilation successful
+- Result: âœ… Compilation successful
 
 **Stage 3: Loading**
 - JVM reads Calculator.class
@@ -320,18 +320,18 @@ public class Calculator {
 
 **Stage 4: Linking**
 - JVM verifies:
-  - ✅ Calculator class is valid
-  - ✅ int type exists
-  - ✅ System.out.println() exists
+  - âœ… Calculator class is valid
+  - âœ… int type exists
+  - âœ… System.out.println() exists
 
 **Stage 5: Execution**
 ```
 JVM executes main():
-├─ int a = 5;           (create variable a, store 5)
-├─ int b = 3;           (create variable b, store 3)
-├─ int sum = a + b;     (add 5+3, store result in sum)
-├─ println(...);        (print "Sum: 8")
-└─ Program ends
+â”œâ”€ int a = 5;           (create variable a, store 5)
+â”œâ”€ int b = 3;           (create variable b, store 3)
+â”œâ”€ int sum = a + b;     (add 5+3, store result in sum)
+â”œâ”€ println(...);        (print "Sum: 8")
+â””â”€ Program ends
 ```
 
 **Output**: `Sum: 8`
@@ -341,7 +341,7 @@ JVM executes main():
 ### Why Compile?
 
 **C/C++**:
-- Compile once → .exe file (Windows only)
+- Compile once â†’ .exe file (Windows only)
 - Users run .exe
 - If user has Mac, must recompile
 
@@ -352,7 +352,7 @@ JVM executes main():
 - Slower execution
 
 **Java**:
-- Compile once → .class bytecode (universal)
+- Compile once â†’ .class bytecode (universal)
 - Users need JVM
 - Bytecode works anywhere
 - JVM converts to fast machine code
@@ -362,9 +362,9 @@ JVM executes main():
 
 The JVM does something special called **JIT Compilation** (Just-In-Time):
 
-1. First time you run code → slower (JVM interprets bytecode)
-2. Second time → faster (JVM converts frequently-used code to native)
-3. Third time → even faster (JVM optimizes further)
+1. First time you run code â†’ slower (JVM interprets bytecode)
+2. Second time â†’ faster (JVM converts frequently-used code to native)
+3. Third time â†’ even faster (JVM optimizes further)
 
 This is why Java seems slow at first but gets faster!
 
@@ -372,19 +372,18 @@ This is why Java seems slow at first but gets faster!
 
 Now that you understand how programs execute, we'll learn about **variables** - the containers that store data in your programs.
 
-[Next Section: Variables and Data Types →](../2-Core-Java/01-VariablesAndDataTypes.md)
+[Next Section: Variables and Data Types â†’](../2-Core-Java/01-VariablesAndDataTypes.md)
 
 ## Key Takeaways
 
-- ✅ Compilation converts .java to .class bytecode
-- ✅ JVM loads and executes bytecode
-- ✅ Bytecode makes Java "write once, run anywhere"
-- ✅ Compilation errors caught before running
-- ✅ Runtime errors happen during execution
-- ✅ Logic errors are hardest to find
-- ✅ JVM optimizes code as it runs
-- ✅ Always fix compilation errors first!
+- âœ… Compilation converts .java to .class bytecode
+- âœ… JVM loads and executes bytecode
+- âœ… Bytecode makes Java "write once, run anywhere"
+- âœ… Compilation errors caught before running
+- âœ… Runtime errors happen during execution
+- âœ… Logic errors are hardest to find
+- âœ… JVM optimizes code as it runs
+- âœ… Always fix compilation errors first!
 
 ---
 
-**You now understand the complete journey from code to execution. You're ready to learn about variables!**

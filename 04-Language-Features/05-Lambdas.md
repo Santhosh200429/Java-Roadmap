@@ -1,4 +1,4 @@
-# Lambda Expressions: Functional Programming in Java
+﻿# Lambda Expressions: Functional Programming in Java
 
 ## What are Lambda Expressions?
 
@@ -305,14 +305,14 @@ public class StudentFilter {
 
 ### 1. No Curly Braces when Multiple Statements
 ```java
-// ❌ WRONG
+// âŒ WRONG
 List<Integer> nums = Arrays.asList(1, 2, 3);
 nums.forEach(n -> 
     int x = n * 2;  // ERROR: need braces
     System.out.println(x);
 );
 
-// ✅ RIGHT
+// âœ… RIGHT
 nums.forEach(n -> {
     int x = n * 2;
     System.out.println(x);
@@ -321,10 +321,10 @@ nums.forEach(n -> {
 
 ### 2. Forgetting Return Statement
 ```java
-// ❌ WRONG
+// âŒ WRONG
 Function<Integer, Integer> square = x -> { x * x; };
 
-// ✅ RIGHT
+// âœ… RIGHT
 Function<Integer, Integer> square = x -> x * x;
 // OR
 Function<Integer, Integer> square = x -> { return x * x; };
@@ -332,23 +332,22 @@ Function<Integer, Integer> square = x -> { return x * x; };
 
 ### 3. Wrong Functional Interface
 ```java
-// ❌ WRONG - Predicate returns boolean, not String
+// âŒ WRONG - Predicate returns boolean, not String
 Predicate<Integer> check = n -> "value";
 
-// ✅ RIGHT
+// âœ… RIGHT
 Predicate<Integer> check = n -> n > 0;
 ```
 
 ## Key Takeaways
 
-- ✅ Lambdas are short, anonymous functions
-- ✅ `(params) -> body` syntax
-- ✅ Work with functional interfaces
-- ✅ Often used with Streams
-- ✅ Method references can simplify lambdas
-- ✅ Cleaner code than anonymous classes
-- ✅ Braces needed for multiple statements
+- âœ… Lambdas are short, anonymous functions
+- âœ… `(params) -> body` syntax
+- âœ… Work with functional interfaces
+- âœ… Often used with Streams
+- âœ… Method references can simplify lambdas
+- âœ… Cleaner code than anonymous classes
+- âœ… Braces needed for multiple statements
 
 ---
 
-**Next →** Streams: [Stream API](/4-Language-Features/06-Streams.md)

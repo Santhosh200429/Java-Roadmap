@@ -1,4 +1,4 @@
-# Pass By Reference in Java
+﻿# Pass By Reference in Java
 
 ## Overview
 While Java is often said to be **"pass by value only"**, understanding how references work is crucial for writing correct Java code. This document clarifies the distinction between pass by value and pass by reference behavior in Java.
@@ -70,26 +70,26 @@ public class ReferenceReassignment {
 ### When Object Reference is Passed:
 ```
 main() stack:           modifyObject() stack:
-┌─────────────┐        ┌──────────────────┐
-│ p ──┐       │        │ person ──┐       │
-│     │       │        │          │       │
-└─────┼───────┘        └──────────┼───────┘
-      │                            │
-      └────────────→ Heap         │
-               ┌──────────────┐   │
-               │ Person obj   │←──┘
-               │ name: "Orig" │
-               └──────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”        â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ p â”€â”€â”       â”‚        â”‚ person â”€â”€â”       â”‚
+â”‚     â”‚       â”‚        â”‚          â”‚       â”‚
+â””â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”˜        â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”˜
+      â”‚                            â”‚
+      â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â†’ Heap         â”‚
+               â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”‚
+               â”‚ Person obj   â”‚â†â”€â”€â”˜
+               â”‚ name: "Orig" â”‚
+               â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 Both `p` and `person` reference the same object in the heap.
 
 ## Common Misconceptions
 
-### ❌ Myth: Java has pass-by-reference
+### âŒ Myth: Java has pass-by-reference
 **Reality:** Java only has pass-by-value, but values can be object references.
 
-### ❌ Myth: You can use a method to change which object a variable points to
+### âŒ Myth: You can use a method to change which object a variable points to
 **Reality:** Only the local copy of the reference changes, not the original.
 
 ```java
@@ -116,7 +116,7 @@ public class Demo {
 
 ## Practical Implications
 
-### Modifying Object State Works ✓
+### Modifying Object State Works âœ“
 ```java
 List<String> list = new ArrayList<>();
 modifyList(list);  // list is modified
@@ -126,7 +126,7 @@ public static void modifyList(List<String> list) {
 }
 ```
 
-### Reassigning Reference Doesn't Work ✗
+### Reassigning Reference Doesn't Work âœ—
 ```java
 String str = "Hello";
 replaceString(str);  // str still = "Hello"
@@ -166,4 +166,3 @@ public static void replaceString(String str) {
 ## See Also
 - [Pass By Value](07-PassByValue.md)
 - [Object Oriented Programming](../3-OOP/01-ClassesAndObjects.md)
-- Java Memory Model and Object References

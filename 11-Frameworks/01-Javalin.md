@@ -1,4 +1,4 @@
-# Javalin Web Framework
+﻿# Javalin Web Framework
 
 ## What is Javalin?
 
@@ -18,7 +18,7 @@ Framework      | LOC for Hello World | Focus
 ---------------|-------------------|------------------
 Spring Boot    | 20+                | Full framework
 Quarkus        | 15+                | Cloud-native
-Javalin        | 5-8                | Simplicity ⭐
+Javalin        | 5-8                | Simplicity â­
 Vert.x         | 15+                | Reactive
 ```
 
@@ -438,17 +438,16 @@ public class ProductionAPI {
 
 ## Key Takeaways
 
-- ✅ Javalin is lightweight and simple
-- ✅ Perfect for REST APIs
-- ✅ Minimal boilerplate code
-- ✅ Easy routing with path/query parameters
-- ✅ Built on proven Jetty server
-- ✅ JSON support out of box
-- ✅ Good error handling
-- ✅ Works in Java and Kotlin
-- ✅ Production-ready
-- ✅ Ideal for microservices
+- âœ… Javalin is lightweight and simple
+- âœ… Perfect for REST APIs
+- âœ… Minimal boilerplate code
+- âœ… Easy routing with path/query parameters
+- âœ… Built on proven Jetty server
+- âœ… JSON support out of box
+- âœ… Good error handling
+- âœ… Works in Java and Kotlin
+- âœ… Production-ready
+- âœ… Ideal for microservices
 
 ---
 
-**Next →** Quarkus: [Cloud-Native Framework](/11-Frameworks/01-Quarkus.md)

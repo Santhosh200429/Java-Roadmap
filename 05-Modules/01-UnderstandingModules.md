@@ -1,4 +1,4 @@
-# Understanding Java Modules
+﻿# Understanding Java Modules
 
 ## Overview
 Java Modules (introduced in Java 9 with Project Jigsaw) provide a way to organize and encapsulate code into reusable components. Modules allow you to explicitly define dependencies and what parts of your code are publicly available.
@@ -38,13 +38,13 @@ A **module** is a self-contained unit of code that:
 ### Directory Layout
 ```
 myapp/
-├── src/
-│   ├── com/example/module1/
-│   │   ├── Main.java
-│   │   └── Helper.java
-│   └── module-info.java
-├── build/
-└── pom.xml (or build.gradle)
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ com/example/module1/
+â”‚   â”‚   â”œâ”€â”€ Main.java
+â”‚   â”‚   â””â”€â”€ Helper.java
+â”‚   â””â”€â”€ module-info.java
+â”œâ”€â”€ build/
+â””â”€â”€ pom.xml (or build.gradle)
 ```
 
 ### module-info.java
@@ -226,4 +226,3 @@ java --module-path out -m com.example.app/com.example.Main
 
 ## References
 - Project Jigsaw: https://openjdk.org/projects/jigsaw/
-- Java Platform Module System (JPMS)

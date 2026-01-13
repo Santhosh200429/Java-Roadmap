@@ -1,4 +1,4 @@
-# Polymorphism: Many Forms
+﻿# Polymorphism: Many Forms
 
 ## What is Polymorphism?
 
@@ -47,9 +47,9 @@ cow.makeSound();  // Moo!
 Use parent type to reference child objects:
 
 ```java
-Animal animal1 = new Dog();   // ✅ Dog is-an Animal
-Animal animal2 = new Cat();   // ✅ Cat is-an Animal
-Animal animal3 = new Cow();   // ✅ Cow is-an Animal
+Animal animal1 = new Dog();   // âœ… Dog is-an Animal
+Animal animal2 = new Cat();   // âœ… Cat is-an Animal
+Animal animal3 = new Cow();   // âœ… Cow is-an Animal
 
 // Call same method - different behavior!
 animal1.makeSound();  // Woof!
@@ -86,13 +86,13 @@ Sometimes you need to access child-specific methods:
 
 ```java
 Animal animal = new Dog();
-animal.makeSound();  // ✅ Works (in Animal)
+animal.makeSound();  // âœ… Works (in Animal)
 
 Dog dog = (Dog) animal;  // Cast to Dog
-dog.bark();  // ✅ Dog-specific method
+dog.bark();  // âœ… Dog-specific method
 
 // But be careful!
-Cat cat = (Cat) animal;  // ❌ Runtime error - animal is actually Dog!
+Cat cat = (Cat) animal;  // âŒ Runtime error - animal is actually Dog!
 ```
 
 Check type before casting:
@@ -184,13 +184,12 @@ store.processPayment(new Bitcoin(), 25);      // Bitcoin payment
 
 ## Key Takeaways
 
-- ✅ Polymorphism = many forms, one interface
-- ✅ Overriding: Same method, different implementation
-- ✅ Overloading: Same method name, different parameters
-- ✅ Use parent type to reference child objects
-- ✅ Check type with instanceof before casting
-- ✅ Enables flexible, extensible code
+- âœ… Polymorphism = many forms, one interface
+- âœ… Overriding: Same method, different implementation
+- âœ… Overloading: Same method name, different parameters
+- âœ… Use parent type to reference child objects
+- âœ… Check type with instanceof before casting
+- âœ… Enables flexible, extensible code
 
 ---
 
-**Polymorphism is key to flexible, reusable code design.**

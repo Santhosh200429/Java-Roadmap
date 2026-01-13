@@ -1,4 +1,4 @@
-# Classes and Objects: The Foundation of OOP
+﻿# Classes and Objects: The Foundation of OOP
 
 ## What is OOP (Object-Oriented Programming)?
 
@@ -18,7 +18,7 @@ A **class** is a **blueprint** for creating objects. It defines what properties 
 
 Think of it like a cookie cutter:
 ```
-Cookie Cutter (Class) → Many Cookies (Objects)
+Cookie Cutter (Class) â†’ Many Cookies (Objects)
 ```
 
 ### Creating a Simple Class
@@ -49,11 +49,11 @@ Car myCar = new Car();  // Create an object from Car class
 
 ```java
 Car         myCar       =    new Car();
-│           │                │     │
-│           │                │     └─ Call Car's constructor
-│           │                └─ Keyword to create new object
-│           └─ Name of this object (variable)
-└─ Type (class name)
+â”‚           â”‚                â”‚     â”‚
+â”‚           â”‚                â”‚     â””â”€ Call Car's constructor
+â”‚           â”‚                â””â”€ Keyword to create new object
+â”‚           â””â”€ Name of this object (variable)
+â””â”€ Type (class name)
 ```
 
 ## Creating and Using Objects
@@ -279,25 +279,25 @@ Balance: $1300.0
 ### Mistake 1: Forgetting 'new' Keyword
 
 ```java
-Dog dog = Dog();      // ❌ Error - missing 'new'
-Dog dog = new Dog();  // ✅ Correct
+Dog dog = Dog();      // âŒ Error - missing 'new'
+Dog dog = new Dog();  // âœ… Correct
 ```
 
 ### Mistake 2: Objects vs Classes
 
 ```java
 String name;  // This is a variable (holds object reference)
-String = "John";  // ❌ Can't assign to class, only to objects
-name = "John";  // ✅ Assign to variable
+String = "John";  // âŒ Can't assign to class, only to objects
+name = "John";  // âœ… Assign to variable
 ```
 
 ### Mistake 3: Not Initializing Object
 
 ```java
 Dog dog;  // Declared but not created
-dog.name = "Buddy";  // ❌ Error - dog is null
+dog.name = "Buddy";  // âŒ Error - dog is null
 dog = new Dog();  // Create object
-dog.name = "Buddy";  // ✅ Now works
+dog.name = "Buddy";  // âœ… Now works
 ```
 
 ## Class Visibility and Modifiers
@@ -305,7 +305,7 @@ dog.name = "Buddy";  // ✅ Now works
 ### public vs default
 
 ```java
-public class Dog { }        // ✅ Can use from anywhere
+public class Dog { }        // âœ… Can use from anywhere
 class Dog { }              // Can use only in same package
 ```
 
@@ -315,14 +315,14 @@ For now, use `public` for everything.
 
 ## Key Takeaways
 
-- ✅ Class = blueprint, Object = instance of class
-- ✅ Properties store data (state)
-- ✅ Methods define actions (behavior)
-- ✅ Constructor initializes objects
-- ✅ Use `new` keyword to create objects
-- ✅ Properties accessed with `.` notation
-- ✅ Methods called with `.` notation
-- ✅ Each object has its own copy of properties
+- âœ… Class = blueprint, Object = instance of class
+- âœ… Properties store data (state)
+- âœ… Methods define actions (behavior)
+- âœ… Constructor initializes objects
+- âœ… Use `new` keyword to create objects
+- âœ… Properties accessed with `.` notation
+- âœ… Methods called with `.` notation
+- âœ… Each object has its own copy of properties
 
 ## Next Steps
 
@@ -330,4 +330,3 @@ Learn about [Attributes and Methods](./02-AttributesAndMethods.md) to deepen you
 
 ---
 
-**Objects are everywhere in Java. Understanding classes is fundamental!**

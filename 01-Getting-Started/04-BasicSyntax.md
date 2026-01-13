@@ -1,4 +1,4 @@
-# Java Basic Syntax: The Fundamentals
+﻿# Java Basic Syntax: The Fundamentals
 
 ## What is Syntax?
 
@@ -34,8 +34,8 @@ public class ClassName {
 ### 1. Every Statement Ends with a Semicolon (;)
 
 ```java
-System.out.println("Hello");  // ✅ Correct
-System.out.println("Hello")   // ❌ Wrong - missing semicolon
+System.out.println("Hello");  // âœ… Correct
+System.out.println("Hello")   // âŒ Wrong - missing semicolon
 ```
 
 The semicolon tells Java "this instruction is complete."
@@ -43,9 +43,9 @@ The semicolon tells Java "this instruction is complete."
 ### 2. Java is Case-Sensitive
 
 ```java
-println("test");    // ❌ Wrong - must be println
-PrintLn("test");    // ❌ Wrong - must be println
-System.out.println("test");  // ✅ Correct
+println("test");    // âŒ Wrong - must be println
+PrintLn("test");    // âŒ Wrong - must be println
+System.out.println("test");  // âœ… Correct
 ```
 
 A tiny capitalization difference = big error!
@@ -132,11 +132,11 @@ Special characters for formatting:
 
 | Sequence | Meaning | Example |
 |----------|---------|---------|
-| `\n` | New line | `"Hello\nWorld"` → prints on 2 lines |
-| `\t` | Tab (4 spaces) | `"Name\tJohn"` → Name    John |
-| `\\` | Backslash | `"C:\\Users\\"` → C:\\Users\\ |
-| `\"` | Double quote | `"Say \"Hi\""` → Say "Hi" |
-| `\'` | Single quote | `"It\'s"` → It's |
+| `\n` | New line | `"Hello\nWorld"` â†’ prints on 2 lines |
+| `\t` | Tab (4 spaces) | `"Name\tJohn"` â†’ Name    John |
+| `\\` | Backslash | `"C:\\Users\\"` â†’ C:\\Users\\ |
+| `\"` | Double quote | `"Say \"Hi\""` â†’ Say "Hi" |
+| `\'` | Single quote | `"It\'s"` â†’ It's |
 
 Example:
 ```java
@@ -156,10 +156,10 @@ System.out.println("Line 1\nLine 2\nLine 3");
 - No spaces or underscores
 
 ```java
-public class HelloWorld { }      // ✅ Correct
-public class helloWorld { }      // ❌ Unconventional
-public class hello_world { }     // ❌ Unconventional
-public class HELLOWORLD { }      // ❌ Not used
+public class HelloWorld { }      // âœ… Correct
+public class helloWorld { }      // âŒ Unconventional
+public class hello_world { }     // âŒ Unconventional
+public class HELLOWORLD { }      // âŒ Not used
 ```
 
 ### Variable Names (camelCase)
@@ -169,10 +169,10 @@ public class HELLOWORLD { }      // ❌ Not used
 - First letter of first word lowercase
 
 ```java
-int studentAge = 20;         // ✅ Correct
-int StudentAge = 20;         // ❌ Wrong convention
-int student_age = 20;        // ❌ Wrong convention
-int STUDENT_AGE = 20;        // ❌ Only for constants
+int studentAge = 20;         // âœ… Correct
+int StudentAge = 20;         // âŒ Wrong convention
+int student_age = 20;        // âŒ Wrong convention
+int STUDENT_AGE = 20;        // âŒ Only for constants
 ```
 
 ### Method Names (camelCase)
@@ -180,8 +180,8 @@ int STUDENT_AGE = 20;        // ❌ Only for constants
 Like variables - start lowercase, capitalize each new word:
 
 ```java
-public void calculateTotal() { }   // ✅ Correct
-public void CalculateTotal() { }   // ❌ Wrong
+public void calculateTotal() { }   // âœ… Correct
+public void CalculateTotal() { }   // âŒ Wrong
 ```
 
 ## Common Syntax Errors
@@ -191,8 +191,8 @@ Here are mistakes beginners make and how to fix them:
 ### Error 1: Missing Semicolon
 
 ```java
-System.out.println("Hello")  // ❌ Missing semicolon
-System.out.println("Hello"); // ✅ Fixed
+System.out.println("Hello")  // âŒ Missing semicolon
+System.out.println("Hello"); // âœ… Fixed
 ```
 
 **IDE Hint**: Red squiggly line appears
@@ -201,8 +201,8 @@ System.out.println("Hello"); // ✅ Fixed
 
 ```java
 // File: HelloWorld.java
-public class helloWorld { }  // ❌ Doesn't match filename
-public class HelloWorld { }  // ✅ Matches filename
+public class helloWorld { }  // âŒ Doesn't match filename
+public class HelloWorld { }  // âœ… Matches filename
 ```
 
 **Rule**: Class name MUST match filename exactly.
@@ -213,7 +213,7 @@ public class HelloWorld { }  // ✅ Matches filename
 public class Test {
     public static void main(String[] args) {
         System.out.println("Hello");
-    }  // ❌ Missing closing brace for class
+    }  // âŒ Missing closing brace for class
 ```
 
 **IDE Hint**: Your IDE usually auto-matches braces.
@@ -221,8 +221,8 @@ public class Test {
 ### Error 4: Typos in Built-in Words
 
 ```java
-System.out.printl("Hello");      // ❌ printl (typo)
-System.out.println("Hello");     // ✅ println
+System.out.printl("Hello");      // âŒ printl (typo)
+System.out.println("Hello");     // âœ… println
 ```
 
 **Case Sensitive!** One letter wrong = error.
@@ -231,7 +231,7 @@ System.out.println("Hello");     // ✅ println
 
 ```java
 public class Test {
-    System.out.println("Hello"); // ❌ Can't run this
+    System.out.println("Hello"); // âŒ Can't run this
 }
 ```
 
@@ -299,11 +299,11 @@ Your IDE usually does this automatically.
 ### 2. Meaningful Names
 
 ```java
-// ❌ Bad names
+// âŒ Bad names
 int x = 25;
 String n = "John";
 
-// ✅ Good names
+// âœ… Good names
 int studentAge = 25;
 String name = "John";
 ```
@@ -311,10 +311,10 @@ String name = "John";
 ### 3. One Statement Per Line
 
 ```java
-// ❌ Hard to read
+// âŒ Hard to read
 System.out.println("A"); System.out.println("B"); System.out.println("C");
 
-// ✅ Easy to read
+// âœ… Easy to read
 System.out.println("A");
 System.out.println("B");
 System.out.println("C");
@@ -323,10 +323,10 @@ System.out.println("C");
 ### 4. Use Comments Wisely
 
 ```java
-// ❌ Obvious comment (doesn't help)
+// âŒ Obvious comment (doesn't help)
 int age = 25;  // Set age to 25
 
-// ✅ Helpful comment
+// âœ… Helpful comment
 int age = 25;  // Student must be at least 25 to enroll
 ```
 
@@ -406,21 +406,20 @@ public class Introduction {
 
 ## Key Takeaways
 
-- ✅ Every Java program needs a class and main method
-- ✅ Every statement ends with semicolon (;)
-- ✅ Java is case-sensitive - spelling matters!
-- ✅ Braces { } must match - opening and closing
-- ✅ Comments don't execute - they're for humans
-- ✅ Use meaningful names and proper indentation
-- ✅ System.out.println() displays output
-- ✅ Strings go in double quotes ("text")
+- âœ… Every Java program needs a class and main method
+- âœ… Every statement ends with semicolon (;)
+- âœ… Java is case-sensitive - spelling matters!
+- âœ… Braces { } must match - opening and closing
+- âœ… Comments don't execute - they're for humans
+- âœ… Use meaningful names and proper indentation
+- âœ… System.out.println() displays output
+- âœ… Strings go in double quotes ("text")
 
 ## Next Steps
 
-1. ✅ You understand basic syntax
-2. ⏭️ Next: [Variables and Data Types](../2-Core-Java/01-VariablesAndDataTypes.md)
+1. âœ… You understand basic syntax
+2. â­ï¸ Next: [Variables and Data Types](../2-Core-Java/01-VariablesAndDataTypes.md)
 
 ---
 
 **Master the basics, and everything else becomes easier!**
-

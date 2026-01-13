@@ -1,4 +1,4 @@
-# Records: Immutable Data Classes (Java 17+)
+﻿# Records: Immutable Data Classes (Java 17+)
 
 ## What is a Record?
 
@@ -97,7 +97,7 @@ Records are immutable - can't change values:
 record Book(String title, String author, int year) { }
 
 Book book = new Book("1984", "Orwell", 1949);
-book.title = "New Title";  // ❌ ERROR: can't set field
+book.title = "New Title";  // âŒ ERROR: can't set field
 ```
 
 ### 3. Constructor Validation
@@ -341,29 +341,29 @@ if (result instanceof SuccessResult sr) {
 
 ### 1. Trying to Modify Record
 ```java
-// ❌ WRONG
+// âŒ WRONG
 record Point(int x, int y) { }
 Point p = new Point(1, 2);
 p.x = 5;  // ERROR: can't modify
 
-// ✅ RIGHT - Create new record
+// âœ… RIGHT - Create new record
 Point p2 = new Point(5, p.y());
 ```
 
 ### 2. Wrong Constructor Usage
 ```java
-// ❌ WRONG - no setter methods
+// âŒ WRONG - no setter methods
 record User(String name) { }
 User u = new User("Alice");
 // u.setName("Bob");  // No setter!
 
-// ✅ RIGHT - immutable
+// âœ… RIGHT - immutable
 User u2 = new User("Bob");
 ```
 
 ### 3. Forgetting Compact Constructor
 ```java
-// ❌ WRONG - verbose
+// âŒ WRONG - verbose
 record Age(int years) {
     public Age(int years) {
         if (years < 0) throw new Exception();
@@ -371,7 +371,7 @@ record Age(int years) {
     }
 }
 
-// ✅ RIGHT - compact constructor
+// âœ… RIGHT - compact constructor
 record Age(int years) {
     public Age {
         if (years < 0) throw new Exception();
@@ -381,14 +381,14 @@ record Age(int years) {
 
 ## When to Use Records
 
-✅ **Use Records for:**
+âœ… **Use Records for:**
 - Data transfer objects (DTOs)
 - API responses/requests
 - Immutable data holders
 - Value objects
 - Configuration objects
 
-❌ **Don't Use Records for:**
+âŒ **Don't Use Records for:**
 - Complex business logic
 - Mutable data
 - Entities with many relationships
@@ -396,14 +396,13 @@ record Age(int years) {
 
 ## Key Takeaways
 
-- ✅ Records are immutable data classes
-- ✅ Auto-generates constructors, getters, equals(), hashCode(), toString()
-- ✅ Compact constructor syntax for validation
-- ✅ Can have custom methods
-- ✅ Can implement interfaces
-- ✅ Java 17+ feature
-- ✅ Perfect for DTOs and value objects
+- âœ… Records are immutable data classes
+- âœ… Auto-generates constructors, getters, equals(), hashCode(), toString()
+- âœ… Compact constructor syntax for validation
+- âœ… Can have custom methods
+- âœ… Can implement interfaces
+- âœ… Java 17+ feature
+- âœ… Perfect for DTOs and value objects
 
 ---
 
-**Next →** Nested Classes: [Nested Classes](/4-Language-Features/04-NestedClasses.md)

@@ -1,4 +1,4 @@
-# Conditionals: Making Decisions in Your Code
+﻿# Conditionals: Making Decisions in Your Code
 
 ## What Are Conditionals?
 
@@ -31,11 +31,11 @@ if (age >= 18) {
 
 ```
 Check condition: age >= 18
-       ↓
+       â†“
     Is it true?
-       ↙        ↘
+       â†™        â†˜
      YES        NO
-      ↓          ↓
+      â†“          â†“
    Run code    Skip code
    (vote)      (nothing)
 ```
@@ -85,9 +85,9 @@ if (score >= 90) {
 
 **How else if Works**:
 ```
-Check: score >= 90?  → NO, skip this block
-Check: score >= 80?  → NO, skip this block
-Check: score >= 70?  → YES, run this block! (prints "Grade C")
+Check: score >= 90?  â†’ NO, skip this block
+Check: score >= 80?  â†’ NO, skip this block
+Check: score >= 70?  â†’ YES, run this block! (prints "Grade C")
 Don't check remaining conditions
 ```
 
@@ -97,14 +97,14 @@ Don't check remaining conditions
 
 1. **Order matters** - Put most specific conditions first
 ```java
-// ❌ Bad - will never reach second condition
+// âŒ Bad - will never reach second condition
 if (age >= 0) {
     System.out.println("Any age");
 } else if (age >= 18) {
     System.out.println("Adult");  // Never runs!
 }
 
-// ✅ Good - specific first
+// âœ… Good - specific first
 if (age >= 18) {
     System.out.println("Adult");
 } else if (age >= 0) {
@@ -114,14 +114,14 @@ if (age >= 18) {
 
 2. **Don't use unnecessary conditions**:
 ```java
-// ❌ Wasteful
+// âŒ Wasteful
 if (score >= 90) {
     System.out.println("A");
 } else if (score >= 90 && score < 100) {  // Redundant!
     System.out.println("A+");
 }
 
-// ✅ Cleaner
+// âœ… Cleaner
 if (score >= 95) {
     System.out.println("A+");
 } else if (score >= 90) {
@@ -185,10 +185,10 @@ switch (day) {
 
 ```
 Check day value
-       ↓
+       â†“
    Is it 1? NO
    Is it 2? NO
-   Is it 3? YES → Print "Wednesday", break
+   Is it 3? YES â†’ Print "Wednesday", break
    (Skip rest)
 ```
 
@@ -214,9 +214,9 @@ switch (day) {
 }
 
 /* Output:
-Tuesday        ← Matched day 2
-Wednesday      ← Fell through (no break)
-Invalid        ← Still fell through
+Tuesday        â† Matched day 2
+Wednesday      â† Fell through (no break)
+Invalid        â† Still fell through
 */
 ```
 
@@ -226,21 +226,21 @@ Invalid        ← Still fell through
 
 | Situation | Use switch | Use if-else |
 |-----------|-----------|-----------|
-| Many options for one variable | ✅ | Verbose |
-| Complex conditions | Difficult | ✅ |
-| Ranges (score >= 90) | Difficult | ✅ |
-| Simple comparisons | ✅ | Works |
+| Many options for one variable | âœ… | Verbose |
+| Complex conditions | Difficult | âœ… |
+| Ranges (score >= 90) | Difficult | âœ… |
+| Simple comparisons | âœ… | Works |
 
 **Example**: Switch better for days
 
 ```java
-// ✅ switch (clean)
+// âœ… switch (clean)
 switch (day) {
     case 1: System.out.println("Monday"); break;
     case 2: System.out.println("Tuesday"); break;
 }
 
-// ❌ if-else (verbose)
+// âŒ if-else (verbose)
 if (day == 1) {
     System.out.println("Monday");
 } else if (day == 2) {
@@ -251,14 +251,14 @@ if (day == 1) {
 **Example**: if-else better for ranges
 
 ```java
-// ✅ if-else (clean)
+// âœ… if-else (clean)
 if (score >= 90) {
     System.out.println("A");
 } else if (score >= 80) {
     System.out.println("B");
 }
 
-// ❌ switch (weird)
+// âŒ switch (weird)
 switch (score) {
     case 90:
     case 91:
@@ -373,7 +373,7 @@ if (age >= 18)
     System.out.println("Adult");
     System.out.println("Vote");  // Always runs!
 
-// ✅ Correct - braces group statements
+// âœ… Correct - braces group statements
 if (age >= 18) {
     System.out.println("Adult");
     System.out.println("Vote");
@@ -386,8 +386,8 @@ if (age >= 18) {
 String name1 = "John";
 String name2 = "John";
 
-if (name1 == name2) { }      // ❌ Might fail (compares reference)
-if (name1.equals(name2)) { } // ✅ Correct (compares content)
+if (name1 == name2) { }      // âŒ Might fail (compares reference)
+if (name1.equals(name2)) { } // âœ… Correct (compares content)
 ```
 
 ### Mistake 3: Forgetting break in switch
@@ -396,7 +396,7 @@ if (name1.equals(name2)) { } // ✅ Correct (compares content)
 switch (day) {
     case 1:
         System.out.println("Monday");
-        // ❌ Missing break - falls through!
+        // âŒ Missing break - falls through!
     case 2:
         System.out.println("Tuesday");
 }
@@ -430,14 +430,14 @@ Use switch to print day name from number (1=Monday, etc.)
 
 ## Key Takeaways
 
-- ✅ `if`: Do something if true
-- ✅ `if-else`: Do one thing or another
-- ✅ `else if`: Multiple choices
-- ✅ `switch`: Many options for one variable
-- ✅ Logical operators: && (and), || (or), ! (not)
-- ✅ Ternary operator: Simple if-else shorthand
-- ✅ Always use break in switch (unless intentional fall-through)
-- ✅ Order matters in if-else if chains
+- âœ… `if`: Do something if true
+- âœ… `if-else`: Do one thing or another
+- âœ… `else if`: Multiple choices
+- âœ… `switch`: Many options for one variable
+- âœ… Logical operators: && (and), || (or), ! (not)
+- âœ… Ternary operator: Simple if-else shorthand
+- âœ… Always use break in switch (unless intentional fall-through)
+- âœ… Order matters in if-else if chains
 
 ## Next Steps
 
@@ -445,4 +445,3 @@ Master conditionals - they're fundamental! Next, learn about [Loops](./Loops.md)
 
 ---
 
-**Conditionals let your programs think. Practice them!**

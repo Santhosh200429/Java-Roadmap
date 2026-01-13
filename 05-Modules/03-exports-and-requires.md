@@ -1,4 +1,4 @@
-# Exports and Requires in Java Modules
+﻿# Exports and Requires in Java Modules
 
 ## Module Declaration Basics
 
@@ -32,16 +32,16 @@ module myapp.core {
 
 ```
 calculator-app/
-├── calculator.core/
-│   ├── src/module-info.java
-│   └── src/com/calculator/
-│       ├── Calculator.java (public)
-│       └── internal/
-│           └── MathUtil.java (hidden)
-├── calculator.ui/
-│   ├── src/module-info.java
-│   └── src/com/calculator/ui/
-│       └── CalculatorUI.java
+â”œâ”€â”€ calculator.core/
+â”‚   â”œâ”€â”€ src/module-info.java
+â”‚   â””â”€â”€ src/com/calculator/
+â”‚       â”œâ”€â”€ Calculator.java (public)
+â”‚       â””â”€â”€ internal/
+â”‚           â””â”€â”€ MathUtil.java (hidden)
+â”œâ”€â”€ calculator.ui/
+â”‚   â”œâ”€â”€ src/module-info.java
+â”‚   â””â”€â”€ src/com/calculator/ui/
+â”‚       â””â”€â”€ CalculatorUI.java
 ```
 
 ### module-info.java for calculator.core
@@ -53,13 +53,13 @@ module calculator.core {
 ```
 
 **What's visible to calculator.ui:**
-- ✅ `com.calculator.Calculator` (exported)
-- ❌ `com.calculator.internal.MathUtil` (hidden)
+- âœ… `com.calculator.Calculator` (exported)
+- âŒ `com.calculator.internal.MathUtil` (hidden)
 
 ```java
 // In calculator.ui
-import com.calculator.Calculator;  // ✓ Works!
-import com.calculator.internal.MathUtil;  // ✗ Compilation error!
+import com.calculator.Calculator;  // âœ“ Works!
+import com.calculator.internal.MathUtil;  // âœ— Compilation error!
 ```
 
 ## Requires: Declaring Dependencies
@@ -109,8 +109,8 @@ module c {
 }
 
 // In module C code:
-import com.b.*;    // ✓ Works (B exports it)
-import com.a.*;    // ✗ Error! (A not transitively exported)
+import com.b.*;    // âœ“ Works (B exports it)
+import com.a.*;    // âœ— Error! (A not transitively exported)
 ```
 
 ### With Transitive
@@ -133,8 +133,8 @@ module c {
 }
 
 // In module C code:
-import com.b.*;    // ✓ Works
-import com.a.*;    // ✓ Now works! (transitive makes it available)
+import com.b.*;    // âœ“ Works
+import com.a.*;    // âœ“ Now works! (transitive makes it available)
 ```
 
 ### Real-World Example: API Stack
@@ -159,14 +159,14 @@ module myapp {
 }
 
 // In myapp code:
-import com.auth.jwt.*;           // ✓ Direct dependency
-import com.security.cipher.*;    // ✓ Transitive dependency!
+import com.auth.jwt.*;           // âœ“ Direct dependency
+import com.security.cipher.*;    // âœ“ Transitive dependency!
 ```
 
 ### When to Use Transitive
 
 ```java
-// ✓ Use transitive when:
+// âœ“ Use transitive when:
 // 1. Dependency is fundamental to your module's API
 module database.connection {
     requires transitive java.sql;  // SQL is core to our API
@@ -179,7 +179,7 @@ module payment.gateway {
     exports com.payment;
 }
 
-// ✗ Don't use transitive for:
+// âœ— Don't use transitive for:
 // 1. Internal implementation details
 module utils {
     requires logging;  // Keep logging internal, don't expose
@@ -221,10 +221,10 @@ module banking.core {
 }
 
 // In banking.mobile - OK
-import com.banking.security.*;  // ✓ Works (white-listed)
+import com.banking.security.*;  // âœ“ Works (white-listed)
 
 // In banking.analytics - ERROR
-import com.banking.security.*;  // ✗ Not in white-list
+import com.banking.security.*;  // âœ— Not in white-list
 ```
 
 ## Opens: Reflection Access
@@ -242,7 +242,7 @@ module myapp.core {
 public class Configurer {
     public static void configure() {
         Class<?> clz = Class.forName("com.myapp.ConfigImpl");
-        // ✗ IllegalAccessException - reflection not allowed!
+        // âœ— IllegalAccessException - reflection not allowed!
     }
 }
 ```
@@ -259,7 +259,7 @@ module myapp.core {
 public class Configurer {
     public static void configure() {
         Class<?> clz = Class.forName("com.myapp.ConfigImpl");
-        // ✓ Works - reflection allowed
+        // âœ“ Works - reflection allowed
     }
 }
 ```
@@ -282,21 +282,21 @@ open module spring.core {
 
 ```
 banking-app/
-├── banking.api/
-│   ├── src/module-info.java
-│   └── src/com/bank/api/
-│       ├── Account.java
-│       ├── Transaction.java
-│       └── internal/
-│           └── Utils.java
-├── banking.impl/
-│   ├── src/module-info.java
-│   └── src/com/bank/impl/
-│       └── AccountImpl.java
-└── banking.app/
-    ├── src/module-info.java
-    └── src/com/bank/app/
-        └── BankingApp.java
+â”œâ”€â”€ banking.api/
+â”‚   â”œâ”€â”€ src/module-info.java
+â”‚   â””â”€â”€ src/com/bank/api/
+â”‚       â”œâ”€â”€ Account.java
+â”‚       â”œâ”€â”€ Transaction.java
+â”‚       â””â”€â”€ internal/
+â”‚           â””â”€â”€ Utils.java
+â”œâ”€â”€ banking.impl/
+â”‚   â”œâ”€â”€ src/module-info.java
+â”‚   â””â”€â”€ src/com/bank/impl/
+â”‚       â””â”€â”€ AccountImpl.java
+â””â”€â”€ banking.app/
+    â”œâ”€â”€ src/module-info.java
+    â””â”€â”€ src/com/bank/app/
+        â””â”€â”€ BankingApp.java
 ```
 
 ### banking.api/src/module-info.java
@@ -347,13 +347,13 @@ jdeps --module-path out banking.app
 ```
 Without Transitive:
 banking.api
-    ↑
-    │ requires
-    │
+    â†‘
+    â”‚ requires
+    â”‚
 banking.impl
-    ↑
-    │ requires
-    │
+    â†‘
+    â”‚ requires
+    â”‚
 banking.app
 
 banking.app cannot see banking.api directly!
@@ -362,13 +362,13 @@ banking.app cannot see banking.api directly!
 
 With Transitive (requires transitive):
 banking.api
-    ↑
-    │ requires transitive
-    │
+    â†‘
+    â”‚ requires transitive
+    â”‚
 banking.impl
-    ↑
-    │ requires
-    │
+    â†‘
+    â”‚ requires
+    â”‚
 banking.app
 
 banking.app CAN see banking.api!
@@ -450,17 +450,16 @@ error: module graph has a cycle: myapp -> utils -> myapp
 
 ## Key Takeaways
 
-- ✅ **exports** - Makes package available to other modules
-- ✅ **requires** - Declares dependency on another module
-- ✅ **requires transitive** - Re-exports dependency
-- ✅ **exports to** - Restricts export to specific modules
-- ✅ **opens** - Allows reflection access
-- ✅ **open module** - Opens all packages for reflection
-- ✅ All module-info.java must be in module root
-- ✅ Module names follow Java naming conventions
-- ✅ No cyclic dependencies allowed
-- ✅ All dependencies must be satisfied at compile/runtime
+- âœ… **exports** - Makes package available to other modules
+- âœ… **requires** - Declares dependency on another module
+- âœ… **requires transitive** - Re-exports dependency
+- âœ… **exports to** - Restricts export to specific modules
+- âœ… **opens** - Allows reflection access
+- âœ… **open module** - Opens all packages for reflection
+- âœ… All module-info.java must be in module root
+- âœ… Module names follow Java naming conventions
+- âœ… No cyclic dependencies allowed
+- âœ… All dependencies must be satisfied at compile/runtime
 
 ---
 
-**Previous ←** Understanding Modules: [Module System](/5-Modules/01-UnderstandingModules.md)

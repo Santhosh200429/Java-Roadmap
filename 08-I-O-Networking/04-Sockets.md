@@ -1,4 +1,4 @@
-# Socket Programming in Java
+﻿# Socket Programming in Java
 
 ## What are Sockets?
 
@@ -493,17 +493,17 @@ public class SocketExceptions {
 ## Best Practices
 
 ```java
-// ✅ Always close resources
+// âœ… Always close resources
 try (Socket socket = new Socket("localhost", 8000)) {
     // Use socket
 } catch (IOException e) {
     System.err.println("Error: " + e);
 }
 
-// ✅ Use timeouts to prevent hanging
+// âœ… Use timeouts to prevent hanging
 socket.setSoTimeout(30000);  // 30 second timeout
 
-// ✅ Handle disconnections gracefully
+// âœ… Handle disconnections gracefully
 try {
     String message = reader.readLine();
     if (message == null) {
@@ -514,7 +514,7 @@ try {
     System.out.println("Connection error: " + e);
 }
 
-// ✅ Use separate threads for concurrent clients
+// âœ… Use separate threads for concurrent clients
 for (Socket client : clients) {
     new Thread(new ClientHandler(client)).start();
 }
@@ -522,15 +522,14 @@ for (Socket client : clients) {
 
 ## Key Takeaways
 
-- ✅ ServerSocket listens for incoming connections
-- ✅ Socket represents a connection to a server
-- ✅ Use streams for reading/writing data
-- ✅ TCP for reliable, UDP for fast
-- ✅ Always close sockets when done
-- ✅ Use timeouts to prevent hanging
-- ✅ Handle multiple clients with threads
-- ✅ Be graceful with disconnections
+- âœ… ServerSocket listens for incoming connections
+- âœ… Socket represents a connection to a server
+- âœ… Use streams for reading/writing data
+- âœ… TCP for reliable, UDP for fast
+- âœ… Always close sockets when done
+- âœ… Use timeouts to prevent hanging
+- âœ… Handle multiple clients with threads
+- âœ… Be graceful with disconnections
 
 ---
 
-**Next →** Date/Time API: [Modern Date Handling](/8-I-O-Networking/05-Date-And-Time.md)

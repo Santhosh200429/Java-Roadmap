@@ -1,4 +1,4 @@
-# Interfaces: Defining Contracts
+﻿# Interfaces: Defining Contracts
 
 ## What is an Interface?
 
@@ -206,13 +206,12 @@ for (Shape shape : shapes) {
 
 ## Key Takeaways
 
-- ✅ Interface = contract, class = implementation
-- ✅ Classes implement interfaces with `implements`
-- ✅ Must implement all interface methods
-- ✅ Can implement multiple interfaces
-- ✅ Use interface for behavior ("can-do")
-- ✅ Use abstract class for shared code ("is-a")
+- âœ… Interface = contract, class = implementation
+- âœ… Classes implement interfaces with `implements`
+- âœ… Must implement all interface methods
+- âœ… Can implement multiple interfaces
+- âœ… Use interface for behavior ("can-do")
+- âœ… Use abstract class for shared code ("is-a")
 
 ---
 
-**Interfaces define what things can do. They're crucial for flexible design.**

@@ -1,12 +1,12 @@
-# Static vs Dynamic Binding in Java
+﻿# Static vs Dynamic Binding in Java
 
 ## What is Binding?
 
 **Binding** is the process of linking a method call to the actual method that runs.
 
 ```
-Method Call → Which method actually executes?
-              ↓
+Method Call â†’ Which method actually executes?
+              â†“
          Binding decides!
 ```
 
@@ -104,18 +104,18 @@ public class DynamicBindingExample {
         // At compile time: both are Animal type
         // At runtime: JVM checks actual object type
         
-        dog.sound();  // Runtime binding → Woof!
-        cat.sound();  // Runtime binding → Meow!
+        dog.sound();  // Runtime binding â†’ Woof!
+        cat.sound();  // Runtime binding â†’ Meow!
     }
 }
 
 // Compile time:
-//   dog.sound() → looks for sound() in Animal class ✓
-//   cat.sound() → looks for sound() in Animal class ✓
+//   dog.sound() â†’ looks for sound() in Animal class âœ“
+//   cat.sound() â†’ looks for sound() in Animal class âœ“
 //
 // Runtime:
-//   dog → actual type is Dog → call Dog.sound()
-//   cat → actual type is Cat → call Cat.sound()
+//   dog â†’ actual type is Dog â†’ call Dog.sound()
+//   cat â†’ actual type is Cat â†’ call Cat.sound()
 ```
 
 ## Complete Examples
@@ -402,11 +402,11 @@ public class ComparisonExample {
 }
 
 // Binding Rules:
-// Static methods      → Static binding (reference type)
-// Private methods     → Static binding (reference type)
-// Final methods       → Static binding (reference type)
-// Instance methods    → Dynamic binding (actual object type)
-// Variables           → Static binding (reference type)
+// Static methods      â†’ Static binding (reference type)
+// Private methods     â†’ Static binding (reference type)
+// Final methods       â†’ Static binding (reference type)
+// Instance methods    â†’ Dynamic binding (actual object type)
+// Variables           â†’ Static binding (reference type)
 ```
 
 ## Virtual Method Invocation
@@ -452,7 +452,7 @@ public class VirtualMethodExample {
 ### 1. Expecting Static Binding Override
 
 ```java
-// ❌ WRONG - static methods not overridden
+// âŒ WRONG - static methods not overridden
 class Parent {
     static void test() {
         System.out.println("Parent");
@@ -510,7 +510,7 @@ System.out.println(p.value);  // Output: 10 (NOT 20!)
 ## When to Use Dynamic Binding
 
 ```java
-// ✅ Use dynamic binding for:
+// âœ… Use dynamic binding for:
 
 // 1. Strategy pattern
 interface Strategy {
@@ -554,16 +554,15 @@ v.start();  // Dynamic binding!
 
 ## Key Takeaways
 
-- ✅ Static binding: compile-time, method clearly known
-- ✅ Dynamic binding: runtime, actual object type decides
-- ✅ Static methods: always static binding
-- ✅ Private methods: always static binding
-- ✅ Final methods: always static binding
-- ✅ Instance methods: usually dynamic binding
-- ✅ Variables: always static binding
-- ✅ Use dynamic binding for flexibility and extensibility
-- ✅ Modern JVMs optimize dynamic calls efficiently
+- âœ… Static binding: compile-time, method clearly known
+- âœ… Dynamic binding: runtime, actual object type decides
+- âœ… Static methods: always static binding
+- âœ… Private methods: always static binding
+- âœ… Final methods: always static binding
+- âœ… Instance methods: usually dynamic binding
+- âœ… Variables: always static binding
+- âœ… Use dynamic binding for flexibility and extensibility
+- âœ… Modern JVMs optimize dynamic calls efficiently
 
 ---
 
-**Next →** PassByValue: [Parameter Passing](/4-Language-Features/07-PassByValue.md)

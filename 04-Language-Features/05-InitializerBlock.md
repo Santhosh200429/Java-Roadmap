@@ -1,4 +1,4 @@
-# Initializer Blocks: Code Initialization in Java
+﻿# Initializer Blocks: Code Initialization in Java
 
 ## What are Initializer Blocks?
 
@@ -411,7 +411,7 @@ public class InstanceInitOrder {
 
 ## When to Use Initializer Blocks
 
-### ✅ Use Static Blocks For:
+### âœ… Use Static Blocks For:
 - One-time class setup (database drivers, logging)
 - Loading shared resources
 - Initializing class-level constants from external sources
@@ -429,7 +429,7 @@ public class DatabaseDriver {
 }
 ```
 
-### ✅ Use Instance Blocks For:
+### âœ… Use Instance Blocks For:
 - Complex initialization common to multiple constructors
 - Setting up collections or data structures
 - Initialization that shouldn't be duplicated across constructors
@@ -454,7 +454,7 @@ public class Person {
 }
 ```
 
-### ❌ Avoid Static Blocks For:
+### âŒ Avoid Static Blocks For:
 - Complex logic (use static methods instead)
 - Error-prone initialization
 - Things that change (use initialization methods)
@@ -464,7 +464,7 @@ public class Person {
 ### 1. Accessing Instance Variables in Static Block
 
 ```java
-// ❌ WRONG
+// âŒ WRONG
 public class Wrong {
     public int value = 5;
     
@@ -473,7 +473,7 @@ public class Wrong {
     }
 }
 
-// ✅ RIGHT
+// âœ… RIGHT
 public class Correct {
     public static int value = 5;
     
@@ -486,14 +486,14 @@ public class Correct {
 ### 2. Throwing Checked Exceptions in Static Block
 
 ```java
-// ❌ WRONG
+// âŒ WRONG
 public class Wrong {
     static {
         FileInputStream fis = new FileInputStream("file.txt");  // ERROR!
     }
 }
 
-// ✅ RIGHT
+// âœ… RIGHT
 public class Correct {
     static {
         try {
@@ -508,7 +508,7 @@ public class Correct {
 ### 3. Overcomplicating Instance Initialization
 
 ```java
-// ❌ WRONG - too complex
+// âŒ WRONG - too complex
 public class Complex {
     {
         for (int i = 0; i < 1000; i++) {
@@ -517,7 +517,7 @@ public class Complex {
     }
 }
 
-// ✅ RIGHT - use constructor
+// âœ… RIGHT - use constructor
 public class Simple {
     public Simple() {
         initializeData();
@@ -533,14 +533,13 @@ public class Simple {
 
 ## Key Takeaways
 
-- ✅ Static blocks run once when class loads
-- ✅ Instance blocks run before constructor every time
-- ✅ Multiple blocks execute in declaration order
-- ✅ Use static blocks for class-level initialization
-- ✅ Use instance blocks for object-level setup common to multiple constructors
-- ✅ Generally prefer constructors for clarity
-- ✅ Never throw checked exceptions in static blocks
+- âœ… Static blocks run once when class loads
+- âœ… Instance blocks run before constructor every time
+- âœ… Multiple blocks execute in declaration order
+- âœ… Use static blocks for class-level initialization
+- âœ… Use instance blocks for object-level setup common to multiple constructors
+- âœ… Generally prefer constructors for clarity
+- âœ… Never throw checked exceptions in static blocks
 
 ---
 
-**Next →** Networking: [Network Fundamentals](/8-I-O-Networking/03-Networking.md)

@@ -1,4 +1,4 @@
-# REST-Assured: Testing REST APIs
+﻿# REST-Assured: Testing REST APIs
 
 ## What is REST-Assured?
 
@@ -464,10 +464,10 @@ public void testListAssertions() {
 ### 1. Ignoring Status Code
 
 ```java
-// ❌ WRONG - doesn't check status
+// âŒ WRONG - doesn't check status
 Response response = get("/students/1").then().extract().response();
 
-// ✅ RIGHT - verify status first
+// âœ… RIGHT - verify status first
 get("/students/1")
     .then()
     .statusCode(200)
@@ -478,14 +478,14 @@ get("/students/1")
 ### 2. Not Waiting for Async Operations
 
 ```java
-// ❌ WRONG - data not ready
+// âŒ WRONG - data not ready
 given()
     .body(student)
     .post("/students")
     .then()
     .statusCode(201);
 
-// ✅ RIGHT - wait for consistency
+// âœ… RIGHT - wait for consistency
 Thread.sleep(100);
 get("/students/1")
     .then()
@@ -495,12 +495,12 @@ get("/students/1")
 ### 3. Hardcoded Test Data
 
 ```java
-// ❌ WRONG - relies on existing data
+// âŒ WRONG - relies on existing data
 get("/students/123")
     .then()
     .statusCode(200);
 
-// ✅ RIGHT - create test data
+// âœ… RIGHT - create test data
 int id = given()
     .body(newStudent)
     .post("/students")
@@ -524,14 +524,13 @@ get("/students/" + id)
 
 ## Key Takeaways
 
-- ✅ REST-Assured provides fluent API for testing REST endpoints
-- ✅ `given()` → `when()` → `then()` pattern for readability
-- ✅ Verify status codes, headers, and response body
-- ✅ Support for authentication, path params, query params
-- ✅ Extract data from responses for chaining tests
-- ✅ Test error cases and edge cases
-- ✅ Create test data, don't rely on existing data
+- âœ… REST-Assured provides fluent API for testing REST endpoints
+- âœ… `given()` â†’ `when()` â†’ `then()` pattern for readability
+- âœ… Verify status codes, headers, and response body
+- âœ… Support for authentication, path params, query params
+- âœ… Extract data from responses for chaining tests
+- âœ… Test error cases and edge cases
+- âœ… Create test data, don't rely on existing data
 
 ---
 
-**Next →** Nested Classes: [Nested Classes](/4-Language-Features/04-NestedClasses.md)

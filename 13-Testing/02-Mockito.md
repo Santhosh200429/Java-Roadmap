@@ -1,4 +1,4 @@
-# Mockito: Testing with Mocks
+﻿# Mockito: Testing with Mocks
 
 ## What is Mockito?
 
@@ -14,14 +14,14 @@
 
 Without mocking:
 ```java
-// ❌ Test fails if database is down!
+// âŒ Test fails if database is down!
 StudentService service = new StudentService(realDatabase);
 service.saveStudent(student);  // Depends on real DB
 ```
 
 With mocking:
 ```java
-// ✅ Test works without database
+// âœ… Test works without database
 StudentRepository mockRepo = mock(StudentRepository.class);
 StudentService service = new StudentService(mockRepo);
 service.saveStudent(student);  // Uses fake repo
@@ -413,11 +413,11 @@ public class OrderServiceTest {
 
 ### 1. Verifying on Mock Instead of Service
 ```java
-// ❌ WRONG
+// âŒ WRONG
 StudentRepository mockRepo = mock(StudentRepository.class);
 mockRepo.save(student);  // Directly calling mock
 
-// ✅ RIGHT
+// âœ… RIGHT
 StudentRepository mockRepo = mock(StudentRepository.class);
 StudentService service = new StudentService(mockRepo);
 service.createStudent(student);  // Service uses mock
@@ -426,22 +426,22 @@ verify(mockRepo).save(student);
 
 ### 2. Not Using Argument Matchers
 ```java
-// ❌ WRONG - brittle test
+// âŒ WRONG - brittle test
 when(repo.findById(1)).thenReturn(student);
 // Only works if exactly 1 is passed
 
-// ✅ RIGHT
+// âœ… RIGHT
 when(repo.findById(anyInt())).thenReturn(student);
 // Works with any ID
 ```
 
 ### 3. Forgetting to Setup Mocks
 ```java
-// ❌ WRONG
+// âŒ WRONG
 StudentRepository mockRepo = mock(StudentRepository.class);
 List<Student> result = mockRepo.findAll();  // Returns empty!
 
-// ✅ RIGHT
+// âœ… RIGHT
 when(mockRepo.findAll())
     .thenReturn(Arrays.asList(student1, student2));
 List<Student> result = mockRepo.findAll();
@@ -449,14 +449,13 @@ List<Student> result = mockRepo.findAll();
 
 ## Key Takeaways
 
-- ✅ Mocks are fake objects for testing
-- ✅ Use `when()...thenReturn()` to stub behavior
-- ✅ Use `verify()` to check method calls
-- ✅ `@InjectMocks` auto-injects dependencies
-- ✅ Argument matchers for flexible stubbing
-- ✅ Spies for partial mocking
-- ✅ Test business logic without external dependencies
+- âœ… Mocks are fake objects for testing
+- âœ… Use `when()...thenReturn()` to stub behavior
+- âœ… Use `verify()` to check method calls
+- âœ… `@InjectMocks` auto-injects dependencies
+- âœ… Argument matchers for flexible stubbing
+- âœ… Spies for partial mocking
+- âœ… Test business logic without external dependencies
 
 ---
 
-**Next →** TestNG: [TestNG Testing Framework](/13-Testing/03-TestNG.md)

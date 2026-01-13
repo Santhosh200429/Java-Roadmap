@@ -1,15 +1,15 @@
-# Spring Data JPA: Simplified Database Access
+﻿# Spring Data JPA: Simplified Database Access
 
 ## What is Spring Data JPA?
 
 **Spring Data JPA** simplifies database access by eliminating boilerplate code. Just define an interface - Spring creates the implementation automatically!
 
 **Benefits over plain Hibernate**:
-- ✅ No implementation needed
-- ✅ Common queries already implemented
-- ✅ Method name conventions for queries
-- ✅ Pagination and sorting built-in
-- ✅ Clean, type-safe code
+- âœ… No implementation needed
+- âœ… Common queries already implemented
+- âœ… Method name conventions for queries
+- âœ… Pagination and sorting built-in
+- âœ… Clean, type-safe code
 
 ## JpaRepository Interface
 
@@ -83,13 +83,13 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 ## Query Keywords
 
 ```
-find        → SELECT
-read        → SELECT
-get         → SELECT
-query       → SELECT
-count       → COUNT
-exists      → EXISTS
-delete      → DELETE
+find        â†’ SELECT
+read        â†’ SELECT
+get         â†’ SELECT
+query       â†’ SELECT
+count       â†’ COUNT
+exists      â†’ EXISTS
+delete      â†’ DELETE
 
 Is, Equals
 Greater, GreaterThan, GreaterThanEqual
@@ -443,11 +443,11 @@ class ErrorResponse {
 
 ### 1. Forgetting @Repository
 ```java
-// ❌ WRONG
+// âŒ WRONG
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 }
 
-// ✅ RIGHT
+// âœ… RIGHT
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 }
@@ -455,22 +455,22 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 
 ### 2. Wrong Type for PrimaryKey
 ```java
-// ❌ WRONG - Student ID is Integer, not String
+// âŒ WRONG - Student ID is Integer, not String
 public interface StudentRepository extends JpaRepository<Student, String> {
 }
 
-// ✅ RIGHT
+// âœ… RIGHT
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 }
 ```
 
 ### 3. Missing @Param in @Query
 ```java
-// ❌ WRONG
+// âŒ WRONG
 @Query("SELECT s FROM Student s WHERE s.name = :name")
 List<Student> findByName(String name);  // name not bound
 
-// ✅ RIGHT
+// âœ… RIGHT
 @Query("SELECT s FROM Student s WHERE s.name = :name")
 List<Student> findByName(@Param("name") String name);
 ```
@@ -486,14 +486,13 @@ List<Student> findByName(@Param("name") String name);
 
 ## Key Takeaways
 
-- ✅ Extend JpaRepository to get CRUD operations
-- ✅ Method naming conventions create queries automatically
-- ✅ @Query for complex custom queries
-- ✅ Pagination with Page and Pageable
-- ✅ Service layer between controller and repository
-- ✅ Exception handling for robust code
-- ✅ Cleaner than plain JDBC/Hibernate
+- âœ… Extend JpaRepository to get CRUD operations
+- âœ… Method naming conventions create queries automatically
+- âœ… @Query for complex custom queries
+- âœ… Pagination with Page and Pageable
+- âœ… Service layer between controller and repository
+- âœ… Exception handling for robust code
+- âœ… Cleaner than plain JDBC/Hibernate
 
 ---
 
-**Next →** Spring Security: [Spring Security](/11-Frameworks/SpringBoot/04-Security.md)

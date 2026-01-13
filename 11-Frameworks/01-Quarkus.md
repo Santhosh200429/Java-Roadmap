@@ -1,4 +1,4 @@
-# Quarkus Framework
+﻿# Quarkus Framework
 
 ## What is Quarkus?
 
@@ -30,20 +30,20 @@ cd hello-quarkus
 
 ```
 hello-quarkus/
-├── pom.xml
-├── src/
-│   ├── main/
-│   │   ├── java/com/example/
-│   │   │   ├── GreetingResource.java
-│   │   │   └── GreetingService.java
-│   │   └── resources/
-│   │       ├── application.properties
-│   │       └── META-INF/resources/
-│   │           └── index.html
-│   └── test/
-│       └── java/com/example/
-│           └── GreetingResourceTest.java
-└── README.md
+â”œâ”€â”€ pom.xml
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ main/
+â”‚   â”‚   â”œâ”€â”€ java/com/example/
+â”‚   â”‚   â”‚   â”œâ”€â”€ GreetingResource.java
+â”‚   â”‚   â”‚   â””â”€â”€ GreetingService.java
+â”‚   â”‚   â””â”€â”€ resources/
+â”‚   â”‚       â”œâ”€â”€ application.properties
+â”‚   â”‚       â””â”€â”€ META-INF/resources/
+â”‚   â”‚           â””â”€â”€ index.html
+â”‚   â””â”€â”€ test/
+â”‚       â””â”€â”€ java/com/example/
+â”‚           â””â”€â”€ GreetingResourceTest.java
+â””â”€â”€ README.md
 ```
 
 ### pom.xml Setup
@@ -612,25 +612,24 @@ public class UserResource {
 |---------|---------|------------|
 | Startup | 40ms | 5s |
 | Memory | 50MB | 400MB |
-| Native Binary | ✓ | ✗ |
+| Native Binary | âœ“ | âœ— |
 | Learning Curve | Easy | Medium |
 | Maturity | Growing | Mature |
 | Ecosystem | Smaller | Huge |
-| Cloud Native | ✓ | ✓ |
+| Cloud Native | âœ“ | âœ“ |
 
 ## Key Takeaways
 
-- ✅ Quarkus: Ultra-fast startup and low memory
-- ✅ Perfect for containers and serverless
-- ✅ REST endpoints with simple annotations
-- ✅ Dependency injection with @Inject
-- ✅ Configuration via application.properties
-- ✅ Native builds for maximum performance
-- ✅ Database support with JPA/Hibernate
-- ✅ Live reload in development mode
-- ✅ Easy testing with @QuarkusTest
-- ✅ Lighter alternative to Spring Boot
+- âœ… Quarkus: Ultra-fast startup and low memory
+- âœ… Perfect for containers and serverless
+- âœ… REST endpoints with simple annotations
+- âœ… Dependency injection with @Inject
+- âœ… Configuration via application.properties
+- âœ… Native builds for maximum performance
+- âœ… Database support with JPA/Hibernate
+- âœ… Live reload in development mode
+- âœ… Easy testing with @QuarkusTest
+- âœ… Lighter alternative to Spring Boot
 
 ---
 
-**Previous ←** Javalin: [Lightweight Framework](/11-Frameworks/01-Javalin.md)

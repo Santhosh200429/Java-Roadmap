@@ -1,4 +1,4 @@
-# Spring Boot Security: Protecting Your APIs
+﻿# Spring Boot Security: Protecting Your APIs
 
 ## What is Security?
 
@@ -426,10 +426,10 @@ server.servlet.session.timeout=30m
 ### 1. Storing Plain Text Passwords
 
 ```java
-// ❌ WRONG
+// âŒ WRONG
 user.setPassword("password123");  // Plain text!
 
-// ✅ RIGHT
+// âœ… RIGHT
 PasswordEncoder encoder = new BCryptPasswordEncoder();
 user.setPassword(encoder.encode("password123"));
 ```
@@ -437,10 +437,10 @@ user.setPassword(encoder.encode("password123"));
 ### 2. Exposing Secrets in Code
 
 ```java
-// ❌ WRONG
+// âŒ WRONG
 private String SECRET = "my-secret-key";
 
-// ✅ RIGHT
+// âœ… RIGHT
 @Value("${app.jwtSecret}")
 private String jwtSecret;  // From properties file
 ```
@@ -448,14 +448,14 @@ private String jwtSecret;  // From properties file
 ### 3. Not Validating Tokens
 
 ```java
-// ❌ WRONG
+// âŒ WRONG
 String username = Jwts.parser()
     .setSigningKey(secret)
     .parseClaimsJws(token)  // Crashes if invalid!
     .getBody()
     .getSubject();
 
-// ✅ RIGHT
+// âœ… RIGHT
 if (tokenProvider.validateToken(token)) {
     String username = tokenProvider.getUsernameFromToken(token);
 }
@@ -494,14 +494,13 @@ public class SecurityTest {
 
 ## Key Takeaways
 
-- ✅ Authentication verifies identity (login)
-- ✅ Authorization controls what authenticated users can do
-- ✅ Always encrypt passwords with BCrypt
-- ✅ JWT tokens enable stateless authentication
-- ✅ Use @PreAuthorize for role-based access control
-- ✅ Never expose secrets in code
-- ✅ Validate tokens before using them
+- âœ… Authentication verifies identity (login)
+- âœ… Authorization controls what authenticated users can do
+- âœ… Always encrypt passwords with BCrypt
+- âœ… JWT tokens enable stateless authentication
+- âœ… Use @PreAuthorize for role-based access control
+- âœ… Never expose secrets in code
+- âœ… Validate tokens before using them
 
 ---
 
-**Next →** CI/CD Pipelines: [CI/CD Automation](/14-DevOps-Basics/02-CI-CD.md)

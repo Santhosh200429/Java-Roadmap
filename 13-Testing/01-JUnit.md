@@ -1,4 +1,4 @@
-# JUnit: Testing Java Code
+﻿# JUnit: Testing Java Code
 
 ## What is JUnit?
 
@@ -257,7 +257,7 @@ mvn test -Dtest=CalculatorTest#testAdd
 
 ### In IDE
 
-- Right-click test class → Run Tests
+- Right-click test class â†’ Run Tests
 - Or use keyboard shortcut (usually Ctrl+Shift+F10)
 
 ## Test Coverage
@@ -294,14 +294,13 @@ public void testAdd() {
 
 ## Key Takeaways
 
-- ✅ JUnit tests verify code correctness
-- ✅ @Test marks test methods
-- ✅ Assertions check expected values
-- ✅ @Before/@After setup and teardown
-- ✅ Test exceptions with @Test(expected=...)
-- ✅ Run tests with `mvn test`
-- ✅ Aim for high code coverage
+- âœ… JUnit tests verify code correctness
+- âœ… @Test marks test methods
+- âœ… Assertions check expected values
+- âœ… @Before/@After setup and teardown
+- âœ… Test exceptions with @Test(expected=...)
+- âœ… Run tests with `mvn test`
+- âœ… Aim for high code coverage
 
 ---
 
-**Testing is not optional - it's professional development.**

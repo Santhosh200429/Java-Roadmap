@@ -1,4 +1,4 @@
-# Streams API: Processing Collections Functionally
+﻿# Streams API: Processing Collections Functionally
 
 ## What are Streams?
 
@@ -23,9 +23,9 @@ A **Stream** is a pipeline for processing collections of data. It allows filteri
 
 ```
 Stream<T>
-  → Intermediate operations (filter, map, sorted)
-  → Terminal operation (collect, forEach, reduce)
-  → Result
+  â†’ Intermediate operations (filter, map, sorted)
+  â†’ Terminal operation (collect, forEach, reduce)
+  â†’ Result
 ```
 
 ### Example
@@ -365,12 +365,12 @@ public class StreamExample {
 
 ### 1. Reusing Stream
 ```java
-// ❌ WRONG
+// âŒ WRONG
 Stream<Integer> stream = nums.stream();
 stream.filter(n -> n > 2);
 stream.map(n -> n * 2);  // ERROR: stream closed
 
-// ✅ RIGHT
+// âœ… RIGHT
 nums.stream()
     .filter(n -> n > 2)
     .map(n -> n * 2)
@@ -379,11 +379,11 @@ nums.stream()
 
 ### 2. Forgetting Terminal Operation
 ```java
-// ❌ WRONG - no output
+// âŒ WRONG - no output
 nums.stream()
     .filter(n -> n > 2);  // Only intermediate, does nothing
 
-// ✅ RIGHT
+// âœ… RIGHT
 nums.stream()
     .filter(n -> n > 2)
     .forEach(System.out::println);  // Terminal operation
@@ -391,25 +391,24 @@ nums.stream()
 
 ### 3. Side Effects
 ```java
-// ❌ Avoid
+// âŒ Avoid
 nums.stream()
     .forEach(n -> System.out.println(n));  // Impure
 
-// ✅ Better
+// âœ… Better
 nums.stream()
     .forEach(System.out::println);
 ```
 
 ## Key Takeaways
 
-- ✅ Streams process collections functionally
-- ✅ Intermediate operations: filter, map, sorted
-- ✅ Terminal operations: collect, forEach, reduce
-- ✅ Lazy evaluation - intermediate ops don't execute until terminal op
-- ✅ Pipelines can be chained
-- ✅ Can't reuse a stream
-- ✅ Great for data transformation
+- âœ… Streams process collections functionally
+- âœ… Intermediate operations: filter, map, sorted
+- âœ… Terminal operations: collect, forEach, reduce
+- âœ… Lazy evaluation - intermediate ops don't execute until terminal op
+- âœ… Pipelines can be chained
+- âœ… Can't reuse a stream
+- âœ… Great for data transformation
 
 ---
 
-**Next →** Spring Boot: [REST Controllers](/11-Frameworks/SpringBoot/02-REST-Controllers.md)

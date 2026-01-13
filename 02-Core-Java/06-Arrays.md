@@ -1,4 +1,4 @@
-# Arrays: Storing Multiple Values
+﻿# Arrays: Storing Multiple Values
 
 ## What is an Array?
 
@@ -239,8 +239,8 @@ for (int i = 0; i < matrix.length; i++) {
 
 ```java
 int[] numbers = {10, 20, 30};
-System.out.println(numbers[3]);  // ❌ Error! Index 3 doesn't exist
-System.out.println(numbers[2]);  // ✅ Last element (index is 0-2)
+System.out.println(numbers[3]);  // âŒ Error! Index 3 doesn't exist
+System.out.println(numbers[2]);  // âœ… Last element (index is 0-2)
 ```
 
 ### Mistake 2: Starting Index from 1
@@ -254,8 +254,8 @@ System.out.println(scores[0]);   // 85 (first element)
 ### Mistake 3: Forgetting Array Type
 
 ```java
-int[] numbers = {"10", "20", "30"};  // ❌ Strings in int array
-int[] numbers = {10, 20, 30};        // ✅ Correct
+int[] numbers = {"10", "20", "30"};  // âŒ Strings in int array
+int[] numbers = {10, 20, 30};        // âœ… Correct
 ```
 
 ### Mistake 4: Uninitialized Elements
@@ -311,13 +311,13 @@ Lowest: 76
 
 ## Key Takeaways
 
-- ✅ Array holds multiple values of same type
-- ✅ Arrays are zero-indexed (first element is index 0)
-- ✅ Use `.length` to get array size
-- ✅ Loop through with `for` or enhanced `for` loop
-- ✅ 2D arrays are like matrices (rows and columns)
-- ✅ Check array bounds before accessing
-- ✅ All elements initialized to default value (0, false, null)
+- âœ… Array holds multiple values of same type
+- âœ… Arrays are zero-indexed (first element is index 0)
+- âœ… Use `.length` to get array size
+- âœ… Loop through with `for` or enhanced `for` loop
+- âœ… 2D arrays are like matrices (rows and columns)
+- âœ… Check array bounds before accessing
+- âœ… All elements initialized to default value (0, false, null)
 
 ## Next Steps
 
@@ -325,4 +325,3 @@ Continue learning OOP concepts. Arrays are just the beginning!
 
 ---
 
-**Arrays organize data efficiently. Master them for real programs!**

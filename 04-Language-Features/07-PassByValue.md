@@ -1,4 +1,4 @@
-# Pass by Value in Java
+﻿# Pass by Value in Java
 
 ## What is Pass by Value?
 
@@ -92,31 +92,31 @@ Before call:
 Heap:
   Person object: name="Alice", age=25
 Stack:
-  person → [reference to object]
+  person â†’ [reference to object]
 
 Inside modifyPerson(Person p):
 Stack:
-  person → [reference to object]      (main method)
-  p → [copy of reference]             (modifyPerson)
+  person â†’ [reference to object]      (main method)
+  p â†’ [copy of reference]             (modifyPerson)
 
 p.age = 26:
 Heap:
   Person object: name="Alice", age=26  (MODIFIED!)
 Stack:
-  person → [reference]
-  p → [same reference]
+  person â†’ [reference]
+  p â†’ [same reference]
 
 p = new Person("Bob", 30):
 Heap:
   Person object: name="Alice", age=26
   NEW Person object: name="Bob", age=30
 Stack:
-  person → [reference to Alice]        (unchanged!)
-  p → [reference to Bob]               (local change only)
+  person â†’ [reference to Alice]        (unchanged!)
+  p â†’ [reference to Bob]               (local change only)
 
 Return:
 Stack:
-  person → [reference to Alice]        (unchanged!)
+  person â†’ [reference to Alice]        (unchanged!)
 ```
 
 ## Complete Examples
@@ -381,8 +381,8 @@ public class BankTransfer {
     
     // This works - modifying objects
     static void transfer(Account from, Account to, double amount) {
-        from.balance -= amount;     // Modifies 'from' object ✓
-        to.balance += amount;       // Modifies 'to' object ✓
+        from.balance -= amount;     // Modifies 'from' object âœ“
+        to.balance += amount;       // Modifies 'to' object âœ“
     }
     
     // This doesn't work - reassigning references
@@ -412,16 +412,15 @@ public class BankTransfer {
 
 ## Key Takeaways
 
-- ✅ Java always passes by value
-- ✅ For primitives: copy of value
-- ✅ For objects: copy of reference
-- ✅ Object contents can be modified
-- ✅ Reassigning parameter doesn't affect original reference
-- ✅ Strings are immutable (reassignment creates new object)
-- ✅ Arrays/Collections can be modified
-- ✅ This is why null checks sometimes fail
-- ✅ Understanding this prevents common bugs
+- âœ… Java always passes by value
+- âœ… For primitives: copy of value
+- âœ… For objects: copy of reference
+- âœ… Object contents can be modified
+- âœ… Reassigning parameter doesn't affect original reference
+- âœ… Strings are immutable (reassignment creates new object)
+- âœ… Arrays/Collections can be modified
+- âœ… This is why null checks sometimes fail
+- âœ… Understanding this prevents common bugs
 
 ---
 
-**Next →** Optionals: [Null Safety](/4-Language-Features/08-Optionals.md)

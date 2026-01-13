@@ -1,4 +1,4 @@
-# TestNG: Advanced Testing Framework
+﻿# TestNG: Advanced Testing Framework
 
 ## What is TestNG?
 
@@ -452,26 +452,26 @@ assertEquals(result, 5);  // Note: order reversed!
 ### 1. Confusing Parameter Order
 
 ```java
-// ❌ WRONG - TestNG order is (actual, expected)
+// âŒ WRONG - TestNG order is (actual, expected)
 @Test(dataProvider = "data")
 public void testAdd(int a, int b, int expected) {
     assertEquals(expected, a + b);  // Wrong order!
 }
 
-// ✅ RIGHT
+// âœ… RIGHT
 assertEquals(a + b, expected);
 ```
 
 ### 2. Not Using Data Provider for Multiple Cases
 
 ```java
-// ❌ WRONG - separate test for each case
+// âŒ WRONG - separate test for each case
 @Test
 public void testAdd1() { assertEquals(5, add(2,3)); }
 @Test
 public void testAdd2() { assertEquals(7, add(3,4)); }
 
-// ✅ RIGHT - use DataProvider
+// âœ… RIGHT - use DataProvider
 @DataProvider
 public Object[][] addData() {
     return new Object[][] {{2,3,5}, {3,4,7}};
@@ -485,13 +485,13 @@ public void testAdd(int a, int b, int expected) {
 ### 3. Not Cleaning Up Resources
 
 ```java
-// ❌ WRONG - resources leaked
+// âŒ WRONG - resources leaked
 @BeforeMethod
 public void setUp() {
     connection = createConnection();
 }
 
-// ✅ RIGHT - clean up
+// âœ… RIGHT - clean up
 @AfterMethod
 public void tearDown() {
     connection.close();
@@ -500,15 +500,14 @@ public void tearDown() {
 
 ## Key Takeaways
 
-- ✅ TestNG is more powerful than JUnit for complex tests
-- ✅ Groups organize tests (unit, integration, database)
-- ✅ DataProvider enables data-driven testing
-- ✅ Parallel execution speeds up test suite
-- ✅ Better control over test lifecycle
-- ✅ Assertions are powerful with messaging
-- ✅ Excellent for enterprise applications
-- ✅ Good for testing complex business logic
+- âœ… TestNG is more powerful than JUnit for complex tests
+- âœ… Groups organize tests (unit, integration, database)
+- âœ… DataProvider enables data-driven testing
+- âœ… Parallel execution speeds up test suite
+- âœ… Better control over test lifecycle
+- âœ… Assertions are powerful with messaging
+- âœ… Excellent for enterprise applications
+- âœ… Good for testing complex business logic
 
 ---
 
-**Next →** REST-Assured: [REST API Testing](/13-Testing/04-REST-Assured.md)

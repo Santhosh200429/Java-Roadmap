@@ -1,4 +1,4 @@
-# Iterator in Java Collections
+﻿# Iterator in Java Collections
 
 ## What is an Iterator?
 
@@ -78,27 +78,27 @@ public class IteratorBasics {
 
 ```
 Iterator states:
-┌─────────────────────────────────────┐
-│ Initial state (before first next()) │
-└────────────┬────────────────────────┘
-             │
-             ▼ next()
-        ┌─────────────┐
-        │ Element 1   │
-        └────┬────┬───┘
-             │    │
-             │    ▼ remove() (optional)
-             │    └─ Element removed
-             │
-             ▼ next()
-        ┌─────────────┐
-        │ Element 2   │
-        └────┬────────┘
-             │
-             ▼ hasNext() returns false
-        ┌──────────────────┐
-        │ End of iteration │
-        └──────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Initial state (before first next()) â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+             â”‚
+             â–¼ next()
+        â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+        â”‚ Element 1   â”‚
+        â””â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”¬â”€â”€â”€â”˜
+             â”‚    â”‚
+             â”‚    â–¼ remove() (optional)
+             â”‚    â””â”€ Element removed
+             â”‚
+             â–¼ next()
+        â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+        â”‚ Element 2   â”‚
+        â””â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+             â”‚
+             â–¼ hasNext() returns false
+        â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+        â”‚ End of iteration â”‚
+        â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ## Removing Elements
@@ -140,7 +140,7 @@ list.add(3);
 
 for (int num : list) {
     if (num == 2) {
-        list.remove((Integer) num);  // ✗ ConcurrentModificationException!
+        list.remove((Integer) num);  // âœ— ConcurrentModificationException!
     }
 }
 ```
@@ -151,7 +151,7 @@ Iterator<Integer> it = list.iterator();
 while (it.hasNext()) {
     int num = it.next();
     if (num == 2) {
-        it.remove();  // ✓ Safe removal
+        it.remove();  // âœ“ Safe removal
     }
 }
 ```
@@ -208,11 +208,11 @@ while (it.hasNext()) {
 
 | Feature | For Loop | Enhanced For | Iterator |
 |---------|----------|--------------|----------|
-| Works with List | ✓ | ✓ | ✓ |
-| Works with Set | ✗ | ✓ | ✓ |
-| Can remove | ✗ | ✗ | ✓ |
-| Can skip index | ✗ | ✗ | ✓ |
-| Simple syntax | ✓ | ✓ | ✗ |
+| Works with List | âœ“ | âœ“ | âœ“ |
+| Works with Set | âœ— | âœ“ | âœ“ |
+| Can remove | âœ— | âœ— | âœ“ |
+| Can skip index | âœ— | âœ— | âœ“ |
+| Simple syntax | âœ“ | âœ“ | âœ— |
 
 ## Practical Examples
 
@@ -499,17 +499,16 @@ numbers.stream()
 
 ## Key Takeaways
 
-- ✅ Iterator traverses collections element by element
-- ✅ Use `hasNext()` to check if more elements exist
-- ✅ Use `next()` to get next element
-- ✅ Use `remove()` for safe removal during iteration
-- ✅ Never modify collection directly while iterating
-- ✅ Works with all Collections (List, Set, Queue, Map)
-- ✅ Enhanced for loop uses Iterator behind the scenes
-- ✅ ListIterator allows bidirectional traversal
-- ✅ Streams are modern alternative for functional style
-- ✅ ConcurrentModificationException thrown if collection modified
+- âœ… Iterator traverses collections element by element
+- âœ… Use `hasNext()` to check if more elements exist
+- âœ… Use `next()` to get next element
+- âœ… Use `remove()` for safe removal during iteration
+- âœ… Never modify collection directly while iterating
+- âœ… Works with all Collections (List, Set, Queue, Map)
+- âœ… Enhanced for loop uses Iterator behind the scenes
+- âœ… ListIterator allows bidirectional traversal
+- âœ… Streams are modern alternative for functional style
+- âœ… ConcurrentModificationException thrown if collection modified
 
 ---
 
-**Next →** ArrayList vs Array: [Collections Comparison](/6-Collections/05-ArrayListVsArray.md)

@@ -1,4 +1,4 @@
-# Abstraction: Hiding Complexity
+﻿# Abstraction: Hiding Complexity
 
 ## What is Abstraction?
 
@@ -19,7 +19,7 @@ abstract class Animal {
     }
 }
 
-// ❌ Can't create: Animal a = new Animal();
+// âŒ Can't create: Animal a = new Animal();
 ```
 
 ## Concrete Implementation
@@ -34,7 +34,7 @@ class Dog extends Animal {
     }
 }
 
-// ✅ Can create: Dog d = new Dog();
+// âœ… Can create: Dog d = new Dog();
 d.makeSound();  // Woof!
 ```
 
@@ -114,13 +114,12 @@ processor.confirmTransaction();
 
 ## Key Takeaways
 
-- ✅ Abstract classes define blueprints
-- ✅ Interfaces define contracts
-- ✅ Abstraction hides implementation details
-- ✅ Use abstract when sharing code (extends)
-- ✅ Use interface when defining behavior (implements)
-- ✅ Concrete classes implement abstract methods
+- âœ… Abstract classes define blueprints
+- âœ… Interfaces define contracts
+- âœ… Abstraction hides implementation details
+- âœ… Use abstract when sharing code (extends)
+- âœ… Use interface when defining behavior (implements)
+- âœ… Concrete classes implement abstract methods
 
 ---
 
-**Abstraction reduces complexity and improves code organization.**

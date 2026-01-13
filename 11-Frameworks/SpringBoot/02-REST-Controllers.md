@@ -1,4 +1,4 @@
-# REST Controllers: Building Web APIs
+﻿# REST Controllers: Building Web APIs
 
 ## What is a REST API?
 
@@ -395,14 +395,13 @@ public class StudentAPIApplication {
 
 ## Key Takeaways
 
-- ✅ @RestController returns JSON
-- ✅ @GetMapping, @PostMapping, @PutMapping, @DeleteMapping for CRUD
-- ✅ @PathVariable for URL parameters
-- ✅ @RequestBody for JSON input
-- ✅ Service layer contains business logic
-- ✅ Repository handles database access
-- ✅ @Autowired injects dependencies
+- âœ… @RestController returns JSON
+- âœ… @GetMapping, @PostMapping, @PutMapping, @DeleteMapping for CRUD
+- âœ… @PathVariable for URL parameters
+- âœ… @RequestBody for JSON input
+- âœ… Service layer contains business logic
+- âœ… Repository handles database access
+- âœ… @Autowired injects dependencies
 
 ---
 
-**Next →** Spring Data JPA: [Spring Data JPA](/11-Frameworks/SpringBoot/03-Spring-Data-JPA.md)

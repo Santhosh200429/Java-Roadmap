@@ -1,4 +1,4 @@
-# Inheritance: Reusing Code Through Inheritance
+﻿# Inheritance: Reusing Code Through Inheritance
 
 ## What is Inheritance?
 
@@ -7,9 +7,9 @@
 Think of it like real-world inheritance:
 ```
 Parent (Grandparent's traits)
-  ↓
+  â†“
 Child (Inherits Parent's traits + adds own)
-  ↓
+  â†“
 Grandchild (Inherits Child's traits + adds own)
 ```
 
@@ -297,9 +297,9 @@ car.drive();  // Car with 4 doors is driving
 ### 1. Can Only Extend One Class
 
 ```java
-public class Dog extends Animal { }  // ✅ One parent
+public class Dog extends Animal { }  // âœ… One parent
 
-public class Dog extends Animal, Pet { }  // ❌ Can't extend multiple
+public class Dog extends Animal, Pet { }  // âŒ Can't extend multiple
 ```
 
 ### 2. Constructor Must Call super()
@@ -338,7 +338,7 @@ class Child extends Parent {
 ```java
 public class Dog extends Animal {
     public Dog(String name) {
-        // ❌ Must call super(name) first
+        // âŒ Must call super(name) first
         this.breed = breed;
     }
 }
@@ -347,8 +347,8 @@ public class Dog extends Animal {
 ### Mistake 2: Trying to Extend Multiple Classes
 
 ```java
-public class Dog extends Animal, Pet { }  // ❌ Error
-public class Dog extends Animal { }       // ✅ Correct
+public class Dog extends Animal, Pet { }  // âŒ Error
+public class Dog extends Animal { }       // âœ… Correct
 ```
 
 ### Mistake 3: Wrong Method Signature in Override
@@ -358,19 +358,19 @@ class Parent {
     public void test(int x) { }
 }
 class Child extends Parent {
-    public void test(String x) { }  // ⚠️ This is overloading, not overriding!
+    public void test(String x) { }  // âš ï¸ This is overloading, not overriding!
 }
 ```
 
 ## Key Takeaways
 
-- ✅ Inheritance allows code reuse
-- ✅ Child class inherits from parent using `extends`
-- ✅ Use `super` to access parent class members
-- ✅ Override methods to change behavior in child class
-- ✅ Can only extend one class (single inheritance)
-- ✅ Access modifiers: public, protected, private
-- ✅ Use `@Override` annotation for clarity
+- âœ… Inheritance allows code reuse
+- âœ… Child class inherits from parent using `extends`
+- âœ… Use `super` to access parent class members
+- âœ… Override methods to change behavior in child class
+- âœ… Can only extend one class (single inheritance)
+- âœ… Access modifiers: public, protected, private
+- âœ… Use `@Override` annotation for clarity
 
 ## Next Steps
 
@@ -378,4 +378,3 @@ Learn about [Abstraction](./04-Abstraction.md) to define interfaces.
 
 ---
 
-**Inheritance is powerful for code reuse. Use it wisely!**

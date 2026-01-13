@@ -1,4 +1,4 @@
-# CI/CD Pipelines: Automated Testing & Deployment
+﻿# CI/CD Pipelines: Automated Testing & Deployment
 
 ## What is CI/CD?
 
@@ -426,11 +426,11 @@ deploy:
 ### 1. No Test in Pipeline
 
 ```yaml
-# ❌ WRONG - skips all tests
+# âŒ WRONG - skips all tests
 - name: Build
   run: mvn clean package -DskipTests
 
-# ✅ RIGHT - run all tests
+# âœ… RIGHT - run all tests
 - name: Build and Test
   run: mvn clean package
 ```
@@ -438,12 +438,12 @@ deploy:
 ### 2. Long Build Times
 
 ```yaml
-# ❌ WRONG - rebuilds every time
+# âŒ WRONG - rebuilds every time
 - name: Build
   run: mvn clean compile
   run: mvn test
 
-# ✅ RIGHT - use caching
+# âœ… RIGHT - use caching
 - name: Set up JDK
   uses: actions/setup-java@v3
   with:
@@ -455,11 +455,11 @@ deploy:
 ### 3. Exposing Secrets
 
 ```yaml
-# ❌ WRONG - hardcoded secrets
+# âŒ WRONG - hardcoded secrets
 - name: Login
   run: docker login -u myuser -p hardcoded_password
 
-# ✅ RIGHT - use GitHub secrets
+# âœ… RIGHT - use GitHub secrets
 - name: Login
   run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 ```
@@ -476,14 +476,13 @@ deploy:
 
 ## Key Takeaways
 
-- ✅ CI automatically builds and tests code changes
-- ✅ CD automatically deploys tested code
-- ✅ GitHub Actions enables CI/CD for free
-- ✅ Pipeline stages: Build → Test → Docker → Deploy
-- ✅ Use secrets for credentials, never hardcode
-- ✅ Cache dependencies to speed up builds
-- ✅ Run tests before deployment
+- âœ… CI automatically builds and tests code changes
+- âœ… CD automatically deploys tested code
+- âœ… GitHub Actions enables CI/CD for free
+- âœ… Pipeline stages: Build â†’ Test â†’ Docker â†’ Deploy
+- âœ… Use secrets for credentials, never hardcode
+- âœ… Cache dependencies to speed up builds
+- âœ… Run tests before deployment
 
 ---
 
-**Next →** Logging Frameworks: [Logging & Monitoring](/14-DevOps-Basics/03-LoggingFrameworks.md)

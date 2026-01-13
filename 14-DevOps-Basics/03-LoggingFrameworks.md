@@ -1,4 +1,4 @@
-# Logging Frameworks: SLF4J and Logback
+﻿# Logging Frameworks: SLF4J and Logback
 
 ## What is Logging?
 
@@ -9,7 +9,7 @@
 ## Why Not System.out.println()?
 
 ```java
-// ❌ BAD - System.out
+// âŒ BAD - System.out
 System.out.println("User logged in: " + username);
 System.out.println("Processing payment for: " + amount);
 
@@ -25,9 +25,9 @@ System.out.println("Processing payment for: " + amount);
 
 ```
 SLF4J (API)
-    ↓
+    â†“
 Logback (Implementation)
-    ↓
+    â†“
 Writes to: File, Console, Email, Database, etc.
 ```
 
@@ -357,34 +357,34 @@ public class RequestHandler {
 ### 1. String Concatenation in Logging
 
 ```java
-// ❌ WRONG - creates string even if DEBUG disabled
+// âŒ WRONG - creates string even if DEBUG disabled
 logger.debug("User: " + user + ", Amount: " + amount);
 
-// ✅ RIGHT - string created only if level enabled
+// âœ… RIGHT - string created only if level enabled
 logger.debug("User: {}, Amount: {}", user, amount);
 ```
 
 ### 2. Logging Passwords/Sensitive Data
 
 ```java
-// ❌ WRONG - logs password
+// âŒ WRONG - logs password
 logger.info("User login: username={}, password={}", username, password);
 
-// ✅ RIGHT - don't log sensitive data
+// âœ… RIGHT - don't log sensitive data
 logger.info("User login attempt: username={}", username);
 ```
 
 ### 3. Not Logging Exceptions
 
 ```java
-// ❌ WRONG - exception lost
+// âŒ WRONG - exception lost
 try {
     doSomething();
 } catch (Exception e) {
     logger.error("Error");  // No exception details!
 }
 
-// ✅ RIGHT - include exception
+// âœ… RIGHT - include exception
 try {
     doSomething();
 } catch (Exception e) {
@@ -395,10 +395,10 @@ try {
 ## Performance Tips
 
 ```java
-// ✅ Lazy evaluation - only creates message if enabled
+// âœ… Lazy evaluation - only creates message if enabled
 logger.debug("Processing {} items", expensiveCalculation());
 
-// ❌ Eager - always calculates even if not logged
+// âŒ Eager - always calculates even if not logged
 if (logger.isDebugEnabled()) {
     logger.debug("Processing {} items", expensiveCalculation());
 }
@@ -406,16 +406,15 @@ if (logger.isDebugEnabled()) {
 
 ## Key Takeaways
 
-- ✅ Use SLF4J API with Logback implementation
-- ✅ One logger per class: `LoggerFactory.getLogger(ClassName.class)`
-- ✅ Log levels: TRACE < DEBUG < INFO < WARN < ERROR
-- ✅ Use placeholders: `logger.info("Message: {}", var)`
-- ✅ Configure via properties or XML files
-- ✅ Never log passwords or sensitive data
-- ✅ Always include exceptions: `logger.error("Message", exception)`
-- ✅ Use file rolling to manage log size
-- ✅ Set appropriate levels (DEBUG for dev, INFO for prod)
+- âœ… Use SLF4J API with Logback implementation
+- âœ… One logger per class: `LoggerFactory.getLogger(ClassName.class)`
+- âœ… Log levels: TRACE < DEBUG < INFO < WARN < ERROR
+- âœ… Use placeholders: `logger.info("Message: {}", var)`
+- âœ… Configure via properties or XML files
+- âœ… Never log passwords or sensitive data
+- âœ… Always include exceptions: `logger.error("Message", exception)`
+- âœ… Use file rolling to manage log size
+- âœ… Set appropriate levels (DEBUG for dev, INFO for prod)
 
 ---
 
-**Next →** Virtual Threads: [Virtual Threads](/7-Concurrency/02-VirtualThreads.md)
