@@ -620,16 +620,17 @@ public class UserResource {
 
 ## Key Takeaways
 
-- âœ… Quarkus: Ultra-fast startup and low memory
-- âœ… Perfect for containers and serverless
-- âœ… REST endpoints with simple annotations
-- âœ… Dependency injection with @Inject
-- âœ… Configuration via application.properties
-- âœ… Native builds for maximum performance
-- âœ… Database support with JPA/Hibernate
-- âœ… Live reload in development mode
-- âœ… Easy testing with @QuarkusTest
-- âœ… Lighter alternative to Spring Boot
+- Quarkus: Ultra-fast startup and low memory
+- Perfect for containers and serverless
+- REST endpoints with simple annotations
+- Dependency injection with @Inject
+- Configuration via application.properties
+- Native builds for maximum performance
+- Database support with JPA/Hibernate
+- Live reload in development mode
+- Easy testing with @QuarkusTest
+- Lighter alternative to Spring Boot
 
 ---
+
 

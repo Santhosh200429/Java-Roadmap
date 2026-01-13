@@ -354,7 +354,7 @@ class Account {
     }
 }
 
-// âœ… RIGHT
+// RIGHT
 class Account {
     private int balance;
     
@@ -381,7 +381,7 @@ public class DataProcessor {
     }
 }
 
-// âœ… BETTER - lock only critical section
+// BETTER - lock only critical section
 public class DataProcessor {
     private Object lock = new Object();
     
@@ -405,7 +405,7 @@ synchronized void getData() throws InterruptedException {
     return data;  // Data still null!
 }
 
-// âœ… RIGHT
+// RIGHT
 synchronized void getData() throws InterruptedException {
     while (data == null) {  // Keep checking
         wait();
@@ -441,13 +441,14 @@ public void updateMany() {
 
 ## Key Takeaways
 
-- âœ… Synchronization prevents race conditions
-- âœ… `synchronized` method/block acquires object lock
-- âœ… Only one thread executes synchronized block at a time
-- âœ… `wait()` releases lock and waits for notification
-- âœ… `notifyAll()` wakes up waiting threads
-- âœ… Synchronize all shared variable access
-- âœ… Only synchronize critical sections for performance
+- Synchronization prevents race conditions
+- `synchronized` method/block acquires object lock
+- Only one thread executes synchronized block at a time
+- `wait()` releases lock and waits for notification
+- `notifyAll()` wakes up waiting threads
+- Synchronize all shared variable access
+- Only synchronize critical sections for performance
 
 ---
+
 

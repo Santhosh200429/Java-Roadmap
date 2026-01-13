@@ -245,13 +245,14 @@ Charlie: A
 
 ## Key Takeaways
 
-- âœ… ArrayList = ordered, fast access
-- âœ… LinkedList = ordered, fast insertion
-- âœ… HashSet = unique, fast, unordered
-- âœ… TreeSet = unique, sorted, slower
-- âœ… HashMap = key-value, fastest
-- âœ… TreeMap = key-value, sorted
-- âœ… Use generics for type safety
+- ArrayList = ordered, fast access
+- LinkedList = ordered, fast insertion
+- HashSet = unique, fast, unordered
+- TreeSet = unique, sorted, slower
+- HashMap = key-value, fastest
+- TreeMap = key-value, sorted
+- Use generics for type safety
 
 ---
+
 

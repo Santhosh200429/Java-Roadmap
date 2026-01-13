@@ -196,7 +196,7 @@ public class StudentDB {
 ## Best Practices
 
 ```java
-// âœ… Use try-with-resources (auto-close)
+// Use try-with-resources (auto-close)
 try (Connection conn = DriverManager.getConnection(url, user, password);
      PreparedStatement stmt = conn.prepareStatement(query)) {
     // Code here
@@ -204,7 +204,7 @@ try (Connection conn = DriverManager.getConnection(url, user, password);
     e.printStackTrace();
 }
 
-// âœ… Use PreparedStatement (prevents SQL injection)
+// Use PreparedStatement (prevents SQL injection)
 String query = "SELECT * FROM users WHERE email = ?";
 PreparedStatement stmt = conn.prepareStatement(query);
 stmt.setString(1, email);
@@ -215,13 +215,14 @@ String query = "SELECT * FROM users WHERE email = '" + email + "'";
 
 ## Key Takeaways
 
-- âœ… JDBC connects Java to databases
-- âœ… Use PreparedStatement for queries
-- âœ… Always close connections
-- âœ… Handle SQLExceptions appropriately
-- âœ… Use try-with-resources for auto-closing
-- âœ… Avoid SQL injection with parameterized queries
-- âœ… Check ResultSet with next() before accessing
+- JDBC connects Java to databases
+- Use PreparedStatement for queries
+- Always close connections
+- Handle SQLExceptions appropriately
+- Use try-with-resources for auto-closing
+- Avoid SQL injection with parameterized queries
+- Check ResultSet with next() before accessing
 
 ---
+
 

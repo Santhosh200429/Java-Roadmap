@@ -117,7 +117,7 @@ System.out.println(age >= 20);   // true
 
 ```java
 if (age = 20) { }   // âŒ This ASSIGNS 20 to age (wrong!)
-if (age == 20) { }  // âœ… This COMPARES age to 20 (correct!)
+if (age == 20) { }  // This COMPARES age to 20 (correct!)
 ```
 
 ### 4. Logical Operators (Combining Conditions)
@@ -296,7 +296,7 @@ public class NumberComparison {
 
 ```java
 if (age = 20) { }   // âŒ Assigns 20 (wrong!)
-if (age == 20) { }  // âœ… Compares (correct!)
+if (age == 20) { }  // Compares (correct!)
 ```
 
 ### Mistake 2: Integer Division Loses Decimals
@@ -322,7 +322,7 @@ String name2 = "John";
 
 if (name1 = name2) { }   // âŒ Assigns (wrong!)
 if (name1 == name2) { }  // âš ï¸ Compares references (not values!)
-if (name1.equals(name2)) { } // âœ… Compares actual text (correct!)
+if (name1.equals(name2)) { } // Compares actual text (correct!)
 ```
 
 For Strings, use `.equals()` method, not `==`.
@@ -347,18 +347,19 @@ Write a program that:
 
 ## Key Takeaways
 
-- âœ… Arithmetic operators: + - * / %
-- âœ… Assignment operators: = += -= *= /=
-- âœ… Comparison operators: == != > < >= <=
-- âœ… Logical operators: && || !
-- âœ… Use == to compare (not = which assigns)
-- âœ… Operator precedence matters (use parentheses when unsure)
-- âœ… Increment/decrement: ++ and --
-- âœ… Ternary operator: condition ? true : false
+- Arithmetic operators: + - * / %
+- Assignment operators: = += -= *= /=
+- Comparison operators: == != > < >= <=
+- Logical operators: && || !
+- Use == to compare (not = which assigns)
+- Operator precedence matters (use parentheses when unsure)
+- Increment/decrement: ++ and --
+- Ternary operator: condition ? true : false
 
 ## Next Steps
 
 Now that you understand operators, learn about [Conditionals](./03-Conditionals.md) to control program flow based on conditions.
 
 ---
+
 

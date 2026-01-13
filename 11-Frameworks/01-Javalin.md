@@ -438,16 +438,17 @@ public class ProductionAPI {
 
 ## Key Takeaways
 
-- âœ… Javalin is lightweight and simple
-- âœ… Perfect for REST APIs
-- âœ… Minimal boilerplate code
-- âœ… Easy routing with path/query parameters
-- âœ… Built on proven Jetty server
-- âœ… JSON support out of box
-- âœ… Good error handling
-- âœ… Works in Java and Kotlin
-- âœ… Production-ready
-- âœ… Ideal for microservices
+- Javalin is lightweight and simple
+- Perfect for REST APIs
+- Minimal boilerplate code
+- Easy routing with path/query parameters
+- Built on proven Jetty server
+- JSON support out of box
+- Good error handling
+- Works in Java and Kotlin
+- Production-ready
+- Ideal for microservices
 
 ---
+
 

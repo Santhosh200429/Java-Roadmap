@@ -411,7 +411,7 @@ public class InstanceInitOrder {
 
 ## When to Use Initializer Blocks
 
-### âœ… Use Static Blocks For:
+### Use Static Blocks For:
 - One-time class setup (database drivers, logging)
 - Loading shared resources
 - Initializing class-level constants from external sources
@@ -429,7 +429,7 @@ public class DatabaseDriver {
 }
 ```
 
-### âœ… Use Instance Blocks For:
+### Use Instance Blocks For:
 - Complex initialization common to multiple constructors
 - Setting up collections or data structures
 - Initialization that shouldn't be duplicated across constructors
@@ -473,7 +473,7 @@ public class Wrong {
     }
 }
 
-// âœ… RIGHT
+// RIGHT
 public class Correct {
     public static int value = 5;
     
@@ -493,7 +493,7 @@ public class Wrong {
     }
 }
 
-// âœ… RIGHT
+// RIGHT
 public class Correct {
     static {
         try {
@@ -517,7 +517,7 @@ public class Complex {
     }
 }
 
-// âœ… RIGHT - use constructor
+// RIGHT - use constructor
 public class Simple {
     public Simple() {
         initializeData();
@@ -533,13 +533,14 @@ public class Simple {
 
 ## Key Takeaways
 
-- âœ… Static blocks run once when class loads
-- âœ… Instance blocks run before constructor every time
-- âœ… Multiple blocks execute in declaration order
-- âœ… Use static blocks for class-level initialization
-- âœ… Use instance blocks for object-level setup common to multiple constructors
-- âœ… Generally prefer constructors for clarity
-- âœ… Never throw checked exceptions in static blocks
+- Static blocks run once when class loads
+- Instance blocks run before constructor every time
+- Multiple blocks execute in declaration order
+- Use static blocks for class-level initialization
+- Use instance blocks for object-level setup common to multiple constructors
+- Generally prefer constructors for clarity
+- Never throw checked exceptions in static blocks
 
 ---
+
 

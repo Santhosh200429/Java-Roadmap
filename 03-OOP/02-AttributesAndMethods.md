@@ -273,7 +273,7 @@ Java figures out which method to call based on argument type.
 
 ```java
 void printMessage() { }     // âŒ Can't call from outside class
-public void printMessage() { } // âœ… Can call from anywhere
+public void printMessage() { } // Can call from anywhere
 ```
 
 ### Mistake 2: Wrong Return Type
@@ -284,7 +284,7 @@ public int getValue() {
 }
 
 public String getValue() {
-    return "Hello";  // âœ… Correct
+    return "Hello";  // Correct
 }
 ```
 
@@ -298,7 +298,7 @@ public int add(int a, int b) {
 
 public int add(int a, int b) {
     int sum = a + b;
-    return sum;  // âœ… Correct
+    return sum;  // Correct
 }
 ```
 
@@ -312,23 +312,24 @@ public void printName(String name) {
 
 public void printName(String name) {
     System.out.println(name);
-    return;  // âœ… Just 'return' (no value) or omit it
+    return;  // Just 'return' (no value) or omit it
 }
 ```
 
 ## Key Takeaways
 
-- âœ… Attributes store object data
-- âœ… Methods define object behavior
-- âœ… Return type can be any type or void
-- âœ… Parameters allow methods to accept data
-- âœ… Getters and Setters provide controlled access
-- âœ… Overloading allows same method name with different parameters
-- âœ… Always specify visibility (public/private)
+- Attributes store object data
+- Methods define object behavior
+- Return type can be any type or void
+- Parameters allow methods to accept data
+- Getters and Setters provide controlled access
+- Overloading allows same method name with different parameters
+- Always specify visibility (public/private)
 
 ## Next Steps
 
 Learn about [Inheritance](./03-Inheritance.md) to reuse code.
 
 ---
+
 

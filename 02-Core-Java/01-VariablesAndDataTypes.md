@@ -20,7 +20,7 @@ System.out.println("My name is John");
 System.out.println("Hello John");
 System.out.println(John + " is here");
 
-// âœ… With variables - clean and easy to update
+// With variables - clean and easy to update
 String name = "John";
 System.out.println("My name is " + name);
 System.out.println("Hello " + name);
@@ -74,8 +74,8 @@ Java has 8 primitive data types:
 - `byte`, `short`: Rarely used, only to save memory
 
 ```java
-int students = 150;         // âœ… Use int for normal numbers
-long worldPopulation = 8000000000L;  // âœ… Use L suffix for long
+int students = 150;         // Use int for normal numbers
+long worldPopulation = 8000000000L;  // Use L suffix for long
 ```
 
 #### 2. Floating-Point Types (Decimal Numbers)
@@ -90,7 +90,7 @@ long worldPopulation = 8000000000L;  // âœ… Use L suffix for long
 - `float`: Rarely, only to save memory
 
 ```java
-double price = 19.99;       // âœ… Use double for decimals
+double price = 19.99;       // Use double for decimals
 float temperature = 98.6f;  // Add 'f' suffix for float
 ```
 
@@ -101,7 +101,7 @@ float temperature = 98.6f;  // Add 'f' suffix for float
 | `char` | Single character | `char grade = 'A';` | 2 bytes |
 
 ```java
-char letter = 'A';      // âœ… Single character in single quotes
+char letter = 'A';      // Single character in single quotes
 char symbol = '$';
 System.out.println(letter);  // Prints: A
 ```
@@ -139,9 +139,9 @@ We'll learn about reference types later.
 ### Rules (Must Follow)
 
 ```java
-int age = 25;              // âœ… Valid - letters, numbers, underscore
-int age_of_student = 25;   // âœ… Valid - underscore allowed
-int age1 = 25;             // âœ… Valid - number in name (not at start)
+int age = 25;              // Valid - letters, numbers, underscore
+int age_of_student = 25;   // Valid - underscore allowed
+int age1 = 25;             // Valid - number in name (not at start)
 int 1age = 25;             // âŒ Can't start with number
 int age-old = 25;          // âŒ Can't use hyphen
 int age old = 25;          // âŒ Can't use space
@@ -157,7 +157,7 @@ int a = 25;
 int x = 3.14;
 int ABC = 100;
 
-// âœ… Good naming (camelCase - start lowercase, capitalize new words)
+// Good naming (camelCase - start lowercase, capitalize new words)
 int studentAge = 25;
 double pi = 3.14;
 int totalScore = 100;
@@ -192,11 +192,11 @@ public class ScopeExample {
     
     public static void main(String[] args) {
         int localVar = 5;  // Can only use in main()
-        System.out.println(localVar);  // âœ… Works
+        System.out.println(localVar);  // Works
     }
     
     public void printVar() {
-        System.out.println(globalVar);  // âœ… Works
+        System.out.println(globalVar);  // Works
         System.out.println(localVar);   // âŒ Error - doesn't exist here
     }
 }
@@ -227,7 +227,7 @@ Java automatically converts smaller types to larger types:
 
 ```java
 int number = 10;
-double decimal = number;  // âœ… Automatic - int fits in double
+double decimal = number;  // Automatic - int fits in double
 System.out.println(decimal);  // Prints: 10.0
 ```
 
@@ -237,7 +237,7 @@ Casting forces a conversion:
 
 ```java
 double decimal = 10.5;
-int number = (int) decimal;  // âœ… Cast to int
+int number = (int) decimal;  // Cast to int
 System.out.println(number);  // Prints: 10 (loses decimal)
 
 // Useful for narrowing down
@@ -286,14 +286,14 @@ Quotient: 2
 
 ```java
 int age = 25.5;  // âŒ Decimal doesn't fit in int
-double age = 25.5;  // âœ… Double accepts decimals
+double age = 25.5;  // Double accepts decimals
 ```
 
 ### Mistake 2: Forgetting Type
 
 ```java
 age = 25;  // âŒ Type must be declared first
-int age = 25;  // âœ… Include type
+int age = 25;  // Include type
 ```
 
 ### Mistake 3: Using Uninitialized Variable
@@ -304,7 +304,7 @@ public static void main(String[] args) {
     System.out.println(age);  // âŒ age not initialized
     
     int age = 25;
-    System.out.println(age);  // âœ… Now it's initialized
+    System.out.println(age);  // Now it's initialized
 }
 ```
 
@@ -312,7 +312,7 @@ public static void main(String[] args) {
 
 ```java
 char letter = "A";  // âŒ Double quotes for String
-char letter = 'A';  // âœ… Single quotes for char
+char letter = 'A';  // Single quotes for char
 ```
 
 ## Practice Problems
@@ -353,18 +353,19 @@ public class RectangleArea {
 
 ## Key Takeaways
 
-- âœ… Variables store data with a name and type
-- âœ… 8 primitive types: byte, short, int, long, float, double, char, boolean
-- âœ… Use `int` for whole numbers, `double` for decimals
-- âœ… Follow camelCase naming convention
-- âœ… Variables must be initialized before use
-- âœ… Use `final` for constants
-- âœ… Larger types can hold smaller types automatically
-- âœ… Type casting converts between types (be careful!)
+- Variables store data with a name and type
+- 8 primitive types: byte, short, int, long, float, double, char, boolean
+- Use `int` for whole numbers, `double` for decimals
+- Follow camelCase naming convention
+- Variables must be initialized before use
+- Use `final` for constants
+- Larger types can hold smaller types automatically
+- Type casting converts between types (be careful!)
 
 ## Next Steps
 
 You now understand variables! Next, learn about [operators](./02-Operators.md) to manipulate data.
 
 ---
+
 

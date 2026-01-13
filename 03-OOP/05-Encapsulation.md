@@ -31,7 +31,7 @@ public class Student {
 
 // Outside class:
 Student s = new Student();
-s.name = "Alice";  // âœ… OK
+s.name = "Alice";  // OK
 ```
 
 ### protected
@@ -44,7 +44,7 @@ public class Animal {
 
 public class Dog extends Animal {
     public void setName(String name) {
-        this.name = name;  // âœ… Can access protected from parent
+        this.name = name;  // Can access protected from parent
     }
 }
 ```
@@ -83,7 +83,7 @@ public class Student {
 
 // Use it
 Student s = new Student();
-s.setAge(20);          // âœ… Valid
+s.setAge(20);          // Valid
 s.setAge(150);         // âŒ Invalid - controlled access!
 System.out.println(s.getAge());  // 20
 ```
@@ -130,7 +130,7 @@ public class BankAccount {
 }
 
 BankAccount account = new BankAccount();
-account.withdraw(500);           // âœ… Allowed
+account.withdraw(500);           // Allowed
 account.deposit(-100);           // âŒ Rejected - validation!
 System.out.println(account.getBalance());  // 500
 ```
@@ -190,12 +190,13 @@ System.out.println(p.getEmail());   // alice@example.com
 
 ## Key Takeaways
 
-- âœ… Use private for sensitive data
-- âœ… Provide public getters and setters
-- âœ… Validate in setters
-- âœ… Hide implementation details
-- âœ… Control what users can access
-- âœ… Encapsulation = data safety
+- Use private for sensitive data
+- Provide public getters and setters
+- Validate in setters
+- Hide implementation details
+- Control what users can access
+- Encapsulation = data safety
 
 ---
+
 

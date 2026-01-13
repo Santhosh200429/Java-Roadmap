@@ -412,15 +412,16 @@ public class BankTransfer {
 
 ## Key Takeaways
 
-- âœ… Java always passes by value
-- âœ… For primitives: copy of value
-- âœ… For objects: copy of reference
-- âœ… Object contents can be modified
-- âœ… Reassigning parameter doesn't affect original reference
-- âœ… Strings are immutable (reassignment creates new object)
-- âœ… Arrays/Collections can be modified
-- âœ… This is why null checks sometimes fail
-- âœ… Understanding this prevents common bugs
+- Java always passes by value
+- For primitives: copy of value
+- For objects: copy of reference
+- Object contents can be modified
+- Reassigning parameter doesn't affect original reference
+- Strings are immutable (reassignment creates new object)
+- Arrays/Collections can be modified
+- This is why null checks sometimes fail
+- Understanding this prevents common bugs
 
 ---
+
 

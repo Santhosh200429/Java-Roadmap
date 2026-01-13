@@ -485,16 +485,17 @@ if (value != null) {
 
 ## Key Takeaways
 
-- âœ… Arrays are fixed-size, faster, support primitives
-- âœ… ArrayList is dynamic, flexible, object-only
-- âœ… Use Array for performance-critical code with known size
-- âœ… Use ArrayList for convenience and unknown size
-- âœ… Array random access: O(1)
-- âœ… ArrayList insertion/deletion: O(n)
-- âœ… Arrays don't grow; ArrayList does automatically
-- âœ… ArrayList has no wrapper for primitives (use Integer, Long, etc.)
-- âœ… Never modify collection while iterating (use Iterator)
-- âœ… ArrayList is usually better for normal code; Array for performance
+- Arrays are fixed-size, faster, support primitives
+- ArrayList is dynamic, flexible, object-only
+- Use Array for performance-critical code with known size
+- Use ArrayList for convenience and unknown size
+- Array random access: O(1)
+- ArrayList insertion/deletion: O(n)
+- Arrays don't grow; ArrayList does automatically
+- ArrayList has no wrapper for primitives (use Integer, Long, etc.)
+- Never modify collection while iterating (use Iterator)
+- ArrayList is usually better for normal code; Array for performance
 
 ---
+
 

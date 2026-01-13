@@ -160,7 +160,7 @@ stringList.getClass() == intList.getClass();  // true!
 This is why you can't do:
 ```java
 if (obj instanceof List<String>) { }  // âŒ Error - can't check generic type
-if (obj instanceof List) { }          // âœ… OK
+if (obj instanceof List) { }          // OK
 ```
 
 ## Benefits of Generics
@@ -203,12 +203,13 @@ public class GenericExample {
 
 ## Key Takeaways
 
-- âœ… Generics provide type safety
-- âœ… Specify type in angle brackets: List<Type>
-- âœ… No casting needed with generics
-- âœ… Can create generic methods and classes
-- âœ… Wildcard ? allows flexible types
-- âœ… Always use generics for collections
+- Generics provide type safety
+- Specify type in angle brackets: List<Type>
+- No casting needed with generics
+- Can create generic methods and classes
+- Wildcard ? allows flexible types
+- Always use generics for collections
 
 ---
+
 

@@ -345,14 +345,15 @@ task printInfo {
 
 ## Key Takeaways
 
-- âœ… Gradle simpler than Maven (less XML)
-- âœ… `build.gradle` uses Groovy/Kotlin syntax
-- âœ… `gradle build` compiles and packages
-- âœ… `gradle run` executes application
-- âœ… `gradle test` runs tests
-- âœ… Dependency scopes: implementation, testImplementation, runtimeOnly
-- âœ… Gradle Wrapper ensures consistent version
-- âœ… Tasks can depend on other tasks
+- Gradle simpler than Maven (less XML)
+- `build.gradle` uses Groovy/Kotlin syntax
+- `gradle build` compiles and packages
+- `gradle run` executes application
+- `gradle test` runs tests
+- Dependency scopes: implementation, testImplementation, runtimeOnly
+- Gradle Wrapper ensures consistent version
+- Tasks can depend on other tasks
 
 ---
+
 

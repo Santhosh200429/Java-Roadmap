@@ -510,7 +510,7 @@ System.out.println(p.value);  // Output: 10 (NOT 20!)
 ## When to Use Dynamic Binding
 
 ```java
-// âœ… Use dynamic binding for:
+// Use dynamic binding for:
 
 // 1. Strategy pattern
 interface Strategy {
@@ -554,15 +554,16 @@ v.start();  // Dynamic binding!
 
 ## Key Takeaways
 
-- âœ… Static binding: compile-time, method clearly known
-- âœ… Dynamic binding: runtime, actual object type decides
-- âœ… Static methods: always static binding
-- âœ… Private methods: always static binding
-- âœ… Final methods: always static binding
-- âœ… Instance methods: usually dynamic binding
-- âœ… Variables: always static binding
-- âœ… Use dynamic binding for flexibility and extensibility
-- âœ… Modern JVMs optimize dynamic calls efficiently
+- Static binding: compile-time, method clearly known
+- Dynamic binding: runtime, actual object type decides
+- Static methods: always static binding
+- Private methods: always static binding
+- Final methods: always static binding
+- Instance methods: usually dynamic binding
+- Variables: always static binding
+- Use dynamic binding for flexibility and extensibility
+- Modern JVMs optimize dynamic calls efficiently
 
 ---
+
 

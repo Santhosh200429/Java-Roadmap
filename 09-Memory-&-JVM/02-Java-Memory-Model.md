@@ -504,16 +504,17 @@ public class ImmutableExample {
 
 ## Key Takeaways
 
-- âœ… Memory Model ensures multi-thread safety
-- âœ… Without it: unpredictable behavior on multi-core
-- âœ… Happens-Before relationship: guarantees visibility
-- âœ… volatile: visibility without locking (fast)
-- âœ… synchronized: visibility + atomicity (safe)
-- âœ… AtomicInteger: lock-free atomicity (fastest)
-- âœ… Data races cause unpredictable results
-- âœ… volatile doesn't guarantee atomicity
-- âœ… Immutability eliminates visibility issues
-- âœ… Final fields always visible
+- Memory Model ensures multi-thread safety
+- Without it: unpredictable behavior on multi-core
+- Happens-Before relationship: guarantees visibility
+- volatile: visibility without locking (fast)
+- synchronized: visibility + atomicity (safe)
+- AtomicInteger: lock-free atomicity (fastest)
+- Data races cause unpredictable results
+- volatile doesn't guarantee atomicity
+- Immutability eliminates visibility issues
+- Final fields always visible
 
 ---
+
 

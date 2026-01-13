@@ -312,7 +312,7 @@ nums.forEach(n ->
     System.out.println(x);
 );
 
-// âœ… RIGHT
+// RIGHT
 nums.forEach(n -> {
     int x = n * 2;
     System.out.println(x);
@@ -324,7 +324,7 @@ nums.forEach(n -> {
 // âŒ WRONG
 Function<Integer, Integer> square = x -> { x * x; };
 
-// âœ… RIGHT
+// RIGHT
 Function<Integer, Integer> square = x -> x * x;
 // OR
 Function<Integer, Integer> square = x -> { return x * x; };
@@ -335,19 +335,20 @@ Function<Integer, Integer> square = x -> { return x * x; };
 // âŒ WRONG - Predicate returns boolean, not String
 Predicate<Integer> check = n -> "value";
 
-// âœ… RIGHT
+// RIGHT
 Predicate<Integer> check = n -> n > 0;
 ```
 
 ## Key Takeaways
 
-- âœ… Lambdas are short, anonymous functions
-- âœ… `(params) -> body` syntax
-- âœ… Work with functional interfaces
-- âœ… Often used with Streams
-- âœ… Method references can simplify lambdas
-- âœ… Cleaner code than anonymous classes
-- âœ… Braces needed for multiple statements
+- Lambdas are short, anonymous functions
+- `(params) -> body` syntax
+- Work with functional interfaces
+- Often used with Streams
+- Method references can simplify lambdas
+- Cleaner code than anonymous classes
+- Braces needed for multiple statements
 
 ---
+
 

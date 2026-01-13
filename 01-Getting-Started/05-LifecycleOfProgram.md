@@ -136,10 +136,10 @@ public class HelloWorld {
 STEP 2: COMPILATION (javac HelloWorld.java)
 â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
 â”‚ Compiler checks:                   â”‚
-â”‚ âœ… Class name matches filename     â”‚
-â”‚ âœ… main method exists              â”‚
-â”‚ âœ… System class available          â”‚
-â”‚ âœ… Syntax is correct               â”‚
+â”‚ Class name matches filename     â”‚
+â”‚ main method exists              â”‚
+â”‚ System class available          â”‚
+â”‚ Syntax is correct               â”‚
 â”‚                                    â”‚
 â”‚ Result: HelloWorld.class created   â”‚
 â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
@@ -159,10 +159,10 @@ STEP 3: LOADING (JVM loads HelloWorld.class)
 STEP 4: LINKING (JVM links references)
 â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
 â”‚ JVM checks:                        â”‚
-â”‚ âœ… System class exists             â”‚
-â”‚ âœ… out field exists on System      â”‚
-â”‚ âœ… println method exists on out    â”‚
-â”‚ âœ… String type is correct          â”‚
+â”‚ System class exists             â”‚
+â”‚ out field exists on System      â”‚
+â”‚ println method exists on out    â”‚
+â”‚ String type is correct          â”‚
 â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
@@ -311,7 +311,7 @@ public class Calculator {
 - javac compiles Calculator.java
 - Creates Calculator.class with bytecode
 - Checks: variables declared? types match? valid syntax?
-- Result: âœ… Compilation successful
+- Result: Compilation successful
 
 **Stage 3: Loading**
 - JVM reads Calculator.class
@@ -320,9 +320,9 @@ public class Calculator {
 
 **Stage 4: Linking**
 - JVM verifies:
-  - âœ… Calculator class is valid
-  - âœ… int type exists
-  - âœ… System.out.println() exists
+  - Calculator class is valid
+  - int type exists
+  - System.out.println() exists
 
 **Stage 5: Execution**
 ```
@@ -376,14 +376,15 @@ Now that you understand how programs execute, we'll learn about **variables** - 
 
 ## Key Takeaways
 
-- âœ… Compilation converts .java to .class bytecode
-- âœ… JVM loads and executes bytecode
-- âœ… Bytecode makes Java "write once, run anywhere"
-- âœ… Compilation errors caught before running
-- âœ… Runtime errors happen during execution
-- âœ… Logic errors are hardest to find
-- âœ… JVM optimizes code as it runs
-- âœ… Always fix compilation errors first!
+- Compilation converts .java to .class bytecode
+- JVM loads and executes bytecode
+- Bytecode makes Java "write once, run anywhere"
+- Compilation errors caught before running
+- Runtime errors happen during execution
+- Logic errors are hardest to find
+- JVM optimizes code as it runs
+- Always fix compilation errors first!
 
 ---
+
 

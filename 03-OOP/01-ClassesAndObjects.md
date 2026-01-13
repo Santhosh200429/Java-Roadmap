@@ -280,7 +280,7 @@ Balance: $1300.0
 
 ```java
 Dog dog = Dog();      // âŒ Error - missing 'new'
-Dog dog = new Dog();  // âœ… Correct
+Dog dog = new Dog();  // Correct
 ```
 
 ### Mistake 2: Objects vs Classes
@@ -288,7 +288,7 @@ Dog dog = new Dog();  // âœ… Correct
 ```java
 String name;  // This is a variable (holds object reference)
 String = "John";  // âŒ Can't assign to class, only to objects
-name = "John";  // âœ… Assign to variable
+name = "John";  // Assign to variable
 ```
 
 ### Mistake 3: Not Initializing Object
@@ -297,7 +297,7 @@ name = "John";  // âœ… Assign to variable
 Dog dog;  // Declared but not created
 dog.name = "Buddy";  // âŒ Error - dog is null
 dog = new Dog();  // Create object
-dog.name = "Buddy";  // âœ… Now works
+dog.name = "Buddy";  // Now works
 ```
 
 ## Class Visibility and Modifiers
@@ -305,7 +305,7 @@ dog.name = "Buddy";  // âœ… Now works
 ### public vs default
 
 ```java
-public class Dog { }        // âœ… Can use from anywhere
+public class Dog { }        // Can use from anywhere
 class Dog { }              // Can use only in same package
 ```
 
@@ -315,18 +315,19 @@ For now, use `public` for everything.
 
 ## Key Takeaways
 
-- âœ… Class = blueprint, Object = instance of class
-- âœ… Properties store data (state)
-- âœ… Methods define actions (behavior)
-- âœ… Constructor initializes objects
-- âœ… Use `new` keyword to create objects
-- âœ… Properties accessed with `.` notation
-- âœ… Methods called with `.` notation
-- âœ… Each object has its own copy of properties
+- Class = blueprint, Object = instance of class
+- Properties store data (state)
+- Methods define actions (behavior)
+- Constructor initializes objects
+- Use `new` keyword to create objects
+- Properties accessed with `.` notation
+- Methods called with `.` notation
+- Each object has its own copy of properties
 
 ## Next Steps
 
 Learn about [Attributes and Methods](./02-AttributesAndMethods.md) to deepen your understanding.
 
 ---
+
 

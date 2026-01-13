@@ -20,8 +20,8 @@ byte â†’ short â†’ int â†’ long â†’ float â†’ double
 **Examples**:
 ```java
 int number = 100;
-long bigNumber = number;        // âœ… Automatic - int to long
-double decimal = 50;            // âœ… Automatic - int to double
+long bigNumber = number;        // Automatic - int to long
+double decimal = 50;            // Automatic - int to double
 float price = 19.99f;           // Explicit float needed for decimals
 
 System.out.println(bigNumber);  // 100
@@ -132,7 +132,7 @@ Fahrenheit (rounded): 77
 double result = 10.5;
 int value = result;  // Error - can't implicit cast
 
-// âœ… Explicit cast - but lose decimals
+// Explicit cast - but lose decimals
 int value = (int) result;  // Value is 10
 ```
 
@@ -143,7 +143,7 @@ String text = "Hello";
 int number = Integer.parseInt(text);  // âŒ Crash! "Hello" isn't a number
 
 String text2 = "25";
-int number2 = Integer.parseInt(text2);  // âœ… Works - "25" is a number
+int number2 = Integer.parseInt(text2);  // Works - "25" is a number
 ```
 
 ### Mistake 3: Forgetting Cast Operator
@@ -151,22 +151,23 @@ int number2 = Integer.parseInt(text2);  // âœ… Works - "25" is a number
 ```java
 double decimal = 10.5;
 int number = decimal;  // âŒ Error - must cast explicitly
-int number = (int) decimal;  // âœ… Correct
+int number = (int) decimal;  // Correct
 ```
 
 ## Key Takeaways
 
-- âœ… Widening (small â†’ large): Automatic, safe
-- âœ… Narrowing (large â†’ small): Explicit (int), risky
-- âœ… Use parentheses for casting: (type) value
-- âœ… Integer division loses decimals
-- âœ… Large values overflow when cast to small types
-- âœ… String to int: Integer.parseInt()
-- âœ… int to String: String.valueOf()
+- Widening (small â†’ large): Automatic, safe
+- Narrowing (large â†’ small): Explicit (int), risky
+- Use parentheses for casting: (type) value
+- Integer division loses decimals
+- Large values overflow when cast to small types
+- String to int: Integer.parseInt()
+- int to String: String.valueOf()
 
 ## Next Steps
 
 Proceed to [Math Operations](./05-MathOperations.md) for more advanced calculations.
 
 ---
+
 

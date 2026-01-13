@@ -34,7 +34,7 @@ public class ClassName {
 ### 1. Every Statement Ends with a Semicolon (;)
 
 ```java
-System.out.println("Hello");  // âœ… Correct
+System.out.println("Hello");  // Correct
 System.out.println("Hello")   // âŒ Wrong - missing semicolon
 ```
 
@@ -45,7 +45,7 @@ The semicolon tells Java "this instruction is complete."
 ```java
 println("test");    // âŒ Wrong - must be println
 PrintLn("test");    // âŒ Wrong - must be println
-System.out.println("test");  // âœ… Correct
+System.out.println("test");  // Correct
 ```
 
 A tiny capitalization difference = big error!
@@ -156,7 +156,7 @@ System.out.println("Line 1\nLine 2\nLine 3");
 - No spaces or underscores
 
 ```java
-public class HelloWorld { }      // âœ… Correct
+public class HelloWorld { }      // Correct
 public class helloWorld { }      // âŒ Unconventional
 public class hello_world { }     // âŒ Unconventional
 public class HELLOWORLD { }      // âŒ Not used
@@ -169,7 +169,7 @@ public class HELLOWORLD { }      // âŒ Not used
 - First letter of first word lowercase
 
 ```java
-int studentAge = 20;         // âœ… Correct
+int studentAge = 20;         // Correct
 int StudentAge = 20;         // âŒ Wrong convention
 int student_age = 20;        // âŒ Wrong convention
 int STUDENT_AGE = 20;        // âŒ Only for constants
@@ -180,7 +180,7 @@ int STUDENT_AGE = 20;        // âŒ Only for constants
 Like variables - start lowercase, capitalize each new word:
 
 ```java
-public void calculateTotal() { }   // âœ… Correct
+public void calculateTotal() { }   // Correct
 public void CalculateTotal() { }   // âŒ Wrong
 ```
 
@@ -192,7 +192,7 @@ Here are mistakes beginners make and how to fix them:
 
 ```java
 System.out.println("Hello")  // âŒ Missing semicolon
-System.out.println("Hello"); // âœ… Fixed
+System.out.println("Hello"); // Fixed
 ```
 
 **IDE Hint**: Red squiggly line appears
@@ -202,7 +202,7 @@ System.out.println("Hello"); // âœ… Fixed
 ```java
 // File: HelloWorld.java
 public class helloWorld { }  // âŒ Doesn't match filename
-public class HelloWorld { }  // âœ… Matches filename
+public class HelloWorld { }  // Matches filename
 ```
 
 **Rule**: Class name MUST match filename exactly.
@@ -222,7 +222,7 @@ public class Test {
 
 ```java
 System.out.printl("Hello");      // âŒ printl (typo)
-System.out.println("Hello");     // âœ… println
+System.out.println("Hello");     // println
 ```
 
 **Case Sensitive!** One letter wrong = error.
@@ -303,7 +303,7 @@ Your IDE usually does this automatically.
 int x = 25;
 String n = "John";
 
-// âœ… Good names
+// Good names
 int studentAge = 25;
 String name = "John";
 ```
@@ -314,7 +314,7 @@ String name = "John";
 // âŒ Hard to read
 System.out.println("A"); System.out.println("B"); System.out.println("C");
 
-// âœ… Easy to read
+// Easy to read
 System.out.println("A");
 System.out.println("B");
 System.out.println("C");
@@ -326,7 +326,7 @@ System.out.println("C");
 // âŒ Obvious comment (doesn't help)
 int age = 25;  // Set age to 25
 
-// âœ… Helpful comment
+// Helpful comment
 int age = 25;  // Student must be at least 25 to enroll
 ```
 
@@ -406,20 +406,21 @@ public class Introduction {
 
 ## Key Takeaways
 
-- âœ… Every Java program needs a class and main method
-- âœ… Every statement ends with semicolon (;)
-- âœ… Java is case-sensitive - spelling matters!
-- âœ… Braces { } must match - opening and closing
-- âœ… Comments don't execute - they're for humans
-- âœ… Use meaningful names and proper indentation
-- âœ… System.out.println() displays output
-- âœ… Strings go in double quotes ("text")
+- Every Java program needs a class and main method
+- Every statement ends with semicolon (;)
+- Java is case-sensitive - spelling matters!
+- Braces { } must match - opening and closing
+- Comments don't execute - they're for humans
+- Use meaningful names and proper indentation
+- System.out.println() displays output
+- Strings go in double quotes ("text")
 
 ## Next Steps
 
-1. âœ… You understand basic syntax
+1. You understand basic syntax
 2. â­ï¸ Next: [Variables and Data Types](../2-Core-Java/01-VariablesAndDataTypes.md)
 
 ---
 
 **Master the basics, and everything else becomes easier!**
+

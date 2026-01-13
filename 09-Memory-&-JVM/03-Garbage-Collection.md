@@ -300,7 +300,7 @@ public void badMethod() {
     }
 }
 
-// âœ… Better approach
+// Better approach
 StringBuilder sb = new StringBuilder();
 for (int i = 0; i < 1_000_000; i++) {
     sb.append("Value: ").append(i).append("\n");
@@ -317,7 +317,7 @@ public void addToCache(String value) {
     cache.add(value);  // Never removed!
 }
 
-// âœ… Better - use LinkedHashMap with max size
+// Better - use LinkedHashMap with max size
 static Map<String, String> cache = new LinkedHashMap<String, String>(100) {
     protected boolean removeEldestEntry(Map.Entry eldest) {
         return size() > 100;
@@ -338,7 +338,7 @@ class Node {
     }
 }
 
-// âœ… Better - use try-with-resources
+// Better - use try-with-resources
 try (Resource resource = new Resource()) {
     // Use resource
     // Automatically closed and GC'd
@@ -394,16 +394,17 @@ public class StreamingProcessor {
 
 ## Key Takeaways
 
-- âœ… GC automatically reclaims unreachable memory
-- âœ… Young generation collects frequently and fast
-- âœ… Old generation collects rarely and slowly
-- âœ… G1 is good default for most applications
-- âœ… ZGC for ultra-low latency requirements
-- âœ… Avoid creating excessive objects
-- âœ… Avoid memory leaks and long-lived references
-- âœ… Monitor GC with logging and tools
-- âœ… Tune heap size based on application needs
-- âœ… Streaming APIs reduce GC pressure
+- GC automatically reclaims unreachable memory
+- Young generation collects frequently and fast
+- Old generation collects rarely and slowly
+- G1 is good default for most applications
+- ZGC for ultra-low latency requirements
+- Avoid creating excessive objects
+- Avoid memory leaks and long-lived references
+- Monitor GC with logging and tools
+- Tune heap size based on application needs
+- Streaming APIs reduce GC pressure
 
 ---
+
 

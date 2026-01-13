@@ -360,7 +360,7 @@ public class RequestHandler {
 // âŒ WRONG - creates string even if DEBUG disabled
 logger.debug("User: " + user + ", Amount: " + amount);
 
-// âœ… RIGHT - string created only if level enabled
+// RIGHT - string created only if level enabled
 logger.debug("User: {}, Amount: {}", user, amount);
 ```
 
@@ -370,7 +370,7 @@ logger.debug("User: {}, Amount: {}", user, amount);
 // âŒ WRONG - logs password
 logger.info("User login: username={}, password={}", username, password);
 
-// âœ… RIGHT - don't log sensitive data
+// RIGHT - don't log sensitive data
 logger.info("User login attempt: username={}", username);
 ```
 
@@ -384,7 +384,7 @@ try {
     logger.error("Error");  // No exception details!
 }
 
-// âœ… RIGHT - include exception
+// RIGHT - include exception
 try {
     doSomething();
 } catch (Exception e) {
@@ -395,7 +395,7 @@ try {
 ## Performance Tips
 
 ```java
-// âœ… Lazy evaluation - only creates message if enabled
+// Lazy evaluation - only creates message if enabled
 logger.debug("Processing {} items", expensiveCalculation());
 
 // âŒ Eager - always calculates even if not logged
@@ -406,15 +406,16 @@ if (logger.isDebugEnabled()) {
 
 ## Key Takeaways
 
-- âœ… Use SLF4J API with Logback implementation
-- âœ… One logger per class: `LoggerFactory.getLogger(ClassName.class)`
-- âœ… Log levels: TRACE < DEBUG < INFO < WARN < ERROR
-- âœ… Use placeholders: `logger.info("Message: {}", var)`
-- âœ… Configure via properties or XML files
-- âœ… Never log passwords or sensitive data
-- âœ… Always include exceptions: `logger.error("Message", exception)`
-- âœ… Use file rolling to manage log size
-- âœ… Set appropriate levels (DEBUG for dev, INFO for prod)
+- Use SLF4J API with Logback implementation
+- One logger per class: `LoggerFactory.getLogger(ClassName.class)`
+- Log levels: TRACE < DEBUG < INFO < WARN < ERROR
+- Use placeholders: `logger.info("Message: {}", var)`
+- Configure via properties or XML files
+- Never log passwords or sensitive data
+- Always include exceptions: `logger.error("Message", exception)`
+- Use file rolling to manage log size
+- Set appropriate levels (DEBUG for dev, INFO for prod)
 
 ---
+
 

@@ -294,13 +294,14 @@ public void testAdd() {
 
 ## Key Takeaways
 
-- âœ… JUnit tests verify code correctness
-- âœ… @Test marks test methods
-- âœ… Assertions check expected values
-- âœ… @Before/@After setup and teardown
-- âœ… Test exceptions with @Test(expected=...)
-- âœ… Run tests with `mvn test`
-- âœ… Aim for high code coverage
+- JUnit tests verify code correctness
+- @Test marks test methods
+- Assertions check expected values
+- @Before/@After setup and teardown
+- Test exceptions with @Test(expected=...)
+- Run tests with `mvn test`
+- Aim for high code coverage
 
 ---
+
 

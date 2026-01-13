@@ -325,10 +325,10 @@ public class FileAppender {
 
 | Task | Stream | Reader/Writer |
 |------|--------|---------------|
-| Binary files | âœ… Use Stream | âŒ No |
-| Text files | âš ï¸ Works but harder | âœ… Use Reader/Writer |
-| Character encoding | âŒ Not automatic | âœ… Automatic |
-| Performance | âš ï¸ Slower | âœ… Faster |
+| Binary files | Use Stream | âŒ No |
+| Text files | âš ï¸ Works but harder | Use Reader/Writer |
+| Character encoding | âŒ Not automatic | Automatic |
+| Performance | âš ï¸ Slower | Faster |
 
 ## Common Mistakes
 
@@ -344,7 +344,7 @@ public void readFile() throws IOException {
     // Never closed! File locked, memory leak
 }
 
-// âœ… RIGHT - try-with-resources
+// RIGHT - try-with-resources
 public void readFile() throws IOException {
     try (BufferedReader br = new BufferedReader(
         new FileReader("data.txt"))) {
@@ -359,7 +359,7 @@ public void readFile() throws IOException {
 // âŒ WRONG - assumes default encoding
 FileReader fr = new FileReader("utf8_file.txt");
 
-// âœ… RIGHT - specify encoding
+// RIGHT - specify encoding
 InputStreamReader isr = new InputStreamReader(
     new FileInputStream("utf8_file.txt"), 
     StandardCharsets.UTF_8
@@ -378,7 +378,7 @@ String line = br.readLine();
 // Crashes if file empty!
 System.out.println(line.length());
 
-// âœ… RIGHT
+// RIGHT
 String line;
 while ((line = br.readLine()) != null) {
     System.out.println(line.length());
@@ -411,13 +411,14 @@ public class ModernFileIO {
 
 ## Key Takeaways
 
-- âœ… Byte streams for binary, Reader/Writer for text
-- âœ… Use BufferedInputStream/Reader for efficiency
-- âœ… Always close resources (use try-with-resources)
-- âœ… Handle EOF condition (-1 or null)
-- âœ… Modern Files utility for simple operations
-- âœ… Specify encoding for text files
-- âœ… Append mode for logging files
+- Byte streams for binary, Reader/Writer for text
+- Use BufferedInputStream/Reader for efficiency
+- Always close resources (use try-with-resources)
+- Handle EOF condition (-1 or null)
+- Modern Files utility for simple operations
+- Specify encoding for text files
+- Append mode for logging files
 
 ---
+
 

@@ -312,7 +312,7 @@ public class PerformanceTest {
 
 ## When to Use Virtual Threads
 
-### âœ… Perfect For:
+### Perfect For:
 - I/O-bound applications (network, database, files)
 - High-concurrency scenarios (10,000+ simultaneous operations)
 - Web servers and microservices
@@ -391,7 +391,7 @@ executor.submit(() -> {
     }
 });
 
-// âœ… RIGHT - use ReentrantLock
+// RIGHT - use ReentrantLock
 Lock lock = new ReentrantLock();
 executor.submit(() -> {
     lock.lock();
@@ -414,7 +414,7 @@ executor.submit(() -> {
     }
 });
 
-// âœ… RIGHT - use fixed thread pool for CPU work
+// RIGHT - use fixed thread pool for CPU work
 ExecutorService executor = Executors.newFixedThreadPool(
     Runtime.getRuntime().availableProcessors()
 );
@@ -428,7 +428,7 @@ for (int i = 0; i < 10_000_000; i++) {
     Thread.startVirtualThread(() -> doWork());  // OutOfMemory!
 }
 
-// âœ… RIGHT - use executor to manage
+// RIGHT - use executor to manage
 ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
 for (int i = 0; i < 10_000_000; i++) {
     executor.submit(() -> doWork());  // Managed properly
@@ -437,14 +437,15 @@ for (int i = 0; i < 10_000_000; i++) {
 
 ## Key Takeaways
 
-- âœ… Virtual threads are lightweight, JVM-managed threads
-- âœ… Enable millions of concurrent tasks easily
-- âœ… Perfect for I/O-bound applications
-- âœ… Use `Executors.newVirtualThreadPerTaskExecutor()`
-- âœ… Not for CPU-intensive work
-- âœ… Avoid synchronized blocks (causes pinning)
-- âœ… Massive scalability improvement over platform threads
-- âœ… Java 21+ feature
+- Virtual threads are lightweight, JVM-managed threads
+- Enable millions of concurrent tasks easily
+- Perfect for I/O-bound applications
+- Use `Executors.newVirtualThreadPerTaskExecutor()`
+- Not for CPU-intensive work
+- Avoid synchronized blocks (causes pinning)
+- Massive scalability improvement over platform threads
+- Java 21+ feature
 
 ---
+
 

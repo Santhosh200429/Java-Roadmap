@@ -459,7 +459,7 @@ public class StudentController {
 // âŒ WRONG
 @ public void method() { }
 
-// âœ… RIGHT
+// RIGHT
 @Override
 public void method() { }
 ```
@@ -470,28 +470,29 @@ public void method() { }
 @Override
 private int age;
 
-// âœ… RIGHT - @Override on method
+// RIGHT - @Override on method
 @Override
 public void someMethod() { }
 ```
 
 ### 3. Missing parameters in custom annotation
 ```java
-@Author(name = "Alice")  // âœ… OK - date has default
+@Author(name = "Alice")  // OK - date has default
 
 @Author()  // âŒ ERROR - name is required
 ```
 
 ## Key Takeaways
 
-- âœ… Annotations provide metadata about code
-- âœ… `@Override` marks method override
-- âœ… `@Deprecated` marks outdated code
-- âœ… `@SuppressWarnings` suppresses compiler warnings
-- âœ… Spring annotations: `@Component`, `@Service`, `@Repository`
-- âœ… `@Autowired` injects dependencies
-- âœ… Custom annotations can be created
-- âœ… Annotations don't affect code execution directly
+- Annotations provide metadata about code
+- `@Override` marks method override
+- `@Deprecated` marks outdated code
+- `@SuppressWarnings` suppresses compiler warnings
+- Spring annotations: `@Component`, `@Service`, `@Repository`
+- `@Autowired` injects dependencies
+- Custom annotations can be created
+- Annotations don't affect code execution directly
 
 ---
+
 

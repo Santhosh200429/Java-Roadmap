@@ -370,7 +370,7 @@ Stream<Integer> stream = nums.stream();
 stream.filter(n -> n > 2);
 stream.map(n -> n * 2);  // ERROR: stream closed
 
-// âœ… RIGHT
+// RIGHT
 nums.stream()
     .filter(n -> n > 2)
     .map(n -> n * 2)
@@ -383,7 +383,7 @@ nums.stream()
 nums.stream()
     .filter(n -> n > 2);  // Only intermediate, does nothing
 
-// âœ… RIGHT
+// RIGHT
 nums.stream()
     .filter(n -> n > 2)
     .forEach(System.out::println);  // Terminal operation
@@ -395,20 +395,21 @@ nums.stream()
 nums.stream()
     .forEach(n -> System.out.println(n));  // Impure
 
-// âœ… Better
+// Better
 nums.stream()
     .forEach(System.out::println);
 ```
 
 ## Key Takeaways
 
-- âœ… Streams process collections functionally
-- âœ… Intermediate operations: filter, map, sorted
-- âœ… Terminal operations: collect, forEach, reduce
-- âœ… Lazy evaluation - intermediate ops don't execute until terminal op
-- âœ… Pipelines can be chained
-- âœ… Can't reuse a stream
-- âœ… Great for data transformation
+- Streams process collections functionally
+- Intermediate operations: filter, map, sorted
+- Terminal operations: collect, forEach, reduce
+- Lazy evaluation - intermediate ops don't execute until terminal op
+- Pipelines can be chained
+- Can't reuse a stream
+- Great for data transformation
 
 ---
+
 

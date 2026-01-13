@@ -467,7 +467,7 @@ public void testListAssertions() {
 // âŒ WRONG - doesn't check status
 Response response = get("/students/1").then().extract().response();
 
-// âœ… RIGHT - verify status first
+// RIGHT - verify status first
 get("/students/1")
     .then()
     .statusCode(200)
@@ -485,7 +485,7 @@ given()
     .then()
     .statusCode(201);
 
-// âœ… RIGHT - wait for consistency
+// RIGHT - wait for consistency
 Thread.sleep(100);
 get("/students/1")
     .then()
@@ -500,7 +500,7 @@ get("/students/123")
     .then()
     .statusCode(200);
 
-// âœ… RIGHT - create test data
+// RIGHT - create test data
 int id = given()
     .body(newStudent)
     .post("/students")
@@ -524,13 +524,14 @@ get("/students/" + id)
 
 ## Key Takeaways
 
-- âœ… REST-Assured provides fluent API for testing REST endpoints
-- âœ… `given()` â†’ `when()` â†’ `then()` pattern for readability
-- âœ… Verify status codes, headers, and response body
-- âœ… Support for authentication, path params, query params
-- âœ… Extract data from responses for chaining tests
-- âœ… Test error cases and edge cases
-- âœ… Create test data, don't rely on existing data
+- REST-Assured provides fluent API for testing REST endpoints
+- `given()` â†’ `when()` â†’ `then()` pattern for readability
+- Verify status codes, headers, and response body
+- Support for authentication, path params, query params
+- Extract data from responses for chaining tests
+- Test error cases and edge cases
+- Create test data, don't rely on existing data
 
 ---
+
 

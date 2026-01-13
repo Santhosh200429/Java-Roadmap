@@ -5,11 +5,11 @@
 **Spring Data JPA** simplifies database access by eliminating boilerplate code. Just define an interface - Spring creates the implementation automatically!
 
 **Benefits over plain Hibernate**:
-- âœ… No implementation needed
-- âœ… Common queries already implemented
-- âœ… Method name conventions for queries
-- âœ… Pagination and sorting built-in
-- âœ… Clean, type-safe code
+- No implementation needed
+- Common queries already implemented
+- Method name conventions for queries
+- Pagination and sorting built-in
+- Clean, type-safe code
 
 ## JpaRepository Interface
 
@@ -447,7 +447,7 @@ class ErrorResponse {
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 }
 
-// âœ… RIGHT
+// RIGHT
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 }
@@ -459,7 +459,7 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 public interface StudentRepository extends JpaRepository<Student, String> {
 }
 
-// âœ… RIGHT
+// RIGHT
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 }
 ```
@@ -470,7 +470,7 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 @Query("SELECT s FROM Student s WHERE s.name = :name")
 List<Student> findByName(String name);  // name not bound
 
-// âœ… RIGHT
+// RIGHT
 @Query("SELECT s FROM Student s WHERE s.name = :name")
 List<Student> findByName(@Param("name") String name);
 ```
@@ -486,13 +486,14 @@ List<Student> findByName(@Param("name") String name);
 
 ## Key Takeaways
 
-- âœ… Extend JpaRepository to get CRUD operations
-- âœ… Method naming conventions create queries automatically
-- âœ… @Query for complex custom queries
-- âœ… Pagination with Page and Pageable
-- âœ… Service layer between controller and repository
-- âœ… Exception handling for robust code
-- âœ… Cleaner than plain JDBC/Hibernate
+- Extend JpaRepository to get CRUD operations
+- Method naming conventions create queries automatically
+- @Query for complex custom queries
+- Pagination with Page and Pageable
+- Service layer between controller and repository
+- Exception handling for robust code
+- Cleaner than plain JDBC/Hibernate
 
 ---
+
 

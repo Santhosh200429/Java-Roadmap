@@ -429,7 +429,7 @@ server.servlet.session.timeout=30m
 // âŒ WRONG
 user.setPassword("password123");  // Plain text!
 
-// âœ… RIGHT
+// RIGHT
 PasswordEncoder encoder = new BCryptPasswordEncoder();
 user.setPassword(encoder.encode("password123"));
 ```
@@ -440,7 +440,7 @@ user.setPassword(encoder.encode("password123"));
 // âŒ WRONG
 private String SECRET = "my-secret-key";
 
-// âœ… RIGHT
+// RIGHT
 @Value("${app.jwtSecret}")
 private String jwtSecret;  // From properties file
 ```
@@ -455,7 +455,7 @@ String username = Jwts.parser()
     .getBody()
     .getSubject();
 
-// âœ… RIGHT
+// RIGHT
 if (tokenProvider.validateToken(token)) {
     String username = tokenProvider.getUsernameFromToken(token);
 }
@@ -494,13 +494,14 @@ public class SecurityTest {
 
 ## Key Takeaways
 
-- âœ… Authentication verifies identity (login)
-- âœ… Authorization controls what authenticated users can do
-- âœ… Always encrypt passwords with BCrypt
-- âœ… JWT tokens enable stateless authentication
-- âœ… Use @PreAuthorize for role-based access control
-- âœ… Never expose secrets in code
-- âœ… Validate tokens before using them
+- Authentication verifies identity (login)
+- Authorization controls what authenticated users can do
+- Always encrypt passwords with BCrypt
+- JWT tokens enable stateless authentication
+- Use @PreAuthorize for role-based access control
+- Never expose secrets in code
+- Validate tokens before using them
 
 ---
+
 

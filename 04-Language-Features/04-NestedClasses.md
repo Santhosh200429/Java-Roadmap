@@ -27,7 +27,7 @@ public class OuterClass {
     // Static nested class
     public static class StaticNested {
         public void display() {
-            System.out.println(staticVar);  // âœ… Can access static
+            System.out.println(staticVar);  // Can access static
             // System.out.println(instanceVar);  // âŒ Can't access instance
         }
     }
@@ -111,8 +111,8 @@ public class Outer {
         private String innerVar = "inner";
         
         public void show() {
-            System.out.println(outerVar);   // âœ… Access outer instance
-            System.out.println(innerVar);   // âœ… Access own variable
+            System.out.println(outerVar);   // Access outer instance
+            System.out.println(innerVar);   // Access own variable
         }
     }
 }
@@ -183,7 +183,7 @@ public class Processor {
         // Local inner class - only exists in this method
         class LocalProcessor {
             public void execute() {
-                System.out.println(finalVar);  // âœ… Access final variables
+                System.out.println(finalVar);  // Access final variables
             }
         }
         
@@ -367,7 +367,7 @@ public void process() {
     }
 }
 
-// âœ… RIGHT
+// RIGHT
 public void process() {
     final String var = "value";  // Final
     
@@ -385,7 +385,7 @@ public void process() {
 // âŒ WRONG
 Outer.Inner inner = new Outer.Inner();  // No outer instance
 
-// âœ… RIGHT
+// RIGHT
 Outer outer = new Outer();
 Outer.Inner inner = outer.new Inner();  // Create with outer
 ```
@@ -401,13 +401,13 @@ button.setOnClickListener(new Button.ClickListener() {
     }
 });
 
-// âœ… SIMPLE - use lambda
+// SIMPLE - use lambda
 button.setOnClickListener(() -> doSomething());
 ```
 
 ## When to Use
 
-âœ… **Use Nested Classes for:**
+**Use Nested Classes for:**
 - Builder pattern
 - Event listeners and handlers
 - Comparison/filtering logic
@@ -420,13 +420,14 @@ button.setOnClickListener(() -> doSomething());
 
 ## Key Takeaways
 
-- âœ… Static nested class: standalone class inside another class
-- âœ… Member inner class: associated with outer instance
-- âœ… Local inner class: defined inside method
-- âœ… Anonymous inner class: no name, created inline
-- âœ… Local/anonymous classes can access final variables
-- âœ… Lambdas are preferred over anonymous classes now
-- âœ… Builder pattern uses static nested class
+- Static nested class: standalone class inside another class
+- Member inner class: associated with outer instance
+- Local inner class: defined inside method
+- Anonymous inner class: no name, created inline
+- Local/anonymous classes can access final variables
+- Lambdas are preferred over anonymous classes now
+- Builder pattern uses static nested class
 
 ---
+
 

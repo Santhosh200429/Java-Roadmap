@@ -117,12 +117,13 @@ public class StudentManager {
 
 ## Key Takeaways
 
-- âœ… Collections = flexible containers for objects
-- âœ… List = ordered, allows duplicates
-- âœ… Set = unique values, no duplicates
-- âœ… Map = key-value pairs
-- âœ… Use Collections instead of arrays for flexibility
-- âœ… Each has different performance characteristics
+- Collections = flexible containers for objects
+- List = ordered, allows duplicates
+- Set = unique values, no duplicates
+- Map = key-value pairs
+- Use Collections instead of arrays for flexibility
+- Each has different performance characteristics
 
 ---
+
 

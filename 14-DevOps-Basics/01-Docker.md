@@ -242,7 +242,7 @@ docker-compose ps
 # âŒ Large
 FROM openjdk:17
 
-# âœ… Smaller
+# Smaller
 FROM openjdk:17-jdk-slim
 ```
 
@@ -258,7 +258,7 @@ COPY --from=builder /build/target/*.jar app.jar
 
 ### 3. Cache Layers
 ```dockerfile
-# âœ… Dependencies cached separately
+# Dependencies cached separately
 FROM maven:3.8
 COPY pom.xml .
 RUN mvn dependency:go-offline
@@ -296,13 +296,14 @@ docker run -it myapp /bin/bash
 
 ## Key Takeaways
 
-- âœ… Docker packages application + dependencies
-- âœ… Dockerfile defines build instructions
-- âœ… Image is template, container is instance
-- âœ… `docker build` creates image
-- âœ… `docker run` starts container
-- âœ… Multi-stage builds reduce image size
-- âœ… Docker Compose manages multiple containers
+- Docker packages application + dependencies
+- Dockerfile defines build instructions
+- Image is template, container is instance
+- `docker build` creates image
+- `docker run` starts container
+- Multi-stage builds reduce image size
+- Docker Compose manages multiple containers
 
 ---
+
 

@@ -499,16 +499,17 @@ numbers.stream()
 
 ## Key Takeaways
 
-- âœ… Iterator traverses collections element by element
-- âœ… Use `hasNext()` to check if more elements exist
-- âœ… Use `next()` to get next element
-- âœ… Use `remove()` for safe removal during iteration
-- âœ… Never modify collection directly while iterating
-- âœ… Works with all Collections (List, Set, Queue, Map)
-- âœ… Enhanced for loop uses Iterator behind the scenes
-- âœ… ListIterator allows bidirectional traversal
-- âœ… Streams are modern alternative for functional style
-- âœ… ConcurrentModificationException thrown if collection modified
+- Iterator traverses collections element by element
+- Use `hasNext()` to check if more elements exist
+- Use `next()` to get next element
+- Use `remove()` for safe removal during iteration
+- Never modify collection directly while iterating
+- Works with all Collections (List, Set, Queue, Map)
+- Enhanced for loop uses Iterator behind the scenes
+- ListIterator allows bidirectional traversal
+- Streams are modern alternative for functional style
+- ConcurrentModificationException thrown if collection modified
 
 ---
+
 

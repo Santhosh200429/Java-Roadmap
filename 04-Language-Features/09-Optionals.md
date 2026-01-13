@@ -15,7 +15,7 @@ if (name != null) {
     System.out.println("Name not found");
 }
 
-// âœ… NEW WAY (safe and clean)
+// NEW WAY (safe and clean)
 Optional<String> name = getUserName(123);
 name.ifPresentOrElse(
     System.out::println,
@@ -115,7 +115,7 @@ maybeEmail.ifPresentOrElse(
 ```java
 Optional<String> value = Optional.of("Success");
 
-// âœ… Safe only when you know value exists
+// Safe only when you know value exists
 String result = value.get();  // "Success"
 
 Optional<String> empty = Optional.empty();
@@ -470,7 +470,7 @@ public class OptionalWithStreams {
 Optional<String> value = Optional.empty();
 String result = value.get();  // NoSuchElementException!
 
-// âœ… RIGHT
+// RIGHT
 String result = value.orElse("default");
 ```
 
@@ -480,7 +480,7 @@ String result = value.orElse("default");
 // âŒ WRONG
 Optional<String> opt = Optional.of(null);  // NullPointerException!
 
-// âœ… RIGHT
+// RIGHT
 Optional<String> opt = Optional.ofNullable(null);  // Optional.empty
 ```
 
@@ -492,7 +492,7 @@ void process(Optional<String> name) {
     // Complicated to use
 }
 
-// âœ… RECOMMENDED
+// RECOMMENDED
 void process(String name) {
     Optional.ofNullable(name)
         .ifPresent(n -> doSomething(n));
@@ -505,14 +505,14 @@ void process(String name) {
 // âŒ WRONG - for lists use empty list
 Optional<List<String>> items = Optional.of(new ArrayList<>());
 
-// âœ… RIGHT - use empty collection directly
+// RIGHT - use empty collection directly
 List<String> items = new ArrayList<>();
 if (!items.isEmpty()) { ... }
 ```
 
 ## When to Use Optional
 
-### âœ… Perfect For:
+### Perfect For:
 - Return values from methods (indicates value may be absent)
 - Stream operations (filtering, mapping)
 - Chaining transformations
@@ -526,14 +526,15 @@ if (!items.isEmpty()) { ... }
 
 ## Key Takeaways
 
-- âœ… Optional prevents null pointer exceptions
-- âœ… Use Optional.of() for non-null values
-- âœ… Use Optional.ofNullable() for values that might be null
-- âœ… Use ifPresent() or ifPresentOrElse() instead of isPresent() + get()
-- âœ… Use map() and flatMap() to transform values
-- âœ… Use orElse(), orElseGet(), orElseThrow() to handle empty cases
-- âœ… Don't use Optional as method parameter
-- âœ… Never call get() without checking first
+- Optional prevents null pointer exceptions
+- Use Optional.of() for non-null values
+- Use Optional.ofNullable() for values that might be null
+- Use ifPresent() or ifPresentOrElse() instead of isPresent() + get()
+- Use map() and flatMap() to transform values
+- Use orElse(), orElseGet(), orElseThrow() to handle empty cases
+- Don't use Optional as method parameter
+- Never call get() without checking first
 
 ---
+
 

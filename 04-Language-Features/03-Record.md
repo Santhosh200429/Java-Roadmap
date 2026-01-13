@@ -346,7 +346,7 @@ record Point(int x, int y) { }
 Point p = new Point(1, 2);
 p.x = 5;  // ERROR: can't modify
 
-// âœ… RIGHT - Create new record
+// RIGHT - Create new record
 Point p2 = new Point(5, p.y());
 ```
 
@@ -357,7 +357,7 @@ record User(String name) { }
 User u = new User("Alice");
 // u.setName("Bob");  // No setter!
 
-// âœ… RIGHT - immutable
+// RIGHT - immutable
 User u2 = new User("Bob");
 ```
 
@@ -371,7 +371,7 @@ record Age(int years) {
     }
 }
 
-// âœ… RIGHT - compact constructor
+// RIGHT - compact constructor
 record Age(int years) {
     public Age {
         if (years < 0) throw new Exception();
@@ -381,7 +381,7 @@ record Age(int years) {
 
 ## When to Use Records
 
-âœ… **Use Records for:**
+**Use Records for:**
 - Data transfer objects (DTOs)
 - API responses/requests
 - Immutable data holders
@@ -396,13 +396,14 @@ record Age(int years) {
 
 ## Key Takeaways
 
-- âœ… Records are immutable data classes
-- âœ… Auto-generates constructors, getters, equals(), hashCode(), toString()
-- âœ… Compact constructor syntax for validation
-- âœ… Can have custom methods
-- âœ… Can implement interfaces
-- âœ… Java 17+ feature
-- âœ… Perfect for DTOs and value objects
+- Records are immutable data classes
+- Auto-generates constructors, getters, equals(), hashCode(), toString()
+- Compact constructor syntax for validation
+- Can have custom methods
+- Can implement interfaces
+- Java 17+ feature
+- Perfect for DTOs and value objects
 
 ---
+
 

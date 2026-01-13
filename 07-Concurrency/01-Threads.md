@@ -136,7 +136,7 @@ public class Counter {
     }
 }
 
-// âœ… Thread-safe
+// Thread-safe
 public class SafeCounter {
     int count = 0;
     
@@ -171,13 +171,14 @@ public class Download {
 
 ## Key Takeaways
 
-- âœ… Threads enable concurrent execution
-- âœ… Extend Thread or implement Runnable
-- âœ… Call start() to begin thread (not run())
-- âœ… Use join() to wait for thread completion
-- âœ… Thread.sleep() pauses execution
-- âœ… Use synchronized for thread safety
-- âœ… Only one thread accesses synchronized blocks
+- Threads enable concurrent execution
+- Extend Thread or implement Runnable
+- Call start() to begin thread (not run())
+- Use join() to wait for thread completion
+- Thread.sleep() pauses execution
+- Use synchronized for thread safety
+- Only one thread accesses synchronized blocks
 
 ---
+
 

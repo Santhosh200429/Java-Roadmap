@@ -53,7 +53,7 @@ module calculator.core {
 ```
 
 **What's visible to calculator.ui:**
-- âœ… `com.calculator.Calculator` (exported)
+- `com.calculator.Calculator` (exported)
 - âŒ `com.calculator.internal.MathUtil` (hidden)
 
 ```java
@@ -450,16 +450,17 @@ error: module graph has a cycle: myapp -> utils -> myapp
 
 ## Key Takeaways
 
-- âœ… **exports** - Makes package available to other modules
-- âœ… **requires** - Declares dependency on another module
-- âœ… **requires transitive** - Re-exports dependency
-- âœ… **exports to** - Restricts export to specific modules
-- âœ… **opens** - Allows reflection access
-- âœ… **open module** - Opens all packages for reflection
-- âœ… All module-info.java must be in module root
-- âœ… Module names follow Java naming conventions
-- âœ… No cyclic dependencies allowed
-- âœ… All dependencies must be satisfied at compile/runtime
+- **exports** - Makes package available to other modules
+- **requires** - Declares dependency on another module
+- **requires transitive** - Re-exports dependency
+- **exports to** - Restricts export to specific modules
+- **opens** - Allows reflection access
+- **open module** - Opens all packages for reflection
+- All module-info.java must be in module root
+- Module names follow Java naming conventions
+- No cyclic dependencies allowed
+- All dependencies must be satisfied at compile/runtime
 
 ---
+
 

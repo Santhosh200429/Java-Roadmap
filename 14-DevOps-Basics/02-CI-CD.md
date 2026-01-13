@@ -430,7 +430,7 @@ deploy:
 - name: Build
   run: mvn clean package -DskipTests
 
-# âœ… RIGHT - run all tests
+# RIGHT - run all tests
 - name: Build and Test
   run: mvn clean package
 ```
@@ -443,7 +443,7 @@ deploy:
   run: mvn clean compile
   run: mvn test
 
-# âœ… RIGHT - use caching
+# RIGHT - use caching
 - name: Set up JDK
   uses: actions/setup-java@v3
   with:
@@ -459,7 +459,7 @@ deploy:
 - name: Login
   run: docker login -u myuser -p hardcoded_password
 
-# âœ… RIGHT - use GitHub secrets
+# RIGHT - use GitHub secrets
 - name: Login
   run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 ```
@@ -476,13 +476,14 @@ deploy:
 
 ## Key Takeaways
 
-- âœ… CI automatically builds and tests code changes
-- âœ… CD automatically deploys tested code
-- âœ… GitHub Actions enables CI/CD for free
-- âœ… Pipeline stages: Build â†’ Test â†’ Docker â†’ Deploy
-- âœ… Use secrets for credentials, never hardcode
-- âœ… Cache dependencies to speed up builds
-- âœ… Run tests before deployment
+- CI automatically builds and tests code changes
+- CD automatically deploys tested code
+- GitHub Actions enables CI/CD for free
+- Pipeline stages: Build â†’ Test â†’ Docker â†’ Deploy
+- Use secrets for credentials, never hardcode
+- Cache dependencies to speed up builds
+- Run tests before deployment
 
 ---
+
 

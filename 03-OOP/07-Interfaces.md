@@ -206,12 +206,13 @@ for (Shape shape : shapes) {
 
 ## Key Takeaways
 
-- âœ… Interface = contract, class = implementation
-- âœ… Classes implement interfaces with `implements`
-- âœ… Must implement all interface methods
-- âœ… Can implement multiple interfaces
-- âœ… Use interface for behavior ("can-do")
-- âœ… Use abstract class for shared code ("is-a")
+- Interface = contract, class = implementation
+- Classes implement interfaces with `implements`
+- Must implement all interface methods
+- Can implement multiple interfaces
+- Use interface for behavior ("can-do")
+- Use abstract class for shared code ("is-a")
 
 ---
+
 

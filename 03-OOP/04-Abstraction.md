@@ -34,7 +34,7 @@ class Dog extends Animal {
     }
 }
 
-// âœ… Can create: Dog d = new Dog();
+// Can create: Dog d = new Dog();
 d.makeSound();  // Woof!
 ```
 
@@ -114,12 +114,13 @@ processor.confirmTransaction();
 
 ## Key Takeaways
 
-- âœ… Abstract classes define blueprints
-- âœ… Interfaces define contracts
-- âœ… Abstraction hides implementation details
-- âœ… Use abstract when sharing code (extends)
-- âœ… Use interface when defining behavior (implements)
-- âœ… Concrete classes implement abstract methods
+- Abstract classes define blueprints
+- Interfaces define contracts
+- Abstraction hides implementation details
+- Use abstract when sharing code (extends)
+- Use interface when defining behavior (implements)
+- Concrete classes implement abstract methods
 
 ---
+
 

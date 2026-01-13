@@ -284,7 +284,7 @@ while (true) {
     // No break statement!
 }
 
-// âœ… RIGHT
+// RIGHT
 for (int i = 0; i < 5; i++) {
     System.out.println(i);
 }
@@ -297,7 +297,7 @@ for (int i = 1; i <= 5; i++) {
     System.out.println(i);
 }
 
-// âœ… RIGHT
+// RIGHT
 for (int i = 0; i < 5; i++) {
     System.out.println(i);
 }
@@ -312,7 +312,7 @@ while (count < 5) {
     count++;
 }
 
-// âœ… Better
+// Better
 for (int count = 0; count < 5; count++) {
     System.out.println(count);
 }
@@ -329,13 +329,14 @@ for (int count = 0; count < 5; count++) {
 
 ## Key Takeaways
 
-- âœ… `for` loops: use when you know count
-- âœ… `while` loops: use when count unknown
-- âœ… `do-while`: runs at least once
-- âœ… `break`: exits loop immediately
-- âœ… `continue`: skips to next iteration
-- âœ… Enhanced `for` cleanest for arrays/lists
-- âœ… Nested loops for multi-dimensional data
+- `for` loops: use when you know count
+- `while` loops: use when count unknown
+- `do-while`: runs at least once
+- `break`: exits loop immediately
+- `continue`: skips to next iteration
+- Enhanced `for` cleanest for arrays/lists
+- Nested loops for multi-dimensional data
 
 ---
+
 

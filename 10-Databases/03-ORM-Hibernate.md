@@ -440,13 +440,14 @@ public class StudentManagement {
 
 ## Key Takeaways
 
-- âœ… Hibernate converts Java objects to database
-- âœ… @Entity marks class as database table
-- âœ… @Id marks primary key
-- âœ… HQL queries on objects, not tables
-- âœ… Automatic relationship handling
-- âœ… Transactions ensure data consistency
-- âœ… Less SQL, more Java!
+- Hibernate converts Java objects to database
+- @Entity marks class as database table
+- @Id marks primary key
+- HQL queries on objects, not tables
+- Automatic relationship handling
+- Transactions ensure data consistency
+- Less SQL, more Java!
 
 ---
+
 

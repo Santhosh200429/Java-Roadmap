@@ -104,7 +104,7 @@ if (age >= 0) {
     System.out.println("Adult");  // Never runs!
 }
 
-// âœ… Good - specific first
+// Good - specific first
 if (age >= 18) {
     System.out.println("Adult");
 } else if (age >= 0) {
@@ -121,7 +121,7 @@ if (score >= 90) {
     System.out.println("A+");
 }
 
-// âœ… Cleaner
+// Cleaner
 if (score >= 95) {
     System.out.println("A+");
 } else if (score >= 90) {
@@ -226,15 +226,15 @@ Invalid        â† Still fell through
 
 | Situation | Use switch | Use if-else |
 |-----------|-----------|-----------|
-| Many options for one variable | âœ… | Verbose |
-| Complex conditions | Difficult | âœ… |
-| Ranges (score >= 90) | Difficult | âœ… |
-| Simple comparisons | âœ… | Works |
+| Many options for one variable | | Verbose |
+| Complex conditions | Difficult | |
+| Ranges (score >= 90) | Difficult | |
+| Simple comparisons | | Works |
 
 **Example**: Switch better for days
 
 ```java
-// âœ… switch (clean)
+// switch (clean)
 switch (day) {
     case 1: System.out.println("Monday"); break;
     case 2: System.out.println("Tuesday"); break;
@@ -251,7 +251,7 @@ if (day == 1) {
 **Example**: if-else better for ranges
 
 ```java
-// âœ… if-else (clean)
+// if-else (clean)
 if (score >= 90) {
     System.out.println("A");
 } else if (score >= 80) {
@@ -373,7 +373,7 @@ if (age >= 18)
     System.out.println("Adult");
     System.out.println("Vote");  // Always runs!
 
-// âœ… Correct - braces group statements
+// Correct - braces group statements
 if (age >= 18) {
     System.out.println("Adult");
     System.out.println("Vote");
@@ -387,7 +387,7 @@ String name1 = "John";
 String name2 = "John";
 
 if (name1 == name2) { }      // âŒ Might fail (compares reference)
-if (name1.equals(name2)) { } // âœ… Correct (compares content)
+if (name1.equals(name2)) { } // Correct (compares content)
 ```
 
 ### Mistake 3: Forgetting break in switch
@@ -430,18 +430,19 @@ Use switch to print day name from number (1=Monday, etc.)
 
 ## Key Takeaways
 
-- âœ… `if`: Do something if true
-- âœ… `if-else`: Do one thing or another
-- âœ… `else if`: Multiple choices
-- âœ… `switch`: Many options for one variable
-- âœ… Logical operators: && (and), || (or), ! (not)
-- âœ… Ternary operator: Simple if-else shorthand
-- âœ… Always use break in switch (unless intentional fall-through)
-- âœ… Order matters in if-else if chains
+- `if`: Do something if true
+- `if-else`: Do one thing or another
+- `else if`: Multiple choices
+- `switch`: Many options for one variable
+- Logical operators: && (and), || (or), ! (not)
+- Ternary operator: Simple if-else shorthand
+- Always use break in switch (unless intentional fall-through)
+- Order matters in if-else if chains
 
 ## Next Steps
 
 Master conditionals - they're fundamental! Next, learn about [Loops](./Loops.md) to repeat code.
 
 ---
+
 
