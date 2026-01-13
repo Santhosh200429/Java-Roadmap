@@ -32,16 +32,16 @@ module myapp.core {
 
 ```
 calculator-app/
-â”œâ”€â”€ calculator.core/
-â”‚   â”œâ”€â”€ src/module-info.java
-â”‚   â””â”€â”€ src/com/calculator/
-â”‚       â”œâ”€â”€ Calculator.java (public)
-â”‚       â””â”€â”€ internal/
-â”‚           â””â”€â”€ MathUtil.java (hidden)
-â”œâ”€â”€ calculator.ui/
-â”‚   â”œâ”€â”€ src/module-info.java
-â”‚   â””â”€â”€ src/com/calculator/ui/
-â”‚       â””â”€â”€ CalculatorUI.java
+"oe"" calculator.core/
+"   "oe"" src/module-info.java
+"   """" src/com/calculator/
+"       "oe"" Calculator.java (public)
+"       """" internal/
+"           """" MathUtil.java (hidden)
+"oe"" calculator.ui/
+"   "oe"" src/module-info.java
+"   """" src/com/calculator/ui/
+"       """" CalculatorUI.java
 ```
 
 ### module-info.java for calculator.core
@@ -54,12 +54,12 @@ module calculator.core {
 
 **What's visible to calculator.ui:**
 - `com.calculator.Calculator` (exported)
-- âŒ `com.calculator.internal.MathUtil` (hidden)
+- [WRONG] `com.calculator.internal.MathUtil` (hidden)
 
 ```java
 // In calculator.ui
-import com.calculator.Calculator;  // âœ“ Works!
-import com.calculator.internal.MathUtil;  // âœ— Compilation error!
+import com.calculator.Calculator;  // oe" Works!
+import com.calculator.internal.MathUtil;  // oe- Compilation error!
 ```
 
 ## Requires: Declaring Dependencies
@@ -109,8 +109,8 @@ module c {
 }
 
 // In module C code:
-import com.b.*;    // âœ“ Works (B exports it)
-import com.a.*;    // âœ— Error! (A not transitively exported)
+import com.b.*;    // oe" Works (B exports it)
+import com.a.*;    // oe- Error! (A not transitively exported)
 ```
 
 ### With Transitive
@@ -133,8 +133,8 @@ module c {
 }
 
 // In module C code:
-import com.b.*;    // âœ“ Works
-import com.a.*;    // âœ“ Now works! (transitive makes it available)
+import com.b.*;    // oe" Works
+import com.a.*;    // oe" Now works! (transitive makes it available)
 ```
 
 ### Real-World Example: API Stack
@@ -159,14 +159,14 @@ module myapp {
 }
 
 // In myapp code:
-import com.auth.jwt.*;           // âœ“ Direct dependency
-import com.security.cipher.*;    // âœ“ Transitive dependency!
+import com.auth.jwt.*;           // oe" Direct dependency
+import com.security.cipher.*;    // oe" Transitive dependency!
 ```
 
 ### When to Use Transitive
 
 ```java
-// âœ“ Use transitive when:
+// oe" Use transitive when:
 // 1. Dependency is fundamental to your module's API
 module database.connection {
     requires transitive java.sql;  // SQL is core to our API
@@ -179,7 +179,7 @@ module payment.gateway {
     exports com.payment;
 }
 
-// âœ— Don't use transitive for:
+// oe- Don't use transitive for:
 // 1. Internal implementation details
 module utils {
     requires logging;  // Keep logging internal, don't expose
@@ -221,10 +221,10 @@ module banking.core {
 }
 
 // In banking.mobile - OK
-import com.banking.security.*;  // âœ“ Works (white-listed)
+import com.banking.security.*;  // oe" Works (white-listed)
 
 // In banking.analytics - ERROR
-import com.banking.security.*;  // âœ— Not in white-list
+import com.banking.security.*;  // oe- Not in white-list
 ```
 
 ## Opens: Reflection Access
@@ -242,7 +242,7 @@ module myapp.core {
 public class Configurer {
     public static void configure() {
         Class<?> clz = Class.forName("com.myapp.ConfigImpl");
-        // âœ— IllegalAccessException - reflection not allowed!
+        // oe- IllegalAccessException - reflection not allowed!
     }
 }
 ```
@@ -259,7 +259,7 @@ module myapp.core {
 public class Configurer {
     public static void configure() {
         Class<?> clz = Class.forName("com.myapp.ConfigImpl");
-        // âœ“ Works - reflection allowed
+        // oe" Works - reflection allowed
     }
 }
 ```
@@ -282,21 +282,21 @@ open module spring.core {
 
 ```
 banking-app/
-â”œâ”€â”€ banking.api/
-â”‚   â”œâ”€â”€ src/module-info.java
-â”‚   â””â”€â”€ src/com/bank/api/
-â”‚       â”œâ”€â”€ Account.java
-â”‚       â”œâ”€â”€ Transaction.java
-â”‚       â””â”€â”€ internal/
-â”‚           â””â”€â”€ Utils.java
-â”œâ”€â”€ banking.impl/
-â”‚   â”œâ”€â”€ src/module-info.java
-â”‚   â””â”€â”€ src/com/bank/impl/
-â”‚       â””â”€â”€ AccountImpl.java
-â””â”€â”€ banking.app/
-    â”œâ”€â”€ src/module-info.java
-    â””â”€â”€ src/com/bank/app/
-        â””â”€â”€ BankingApp.java
+"oe"" banking.api/
+"   "oe"" src/module-info.java
+"   """" src/com/bank/api/
+"       "oe"" Account.java
+"       "oe"" Transaction.java
+"       """" internal/
+"           """" Utils.java
+"oe"" banking.impl/
+"   "oe"" src/module-info.java
+"   """" src/com/bank/impl/
+"       """" AccountImpl.java
+"""" banking.app/
+    "oe"" src/module-info.java
+    """" src/com/bank/app/
+        """" BankingApp.java
 ```
 
 ### banking.api/src/module-info.java
@@ -347,13 +347,13 @@ jdeps --module-path out banking.app
 ```
 Without Transitive:
 banking.api
-    â†‘
-    â”‚ requires
-    â”‚
+    -'
+    " requires
+    "
 banking.impl
-    â†‘
-    â”‚ requires
-    â”‚
+    -'
+    " requires
+    "
 banking.app
 
 banking.app cannot see banking.api directly!
@@ -362,13 +362,13 @@ banking.app cannot see banking.api directly!
 
 With Transitive (requires transitive):
 banking.api
-    â†‘
-    â”‚ requires transitive
-    â”‚
+    -'
+    " requires transitive
+    "
 banking.impl
-    â†‘
-    â”‚ requires
-    â”‚
+    -'
+    " requires
+    "
 banking.app
 
 banking.app CAN see banking.api!

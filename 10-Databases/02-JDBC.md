@@ -5,7 +5,7 @@
 **JDBC** (Java Database Connectivity) is a Java API for connecting to databases. It provides a standard interface to work with any SQL database.
 
 ```
-Java Program â†’ JDBC Driver â†’ Database
+Java Program -' JDBC Driver -' Database
 ```
 
 ## Database Setup
@@ -209,7 +209,7 @@ String query = "SELECT * FROM users WHERE email = ?";
 PreparedStatement stmt = conn.prepareStatement(query);
 stmt.setString(1, email);
 
-// âŒ Never do this (vulnerable)
+// [WRONG] Never do this (vulnerable)
 String query = "SELECT * FROM users WHERE email = '" + email + "'";
 ```
 

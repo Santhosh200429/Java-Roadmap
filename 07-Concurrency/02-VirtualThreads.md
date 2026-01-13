@@ -250,7 +250,7 @@ executor.submit(() -> blockingIO());  // Just works!
 ```java
 // 1. Pinning (virtual thread blocked)
 // If blocking in synchronized block, virtual thread pins to platform thread
-synchronized(this) {  // âŒ Avoid in virtual threads
+synchronized(this) {  // [WRONG] Avoid in virtual threads
     blockingIO();     // Virtual thread pinned!
 }
 
@@ -319,7 +319,7 @@ public class PerformanceTest {
 - Batch processing with blocking calls
 - Server applications handling many clients
 
-### âŒ Not Suitable For:
+### [WRONG] Not Suitable For:
 - CPU-intensive computing
 - Real-time systems (GC pauses still occur)
 - Code with lots of synchronized blocks
@@ -383,7 +383,7 @@ public class VirtualThreadBatchProcessor {
 ### 1. Using Synchronized Blocks
 
 ```java
-// âŒ WRONG - causes pinning
+// [WRONG] WRONG - causes pinning
 ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
 executor.submit(() -> {
     synchronized(lock) {
@@ -406,7 +406,7 @@ executor.submit(() -> {
 ### 2. Using for CPU-Bound Work
 
 ```java
-// âŒ WRONG - virtual threads don't help with computation
+// [WRONG] WRONG - virtual threads don't help with computation
 ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
 executor.submit(() -> {
     for (int i = 0; i < 1_000_000; i++) {
@@ -423,7 +423,7 @@ ExecutorService executor = Executors.newFixedThreadPool(
 ### 3. Creating Too Many
 
 ```java
-// âŒ WRONG - creating millions without limiting
+// [WRONG] WRONG - creating millions without limiting
 for (int i = 0; i < 10_000_000; i++) {
     Thread.startVirtualThread(() -> doWork());  // OutOfMemory!
 }

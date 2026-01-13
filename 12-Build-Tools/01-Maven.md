@@ -14,15 +14,15 @@ Maven follows a standard structure:
 
 ```
 myproject/
-â”œâ”€â”€ pom.xml              â† Project configuration
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ main/
-â”‚   â”‚   â”œâ”€â”€ java/       â† Source code
-â”‚   â”‚   â””â”€â”€ resources/  â† Configuration files
-â”‚   â””â”€â”€ test/
-â”‚       â”œâ”€â”€ java/       â† Test code
-â”‚       â””â”€â”€ resources/  â† Test configuration
-â””â”€â”€ target/             â† Compiled output
+"oe"" pom.xml              - Project configuration
+"oe"" src/
+"   "oe"" main/
+"   "   "oe"" java/       - Source code
+"   "   """" resources/  - Configuration files
+"   """" test/
+"       "oe"" java/       - Test code
+"       """" resources/  - Test configuration
+"""" target/             - Compiled output
 ```
 
 ## pom.xml File
@@ -169,7 +169,7 @@ Control when dependencies are needed:
 Maven has built-in phases:
 
 ```
-validate â†’ compile â†’ test â†’ package â†’ install â†’ deploy
+validate -' compile -' test -' package -' install -' deploy
 ```
 
 When you run `mvn package`, all previous phases run automatically.
@@ -265,7 +265,7 @@ Maven ensures consistency - same pom.xml, same result everywhere.
 - pom.xml defines project configuration
 - Dependencies downloaded from Maven Central
 - Standard project structure
-- Lifecycle: compile â†’ test â†’ package â†’ deploy
+- Lifecycle: compile -' test -' package -' deploy
 - Scope controls when dependencies are used
 - mvn commands: clean, compile, test, package, install
 

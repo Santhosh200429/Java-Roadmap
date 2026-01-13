@@ -7,9 +7,9 @@
 Think of it like real-world inheritance:
 ```
 Parent (Grandparent's traits)
-  â†“
+  -"
 Child (Inherits Parent's traits + adds own)
-  â†“
+  -"
 Grandchild (Inherits Child's traits + adds own)
 ```
 
@@ -299,7 +299,7 @@ car.drive();  // Car with 4 doors is driving
 ```java
 public class Dog extends Animal { }  // One parent
 
-public class Dog extends Animal, Pet { }  // âŒ Can't extend multiple
+public class Dog extends Animal, Pet { }  // [WRONG] Can't extend multiple
 ```
 
 ### 2. Constructor Must Call super()
@@ -338,7 +338,7 @@ class Child extends Parent {
 ```java
 public class Dog extends Animal {
     public Dog(String name) {
-        // âŒ Must call super(name) first
+        // [WRONG] Must call super(name) first
         this.breed = breed;
     }
 }
@@ -347,7 +347,7 @@ public class Dog extends Animal {
 ### Mistake 2: Trying to Extend Multiple Classes
 
 ```java
-public class Dog extends Animal, Pet { }  // âŒ Error
+public class Dog extends Animal, Pet { }  // [WRONG] Error
 public class Dog extends Animal { }       // Correct
 ```
 
@@ -358,7 +358,7 @@ class Parent {
     public void test(int x) { }
 }
 class Child extends Parent {
-    public void test(String x) { }  // âš ï¸ This is overloading, not overriding!
+    public void test(String x) { }  // , This is overloading, not overriding!
 }
 ```
 

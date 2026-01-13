@@ -30,20 +30,20 @@ cd hello-quarkus
 
 ```
 hello-quarkus/
-â”œâ”€â”€ pom.xml
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ main/
-â”‚   â”‚   â”œâ”€â”€ java/com/example/
-â”‚   â”‚   â”‚   â”œâ”€â”€ GreetingResource.java
-â”‚   â”‚   â”‚   â””â”€â”€ GreetingService.java
-â”‚   â”‚   â””â”€â”€ resources/
-â”‚   â”‚       â”œâ”€â”€ application.properties
-â”‚   â”‚       â””â”€â”€ META-INF/resources/
-â”‚   â”‚           â””â”€â”€ index.html
-â”‚   â””â”€â”€ test/
-â”‚       â””â”€â”€ java/com/example/
-â”‚           â””â”€â”€ GreetingResourceTest.java
-â””â”€â”€ README.md
+"oe"" pom.xml
+"oe"" src/
+"   "oe"" main/
+"   "   "oe"" java/com/example/
+"   "   "   "oe"" GreetingResource.java
+"   "   "   """" GreetingService.java
+"   "   """" resources/
+"   "       "oe"" application.properties
+"   "       """" META-INF/resources/
+"   "           """" index.html
+"   """" test/
+"       """" java/com/example/
+"           """" GreetingResourceTest.java
+"""" README.md
 ```
 
 ### pom.xml Setup
@@ -612,11 +612,11 @@ public class UserResource {
 |---------|---------|------------|
 | Startup | 40ms | 5s |
 | Memory | 50MB | 400MB |
-| Native Binary | âœ“ | âœ— |
+| Native Binary | oe" | oe- |
 | Learning Curve | Easy | Medium |
 | Maturity | Growing | Mature |
 | Ecosystem | Smaller | Huge |
-| Cloud Native | âœ“ | âœ“ |
+| Cloud Native | oe" | oe" |
 
 ## Key Takeaways
 

@@ -412,10 +412,10 @@ public class NetworkMonitor {
             boolean reachable = address.isReachable(3000);
             long time = System.currentTimeMillis() - start;
             
-            String status = reachable ? "âœ“ UP" : "âœ— DOWN";
+            String status = reachable ? "oe" UP" : "oe- DOWN";
             System.out.println(host + ": " + status + " (" + time + "ms)");
         } catch (Exception e) {
-            System.out.println(host + ": âœ— ERROR - " + e.getMessage());
+            System.out.println(host + ": oe- ERROR - " + e.getMessage());
         }
     }
 }

@@ -5,8 +5,8 @@
 **Binding** is the process of linking a method call to the actual method that runs.
 
 ```
-Method Call â†’ Which method actually executes?
-              â†“
+Method Call -' Which method actually executes?
+              -"
          Binding decides!
 ```
 
@@ -104,18 +104,18 @@ public class DynamicBindingExample {
         // At compile time: both are Animal type
         // At runtime: JVM checks actual object type
         
-        dog.sound();  // Runtime binding â†’ Woof!
-        cat.sound();  // Runtime binding â†’ Meow!
+        dog.sound();  // Runtime binding -' Woof!
+        cat.sound();  // Runtime binding -' Meow!
     }
 }
 
 // Compile time:
-//   dog.sound() â†’ looks for sound() in Animal class âœ“
-//   cat.sound() â†’ looks for sound() in Animal class âœ“
+//   dog.sound() -' looks for sound() in Animal class oe"
+//   cat.sound() -' looks for sound() in Animal class oe"
 //
 // Runtime:
-//   dog â†’ actual type is Dog â†’ call Dog.sound()
-//   cat â†’ actual type is Cat â†’ call Cat.sound()
+//   dog -' actual type is Dog -' call Dog.sound()
+//   cat -' actual type is Cat -' call Cat.sound()
 ```
 
 ## Complete Examples
@@ -402,11 +402,11 @@ public class ComparisonExample {
 }
 
 // Binding Rules:
-// Static methods      â†’ Static binding (reference type)
-// Private methods     â†’ Static binding (reference type)
-// Final methods       â†’ Static binding (reference type)
-// Instance methods    â†’ Dynamic binding (actual object type)
-// Variables           â†’ Static binding (reference type)
+// Static methods      -' Static binding (reference type)
+// Private methods     -' Static binding (reference type)
+// Final methods       -' Static binding (reference type)
+// Instance methods    -' Dynamic binding (actual object type)
+// Variables           -' Static binding (reference type)
 ```
 
 ## Virtual Method Invocation
@@ -452,7 +452,7 @@ public class VirtualMethodExample {
 ### 1. Expecting Static Binding Override
 
 ```java
-// âŒ WRONG - static methods not overridden
+// [WRONG] WRONG - static methods not overridden
 class Parent {
     static void test() {
         System.out.println("Parent");

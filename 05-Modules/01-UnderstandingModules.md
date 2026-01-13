@@ -38,13 +38,13 @@ A **module** is a self-contained unit of code that:
 ### Directory Layout
 ```
 myapp/
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ com/example/module1/
-â”‚   â”‚   â”œâ”€â”€ Main.java
-â”‚   â”‚   â””â”€â”€ Helper.java
-â”‚   â””â”€â”€ module-info.java
-â”œâ”€â”€ build/
-â””â”€â”€ pom.xml (or build.gradle)
+"oe"" src/
+"   "oe"" com/example/module1/
+"   "   "oe"" Main.java
+"   "   """" Helper.java
+"   """" module-info.java
+"oe"" build/
+"""" pom.xml (or build.gradle)
 ```
 
 ### module-info.java

@@ -15,7 +15,7 @@ Box labeled "score" contains: 95.5
 Without variables, we'd have to rewrite data every time we need it:
 
 ```java
-// âŒ Without variables - repetitive and hard to change
+// [WRONG] Without variables - repetitive and hard to change
 System.out.println("My name is John");
 System.out.println("Hello John");
 System.out.println(John + " is here");
@@ -65,7 +65,7 @@ Java has 8 primitive data types:
 |------|-------|---------|------|
 | `byte` | -128 to 127 | `byte age = 25;` | 1 byte |
 | `short` | -32,768 to 32,767 | `short year = 2024;` | 2 bytes |
-| `int` | -2.1B to 2.1B | `int count = 1000;` | 4 bytes â­ **Most Used** |
+| `int` | -2.1B to 2.1B | `int count = 1000;` | 4 bytes - **Most Used** |
 | `long` | Very large | `long population = 8000000000L;` | 8 bytes |
 
 **When to use**:
@@ -83,7 +83,7 @@ long worldPopulation = 8000000000L;  // Use L suffix for long
 | Type | Precision | Example | Size |
 |------|-----------|---------|------|
 | `float` | ~6-7 decimal places | `float height = 5.9f;` | 4 bytes |
-| `double` | ~15-17 decimal places | `double price = 19.99;` | 8 bytes â­ **Most Used** |
+| `double` | ~15-17 decimal places | `double price = 19.99;` | 8 bytes - **Most Used** |
 
 **When to use**:
 - `double`: Default for decimals (more accurate)
@@ -142,9 +142,9 @@ We'll learn about reference types later.
 int age = 25;              // Valid - letters, numbers, underscore
 int age_of_student = 25;   // Valid - underscore allowed
 int age1 = 25;             // Valid - number in name (not at start)
-int 1age = 25;             // âŒ Can't start with number
-int age-old = 25;          // âŒ Can't use hyphen
-int age old = 25;          // âŒ Can't use space
+int 1age = 25;             // [WRONG] Can't start with number
+int age-old = 25;          // [WRONG] Can't use hyphen
+int age old = 25;          // [WRONG] Can't use space
 ```
 
 ### Conventions (Should Follow)
@@ -152,7 +152,7 @@ int age old = 25;          // âŒ Can't use space
 Following conventions makes code readable for others:
 
 ```java
-// âŒ Bad naming
+// [WRONG] Bad naming
 int a = 25;
 int x = 3.14;
 int ABC = 100;
@@ -197,7 +197,7 @@ public class ScopeExample {
     
     public void printVar() {
         System.out.println(globalVar);  // Works
-        System.out.println(localVar);   // âŒ Error - doesn't exist here
+        System.out.println(localVar);   // [WRONG] Error - doesn't exist here
     }
 }
 ```
@@ -208,7 +208,7 @@ Sometimes you want a variable you can't accidentally change:
 
 ```java
 final double PI = 3.14159;  // final = can't change
-PI = 3.14;  // âŒ Error - can't reassign
+PI = 3.14;  // [WRONG] Error - can't reassign
 
 // Conventions: constants in ALL_CAPS
 final int MAX_STUDENTS = 30;
@@ -285,14 +285,14 @@ Quotient: 2
 ### Mistake 1: Wrong Data Type
 
 ```java
-int age = 25.5;  // âŒ Decimal doesn't fit in int
+int age = 25.5;  // [WRONG] Decimal doesn't fit in int
 double age = 25.5;  // Double accepts decimals
 ```
 
 ### Mistake 2: Forgetting Type
 
 ```java
-age = 25;  // âŒ Type must be declared first
+age = 25;  // [WRONG] Type must be declared first
 int age = 25;  // Include type
 ```
 
@@ -301,7 +301,7 @@ int age = 25;  // Include type
 ```java
 public static void main(String[] args) {
     int age;
-    System.out.println(age);  // âŒ age not initialized
+    System.out.println(age);  // [WRONG] age not initialized
     
     int age = 25;
     System.out.println(age);  // Now it's initialized
@@ -311,7 +311,7 @@ public static void main(String[] args) {
 ### Mistake 4: Wrong Quote Type for Char
 
 ```java
-char letter = "A";  // âŒ Double quotes for String
+char letter = "A";  // [WRONG] Double quotes for String
 char letter = 'A';  // Single quotes for char
 ```
 

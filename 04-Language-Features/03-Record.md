@@ -97,7 +97,7 @@ Records are immutable - can't change values:
 record Book(String title, String author, int year) { }
 
 Book book = new Book("1984", "Orwell", 1949);
-book.title = "New Title";  // âŒ ERROR: can't set field
+book.title = "New Title";  // [WRONG] ERROR: can't set field
 ```
 
 ### 3. Constructor Validation
@@ -341,7 +341,7 @@ if (result instanceof SuccessResult sr) {
 
 ### 1. Trying to Modify Record
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 record Point(int x, int y) { }
 Point p = new Point(1, 2);
 p.x = 5;  // ERROR: can't modify
@@ -352,7 +352,7 @@ Point p2 = new Point(5, p.y());
 
 ### 2. Wrong Constructor Usage
 ```java
-// âŒ WRONG - no setter methods
+// [WRONG] WRONG - no setter methods
 record User(String name) { }
 User u = new User("Alice");
 // u.setName("Bob");  // No setter!
@@ -363,7 +363,7 @@ User u2 = new User("Bob");
 
 ### 3. Forgetting Compact Constructor
 ```java
-// âŒ WRONG - verbose
+// [WRONG] WRONG - verbose
 record Age(int years) {
     public Age(int years) {
         if (years < 0) throw new Exception();
@@ -388,7 +388,7 @@ record Age(int years) {
 - Value objects
 - Configuration objects
 
-âŒ **Don't Use Records for:**
+[WRONG] **Don't Use Records for:**
 - Complex business logic
 - Mutable data
 - Entities with many relationships

@@ -14,22 +14,22 @@ Collections: Dynamic size, flexible, rich methods, type-safe
 
 ```
 Collection (Interface)
-â”œâ”€â”€ List (Ordered, allow duplicates)
-â”‚   â”œâ”€â”€ ArrayList
-â”‚   â”œâ”€â”€ LinkedList
-â”‚   â””â”€â”€ Vector
-â”œâ”€â”€ Set (Unique values, no duplicates)
-â”‚   â”œâ”€â”€ HashSet
-â”‚   â”œâ”€â”€ TreeSet
-â”‚   â””â”€â”€ LinkedHashSet
-â””â”€â”€ Queue
-    â”œâ”€â”€ PriorityQueue
-    â””â”€â”€ Deque
+"oe"" List (Ordered, allow duplicates)
+"   "oe"" ArrayList
+"   "oe"" LinkedList
+"   """" Vector
+"oe"" Set (Unique values, no duplicates)
+"   "oe"" HashSet
+"   "oe"" TreeSet
+"   """" LinkedHashSet
+"""" Queue
+    "oe"" PriorityQueue
+    """" Deque
 
 Map (Key-Value pairs)
-â”œâ”€â”€ HashMap
-â”œâ”€â”€ TreeMap
-â””â”€â”€ LinkedHashMap
+"oe"" HashMap
+"oe"" TreeMap
+"""" LinkedHashMap
 ```
 
 ## When to Use Each

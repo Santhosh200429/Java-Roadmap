@@ -426,7 +426,7 @@ server.servlet.session.timeout=30m
 ### 1. Storing Plain Text Passwords
 
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 user.setPassword("password123");  // Plain text!
 
 // RIGHT
@@ -437,7 +437,7 @@ user.setPassword(encoder.encode("password123"));
 ### 2. Exposing Secrets in Code
 
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 private String SECRET = "my-secret-key";
 
 // RIGHT
@@ -448,7 +448,7 @@ private String jwtSecret;  // From properties file
 ### 3. Not Validating Tokens
 
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 String username = Jwts.parser()
     .setSigningKey(secret)
     .parseClaimsJws(token)  // Crashes if invalid!

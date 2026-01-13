@@ -35,14 +35,14 @@ gradle --version       # Verify
 
 ```
 myapp/
-â”œâ”€â”€ build.gradle          # Build configuration
-â”œâ”€â”€ settings.gradle       # Project settings
-â”œâ”€â”€ gradle.properties     # Properties
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ main/java/        # Source code
-â”‚   â””â”€â”€ test/java/        # Test code
-â”œâ”€â”€ lib/                  # Dependencies (downloaded)
-â””â”€â”€ build/                # Output directory
+"oe"" build.gradle          # Build configuration
+"oe"" settings.gradle       # Project settings
+"oe"" gradle.properties     # Properties
+"oe"" src/
+"   "oe"" main/java/        # Source code
+"   """" test/java/        # Test code
+"oe"" lib/                  # Dependencies (downloaded)
+"""" build/                # Output directory
 ```
 
 ## Basic build.gradle
@@ -226,13 +226,13 @@ include 'api'
 ### Project Structure
 ```
 student-system/
-â”œâ”€â”€ settings.gradle
-â”œâ”€â”€ core/
-â”‚   â””â”€â”€ build.gradle
-â”œâ”€â”€ ui/
-â”‚   â””â”€â”€ build.gradle
-â””â”€â”€ api/
-    â””â”€â”€ build.gradle
+"oe"" settings.gradle
+"oe"" core/
+"   """" build.gradle
+"oe"" ui/
+"   """" build.gradle
+"""" api/
+    """" build.gradle
 ```
 
 ### core/build.gradle

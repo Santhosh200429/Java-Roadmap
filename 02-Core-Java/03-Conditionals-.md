@@ -31,11 +31,11 @@ if (age >= 18) {
 
 ```
 Check condition: age >= 18
-       â†“
+       -"
     Is it true?
-       â†™        â†˜
+       -        -
      YES        NO
-      â†“          â†“
+      -"          -"
    Run code    Skip code
    (vote)      (nothing)
 ```
@@ -85,9 +85,9 @@ if (score >= 90) {
 
 **How else if Works**:
 ```
-Check: score >= 90?  â†’ NO, skip this block
-Check: score >= 80?  â†’ NO, skip this block
-Check: score >= 70?  â†’ YES, run this block! (prints "Grade C")
+Check: score >= 90?  -' NO, skip this block
+Check: score >= 80?  -' NO, skip this block
+Check: score >= 70?  -' YES, run this block! (prints "Grade C")
 Don't check remaining conditions
 ```
 
@@ -97,7 +97,7 @@ Don't check remaining conditions
 
 1. **Order matters** - Put most specific conditions first
 ```java
-// âŒ Bad - will never reach second condition
+// [WRONG] Bad - will never reach second condition
 if (age >= 0) {
     System.out.println("Any age");
 } else if (age >= 18) {
@@ -114,7 +114,7 @@ if (age >= 18) {
 
 2. **Don't use unnecessary conditions**:
 ```java
-// âŒ Wasteful
+// [WRONG] Wasteful
 if (score >= 90) {
     System.out.println("A");
 } else if (score >= 90 && score < 100) {  // Redundant!
@@ -185,10 +185,10 @@ switch (day) {
 
 ```
 Check day value
-       â†“
+       -"
    Is it 1? NO
    Is it 2? NO
-   Is it 3? YES â†’ Print "Wednesday", break
+   Is it 3? YES -' Print "Wednesday", break
    (Skip rest)
 ```
 
@@ -214,9 +214,9 @@ switch (day) {
 }
 
 /* Output:
-Tuesday        â† Matched day 2
-Wednesday      â† Fell through (no break)
-Invalid        â† Still fell through
+Tuesday        - Matched day 2
+Wednesday      - Fell through (no break)
+Invalid        - Still fell through
 */
 ```
 
@@ -240,7 +240,7 @@ switch (day) {
     case 2: System.out.println("Tuesday"); break;
 }
 
-// âŒ if-else (verbose)
+// [WRONG] if-else (verbose)
 if (day == 1) {
     System.out.println("Monday");
 } else if (day == 2) {
@@ -258,7 +258,7 @@ if (score >= 90) {
     System.out.println("B");
 }
 
-// âŒ switch (weird)
+// [WRONG] switch (weird)
 switch (score) {
     case 90:
     case 91:
@@ -386,7 +386,7 @@ if (age >= 18) {
 String name1 = "John";
 String name2 = "John";
 
-if (name1 == name2) { }      // âŒ Might fail (compares reference)
+if (name1 == name2) { }      // [WRONG] Might fail (compares reference)
 if (name1.equals(name2)) { } // Correct (compares content)
 ```
 
@@ -396,7 +396,7 @@ if (name1.equals(name2)) { } // Correct (compares content)
 switch (day) {
     case 1:
         System.out.println("Monday");
-        // âŒ Missing break - falls through!
+        // [WRONG] Missing break - falls through!
     case 2:
         System.out.println("Tuesday");
 }

@@ -9,7 +9,7 @@
 ## Why Not System.out.println()?
 
 ```java
-// âŒ BAD - System.out
+// [WRONG] BAD - System.out
 System.out.println("User logged in: " + username);
 System.out.println("Processing payment for: " + amount);
 
@@ -25,9 +25,9 @@ System.out.println("Processing payment for: " + amount);
 
 ```
 SLF4J (API)
-    â†“
+    -"
 Logback (Implementation)
-    â†“
+    -"
 Writes to: File, Console, Email, Database, etc.
 ```
 
@@ -357,7 +357,7 @@ public class RequestHandler {
 ### 1. String Concatenation in Logging
 
 ```java
-// âŒ WRONG - creates string even if DEBUG disabled
+// [WRONG] WRONG - creates string even if DEBUG disabled
 logger.debug("User: " + user + ", Amount: " + amount);
 
 // RIGHT - string created only if level enabled
@@ -367,7 +367,7 @@ logger.debug("User: {}, Amount: {}", user, amount);
 ### 2. Logging Passwords/Sensitive Data
 
 ```java
-// âŒ WRONG - logs password
+// [WRONG] WRONG - logs password
 logger.info("User login: username={}, password={}", username, password);
 
 // RIGHT - don't log sensitive data
@@ -377,7 +377,7 @@ logger.info("User login attempt: username={}", username);
 ### 3. Not Logging Exceptions
 
 ```java
-// âŒ WRONG - exception lost
+// [WRONG] WRONG - exception lost
 try {
     doSomething();
 } catch (Exception e) {
@@ -398,7 +398,7 @@ try {
 // Lazy evaluation - only creates message if enabled
 logger.debug("Processing {} items", expensiveCalculation());
 
-// âŒ Eager - always calculates even if not logged
+// [WRONG] Eager - always calculates even if not logged
 if (logger.isDebugEnabled()) {
     logger.debug("Processing {} items", expensiveCalculation());
 }

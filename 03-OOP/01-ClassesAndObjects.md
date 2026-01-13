@@ -18,7 +18,7 @@ A **class** is a **blueprint** for creating objects. It defines what properties 
 
 Think of it like a cookie cutter:
 ```
-Cookie Cutter (Class) â†’ Many Cookies (Objects)
+Cookie Cutter (Class) -' Many Cookies (Objects)
 ```
 
 ### Creating a Simple Class
@@ -49,11 +49,11 @@ Car myCar = new Car();  // Create an object from Car class
 
 ```java
 Car         myCar       =    new Car();
-â”‚           â”‚                â”‚     â”‚
-â”‚           â”‚                â”‚     â””â”€ Call Car's constructor
-â”‚           â”‚                â””â”€ Keyword to create new object
-â”‚           â””â”€ Name of this object (variable)
-â””â”€ Type (class name)
+"           "                "     "
+"           "                "     """ Call Car's constructor
+"           "                """ Keyword to create new object
+"           """ Name of this object (variable)
+""" Type (class name)
 ```
 
 ## Creating and Using Objects
@@ -279,7 +279,7 @@ Balance: $1300.0
 ### Mistake 1: Forgetting 'new' Keyword
 
 ```java
-Dog dog = Dog();      // âŒ Error - missing 'new'
+Dog dog = Dog();      // [WRONG] Error - missing 'new'
 Dog dog = new Dog();  // Correct
 ```
 
@@ -287,7 +287,7 @@ Dog dog = new Dog();  // Correct
 
 ```java
 String name;  // This is a variable (holds object reference)
-String = "John";  // âŒ Can't assign to class, only to objects
+String = "John";  // [WRONG] Can't assign to class, only to objects
 name = "John";  // Assign to variable
 ```
 
@@ -295,7 +295,7 @@ name = "John";  // Assign to variable
 
 ```java
 Dog dog;  // Declared but not created
-dog.name = "Buddy";  // âŒ Error - dog is null
+dog.name = "Buddy";  // [WRONG] Error - dog is null
 dog = new Dog();  // Create object
 dog.name = "Buddy";  // Now works
 ```

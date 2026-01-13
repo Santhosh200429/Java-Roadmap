@@ -426,7 +426,7 @@ deploy:
 ### 1. No Test in Pipeline
 
 ```yaml
-# âŒ WRONG - skips all tests
+# [WRONG] WRONG - skips all tests
 - name: Build
   run: mvn clean package -DskipTests
 
@@ -438,7 +438,7 @@ deploy:
 ### 2. Long Build Times
 
 ```yaml
-# âŒ WRONG - rebuilds every time
+# [WRONG] WRONG - rebuilds every time
 - name: Build
   run: mvn clean compile
   run: mvn test
@@ -455,7 +455,7 @@ deploy:
 ### 3. Exposing Secrets
 
 ```yaml
-# âŒ WRONG - hardcoded secrets
+# [WRONG] WRONG - hardcoded secrets
 - name: Login
   run: docker login -u myuser -p hardcoded_password
 
@@ -479,7 +479,7 @@ deploy:
 - CI automatically builds and tests code changes
 - CD automatically deploys tested code
 - GitHub Actions enables CI/CD for free
-- Pipeline stages: Build â†’ Test â†’ Docker â†’ Deploy
+- Pipeline stages: Build -' Test -' Docker -' Deploy
 - Use secrets for credentials, never hardcode
 - Cache dependencies to speed up builds
 - Run tests before deployment

@@ -78,27 +78,27 @@ public class IteratorBasics {
 
 ```
 Iterator states:
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ Initial state (before first next()) â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-             â”‚
-             â–¼ next()
-        â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-        â”‚ Element 1   â”‚
-        â””â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”¬â”€â”€â”€â”˜
-             â”‚    â”‚
-             â”‚    â–¼ remove() (optional)
-             â”‚    â””â”€ Element removed
-             â”‚
-             â–¼ next()
-        â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-        â”‚ Element 2   â”‚
-        â””â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-             â”‚
-             â–¼ hasNext() returns false
-        â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-        â”‚ End of iteration â”‚
-        â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+"oe""""""""""""""""""""""""""""""""""""""
+" Initial state (before first next()) "
+""""""""""""""""""""""""""""""""""""""""
+             "
+             - next()
+        "oe""""""""""""""
+        " Element 1   "
+        """"""""""""""""
+             "    "
+             "    - remove() (optional)
+             "    """ Element removed
+             "
+             - next()
+        "oe""""""""""""""
+        " Element 2   "
+        """"""""""""""""
+             "
+             - hasNext() returns false
+        "oe"""""""""""""""""""
+        " End of iteration "
+        """""""""""""""""""""
 ```
 
 ## Removing Elements
@@ -140,7 +140,7 @@ list.add(3);
 
 for (int num : list) {
     if (num == 2) {
-        list.remove((Integer) num);  // âœ— ConcurrentModificationException!
+        list.remove((Integer) num);  // oe- ConcurrentModificationException!
     }
 }
 ```
@@ -151,7 +151,7 @@ Iterator<Integer> it = list.iterator();
 while (it.hasNext()) {
     int num = it.next();
     if (num == 2) {
-        it.remove();  // âœ“ Safe removal
+        it.remove();  // oe" Safe removal
     }
 }
 ```
@@ -208,11 +208,11 @@ while (it.hasNext()) {
 
 | Feature | For Loop | Enhanced For | Iterator |
 |---------|----------|--------------|----------|
-| Works with List | âœ“ | âœ“ | âœ“ |
-| Works with Set | âœ— | âœ“ | âœ“ |
-| Can remove | âœ— | âœ— | âœ“ |
-| Can skip index | âœ— | âœ— | âœ“ |
-| Simple syntax | âœ“ | âœ“ | âœ— |
+| Works with List | oe" | oe" | oe" |
+| Works with Set | oe- | oe" | oe" |
+| Can remove | oe- | oe- | oe" |
+| Can skip index | oe- | oe- | oe" |
+| Simple syntax | oe" | oe" | oe- |
 
 ## Practical Examples
 

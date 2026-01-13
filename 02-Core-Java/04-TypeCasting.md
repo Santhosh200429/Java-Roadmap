@@ -13,7 +13,7 @@
 Converting a smaller type to a larger type. Java does this automatically because no information is lost.
 
 ```
-byte â†’ short â†’ int â†’ long â†’ float â†’ double
+byte -' short -' int -' long -' float -' double
    (smaller)              (larger)
 ```
 
@@ -33,7 +33,7 @@ System.out.println(decimal);    // 50.0
 Converting a larger type to smaller type. You must explicitly cast because information might be lost.
 
 ```
-double â†’ float â†’ long â†’ int â†’ short â†’ byte
+double -' float -' long -' int -' short -' byte
    (larger)              (smaller)
 ```
 
@@ -128,7 +128,7 @@ Fahrenheit (rounded): 77
 ### Mistake 1: Wrong Direction with Precision Loss
 
 ```java
-// âŒ Loses decimal part
+// [WRONG] Loses decimal part
 double result = 10.5;
 int value = result;  // Error - can't implicit cast
 
@@ -140,7 +140,7 @@ int value = (int) result;  // Value is 10
 
 ```java
 String text = "Hello";
-int number = Integer.parseInt(text);  // âŒ Crash! "Hello" isn't a number
+int number = Integer.parseInt(text);  // [WRONG] Crash! "Hello" isn't a number
 
 String text2 = "25";
 int number2 = Integer.parseInt(text2);  // Works - "25" is a number
@@ -150,14 +150,14 @@ int number2 = Integer.parseInt(text2);  // Works - "25" is a number
 
 ```java
 double decimal = 10.5;
-int number = decimal;  // âŒ Error - must cast explicitly
+int number = decimal;  // [WRONG] Error - must cast explicitly
 int number = (int) decimal;  // Correct
 ```
 
 ## Key Takeaways
 
-- Widening (small â†’ large): Automatic, safe
-- Narrowing (large â†’ small): Explicit (int), risky
+- Widening (small -' large): Automatic, safe
+- Narrowing (large -' small): Explicit (int), risky
 - Use parentheses for casting: (type) value
 - Integer division loses decimals
 - Large values overflow when cast to small types

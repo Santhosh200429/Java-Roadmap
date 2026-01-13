@@ -22,7 +22,7 @@
 - **Container**: Running instance (like a baked cookie)
 
 ```
-Docker Image â†’ Docker Container
+Docker Image -' Docker Container
 (Template)    (Running Instance)
 ```
 
@@ -239,7 +239,7 @@ docker-compose ps
 
 ### 1. Minimal Base Image
 ```dockerfile
-# âŒ Large
+# [WRONG] Large
 FROM openjdk:17
 
 # Smaller

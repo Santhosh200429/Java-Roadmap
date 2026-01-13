@@ -7,7 +7,7 @@
 **Problem it solves**: Null pointer exceptions (the "billion-dollar mistake")
 
 ```java
-// âŒ OLD WAY (error-prone)
+// [WRONG] OLD WAY (error-prone)
 String name = getUserName(123);
 if (name != null) {
     System.out.println(name);
@@ -119,7 +119,7 @@ Optional<String> value = Optional.of("Success");
 String result = value.get();  // "Success"
 
 Optional<String> empty = Optional.empty();
-// âŒ DANGER!
+// [WRONG] DANGER!
 empty.get();  // NoSuchElementException!
 
 // Only use get() when you're absolutely sure value exists
@@ -466,7 +466,7 @@ public class OptionalWithStreams {
 ### 1. Using get() Without Check
 
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 Optional<String> value = Optional.empty();
 String result = value.get();  // NoSuchElementException!
 
@@ -477,7 +477,7 @@ String result = value.orElse("default");
 ### 2. Using Optional.of() With Null
 
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 Optional<String> opt = Optional.of(null);  // NullPointerException!
 
 // RIGHT
@@ -487,7 +487,7 @@ Optional<String> opt = Optional.ofNullable(null);  // Optional.empty
 ### 3. Optional as Method Parameter
 
 ```java
-// âŒ NOT RECOMMENDED
+// [WRONG] NOT RECOMMENDED
 void process(Optional<String> name) {
     // Complicated to use
 }
@@ -502,7 +502,7 @@ void process(String name) {
 ### 4. Using Optional for Collections
 
 ```java
-// âŒ WRONG - for lists use empty list
+// [WRONG] WRONG - for lists use empty list
 Optional<List<String>> items = Optional.of(new ArrayList<>());
 
 // RIGHT - use empty collection directly
@@ -518,7 +518,7 @@ if (!items.isEmpty()) { ... }
 - Chaining transformations
 - Replacing null checks
 
-### âŒ Avoid Using For:
+### [WRONG] Avoid Using For:
 - Method parameters (confuses API)
 - Instance variables (unnecessary overhead)
 - Collections (use empty collections instead)

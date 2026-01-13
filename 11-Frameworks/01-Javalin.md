@@ -18,7 +18,7 @@ Framework      | LOC for Hello World | Focus
 ---------------|-------------------|------------------
 Spring Boot    | 20+                | Full framework
 Quarkus        | 15+                | Cloud-native
-Javalin        | 5-8                | Simplicity â­
+Javalin        | 5-8                | Simplicity -
 Vert.x         | 15+                | Reactive
 ```
 

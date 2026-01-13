@@ -18,7 +18,7 @@ public class Student {
 
 // Outside class:
 Student s = new Student();
-s.socialSecurityNumber = "123-45-6789";  // âŒ Error - can't access private
+s.socialSecurityNumber = "123-45-6789";  // [WRONG] Error - can't access private
 ```
 
 ### public
@@ -84,7 +84,7 @@ public class Student {
 // Use it
 Student s = new Student();
 s.setAge(20);          // Valid
-s.setAge(150);         // âŒ Invalid - controlled access!
+s.setAge(150);         // [WRONG] Invalid - controlled access!
 System.out.println(s.getAge());  // 20
 ```
 
@@ -104,7 +104,7 @@ public class BankAccount {
 }
 
 BankAccount account = new BankAccount();
-account.balance = -500;  // âŒ Negative balance - disaster!
+account.balance = -500;  // [WRONG] Negative balance - disaster!
 ```
 
 With encapsulation (good):
@@ -131,7 +131,7 @@ public class BankAccount {
 
 BankAccount account = new BankAccount();
 account.withdraw(500);           // Allowed
-account.deposit(-100);           // âŒ Rejected - validation!
+account.deposit(-100);           // [WRONG] Rejected - validation!
 System.out.println(account.getBalance());  // 500
 ```
 

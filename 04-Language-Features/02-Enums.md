@@ -10,7 +10,7 @@ An **enum** is a special type that represents a fixed set of constants. Use it w
 
 Instead of this:
 ```java
-// âŒ Error-prone
+// [WRONG] Error-prone
 String status = "PENDING";
 String priority = "MODERATE";  // Typo? No compile-time check
 ```
@@ -424,7 +424,7 @@ switch (day1) {
 
 ### 1. Creating Enum Instances (Can't!)
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 Direction dir = new Direction.NORTH;
 
 // RIGHT
@@ -433,7 +433,7 @@ Direction dir = Direction.NORTH;
 
 ### 2. Comparing with String
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 String status = "PENDING";
 if (status == Status.PENDING) { }  // Always false
 
@@ -445,7 +445,7 @@ Status status = Status.valueOf("PENDING");
 
 ### 3. Empty Enum
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 enum Empty { }  // No constants
 
 // RIGHT

@@ -272,7 +272,7 @@ Java figures out which method to call based on argument type.
 ### Mistake 1: Forgetting 'public'
 
 ```java
-void printMessage() { }     // âŒ Can't call from outside class
+void printMessage() { }     // [WRONG] Can't call from outside class
 public void printMessage() { } // Can call from anywhere
 ```
 
@@ -280,7 +280,7 @@ public void printMessage() { } // Can call from anywhere
 
 ```java
 public int getValue() {
-    return "Hello";  // âŒ Can't return String when int expected
+    return "Hello";  // [WRONG] Can't return String when int expected
 }
 
 public String getValue() {
@@ -293,7 +293,7 @@ public String getValue() {
 ```java
 public int add(int a, int b) {
     int sum = a + b;
-    // âŒ Missing return statement
+    // [WRONG] Missing return statement
 }
 
 public int add(int a, int b) {
@@ -307,7 +307,7 @@ public int add(int a, int b) {
 ```java
 public void printName(String name) {
     System.out.println(name);
-    return name;  // âŒ Can't return from void
+    return name;  // [WRONG] Can't return from void
 }
 
 public void printName(String name) {

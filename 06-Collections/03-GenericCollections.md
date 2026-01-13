@@ -21,7 +21,7 @@ Integer number = (Integer) list.get(1);
 ```java
 List<String> list = new ArrayList<String>();
 list.add("Hello");
-list.add(123);  // âŒ Compile error - wrong type!
+list.add(123);  // [WRONG] Compile error - wrong type!
 
 String word = list.get(0);  // No casting needed
 ```
@@ -159,7 +159,7 @@ stringList.getClass() == intList.getClass();  // true!
 
 This is why you can't do:
 ```java
-if (obj instanceof List<String>) { }  // âŒ Error - can't check generic type
+if (obj instanceof List<String>) { }  // [WRONG] Error - can't check generic type
 if (obj instanceof List) { }          // OK
 ```
 

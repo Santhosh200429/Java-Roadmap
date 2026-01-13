@@ -14,7 +14,7 @@
 
 Without mocking:
 ```java
-// âŒ Test fails if database is down!
+// [WRONG] Test fails if database is down!
 StudentService service = new StudentService(realDatabase);
 service.saveStudent(student);  // Depends on real DB
 ```
@@ -413,7 +413,7 @@ public class OrderServiceTest {
 
 ### 1. Verifying on Mock Instead of Service
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 StudentRepository mockRepo = mock(StudentRepository.class);
 mockRepo.save(student);  // Directly calling mock
 
@@ -426,7 +426,7 @@ verify(mockRepo).save(student);
 
 ### 2. Not Using Argument Matchers
 ```java
-// âŒ WRONG - brittle test
+// [WRONG] WRONG - brittle test
 when(repo.findById(1)).thenReturn(student);
 // Only works if exactly 1 is passed
 
@@ -437,7 +437,7 @@ when(repo.findById(anyInt())).thenReturn(student);
 
 ### 3. Forgetting to Setup Mocks
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 StudentRepository mockRepo = mock(StudentRepository.class);
 List<Student> result = mockRepo.findAll();  // Returns empty!
 

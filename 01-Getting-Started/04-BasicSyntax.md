@@ -35,7 +35,7 @@ public class ClassName {
 
 ```java
 System.out.println("Hello");  // Correct
-System.out.println("Hello")   // âŒ Wrong - missing semicolon
+System.out.println("Hello")   // [WRONG] Wrong - missing semicolon
 ```
 
 The semicolon tells Java "this instruction is complete."
@@ -43,8 +43,8 @@ The semicolon tells Java "this instruction is complete."
 ### 2. Java is Case-Sensitive
 
 ```java
-println("test");    // âŒ Wrong - must be println
-PrintLn("test");    // âŒ Wrong - must be println
+println("test");    // [WRONG] Wrong - must be println
+PrintLn("test");    // [WRONG] Wrong - must be println
 System.out.println("test");  // Correct
 ```
 
@@ -132,11 +132,11 @@ Special characters for formatting:
 
 | Sequence | Meaning | Example |
 |----------|---------|---------|
-| `\n` | New line | `"Hello\nWorld"` â†’ prints on 2 lines |
-| `\t` | Tab (4 spaces) | `"Name\tJohn"` â†’ Name    John |
-| `\\` | Backslash | `"C:\\Users\\"` â†’ C:\\Users\\ |
-| `\"` | Double quote | `"Say \"Hi\""` â†’ Say "Hi" |
-| `\'` | Single quote | `"It\'s"` â†’ It's |
+| `\n` | New line | `"Hello\nWorld"` -' prints on 2 lines |
+| `\t` | Tab (4 spaces) | `"Name\tJohn"` -' Name    John |
+| `\\` | Backslash | `"C:\\Users\\"` -' C:\\Users\\ |
+| `\"` | Double quote | `"Say \"Hi\""` -' Say "Hi" |
+| `\'` | Single quote | `"It\'s"` -' It's |
 
 Example:
 ```java
@@ -157,9 +157,9 @@ System.out.println("Line 1\nLine 2\nLine 3");
 
 ```java
 public class HelloWorld { }      // Correct
-public class helloWorld { }      // âŒ Unconventional
-public class hello_world { }     // âŒ Unconventional
-public class HELLOWORLD { }      // âŒ Not used
+public class helloWorld { }      // [WRONG] Unconventional
+public class hello_world { }     // [WRONG] Unconventional
+public class HELLOWORLD { }      // [WRONG] Not used
 ```
 
 ### Variable Names (camelCase)
@@ -170,9 +170,9 @@ public class HELLOWORLD { }      // âŒ Not used
 
 ```java
 int studentAge = 20;         // Correct
-int StudentAge = 20;         // âŒ Wrong convention
-int student_age = 20;        // âŒ Wrong convention
-int STUDENT_AGE = 20;        // âŒ Only for constants
+int StudentAge = 20;         // [WRONG] Wrong convention
+int student_age = 20;        // [WRONG] Wrong convention
+int STUDENT_AGE = 20;        // [WRONG] Only for constants
 ```
 
 ### Method Names (camelCase)
@@ -181,7 +181,7 @@ Like variables - start lowercase, capitalize each new word:
 
 ```java
 public void calculateTotal() { }   // Correct
-public void CalculateTotal() { }   // âŒ Wrong
+public void CalculateTotal() { }   // [WRONG] Wrong
 ```
 
 ## Common Syntax Errors
@@ -191,7 +191,7 @@ Here are mistakes beginners make and how to fix them:
 ### Error 1: Missing Semicolon
 
 ```java
-System.out.println("Hello")  // âŒ Missing semicolon
+System.out.println("Hello")  // [WRONG] Missing semicolon
 System.out.println("Hello"); // Fixed
 ```
 
@@ -201,7 +201,7 @@ System.out.println("Hello"); // Fixed
 
 ```java
 // File: HelloWorld.java
-public class helloWorld { }  // âŒ Doesn't match filename
+public class helloWorld { }  // [WRONG] Doesn't match filename
 public class HelloWorld { }  // Matches filename
 ```
 
@@ -213,7 +213,7 @@ public class HelloWorld { }  // Matches filename
 public class Test {
     public static void main(String[] args) {
         System.out.println("Hello");
-    }  // âŒ Missing closing brace for class
+    }  // [WRONG] Missing closing brace for class
 ```
 
 **IDE Hint**: Your IDE usually auto-matches braces.
@@ -221,7 +221,7 @@ public class Test {
 ### Error 4: Typos in Built-in Words
 
 ```java
-System.out.printl("Hello");      // âŒ printl (typo)
+System.out.printl("Hello");      // [WRONG] printl (typo)
 System.out.println("Hello");     // println
 ```
 
@@ -231,7 +231,7 @@ System.out.println("Hello");     // println
 
 ```java
 public class Test {
-    System.out.println("Hello"); // âŒ Can't run this
+    System.out.println("Hello"); // [WRONG] Can't run this
 }
 ```
 
@@ -299,7 +299,7 @@ Your IDE usually does this automatically.
 ### 2. Meaningful Names
 
 ```java
-// âŒ Bad names
+// [WRONG] Bad names
 int x = 25;
 String n = "John";
 
@@ -311,7 +311,7 @@ String name = "John";
 ### 3. One Statement Per Line
 
 ```java
-// âŒ Hard to read
+// [WRONG] Hard to read
 System.out.println("A"); System.out.println("B"); System.out.println("C");
 
 // Easy to read
@@ -323,7 +323,7 @@ System.out.println("C");
 ### 4. Use Comments Wisely
 
 ```java
-// âŒ Obvious comment (doesn't help)
+// [WRONG] Obvious comment (doesn't help)
 int age = 25;  // Set age to 25
 
 // Helpful comment
@@ -418,7 +418,7 @@ public class Introduction {
 ## Next Steps
 
 1. You understand basic syntax
-2. â­ï¸ Next: [Variables and Data Types](../2-Core-Java/01-VariablesAndDataTypes.md)
+2. -, Next: [Variables and Data Types](../2-Core-Java/01-VariablesAndDataTypes.md)
 
 ---
 

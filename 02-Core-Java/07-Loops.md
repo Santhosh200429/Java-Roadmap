@@ -38,15 +38,15 @@ public class MultiplicationTable {
         int num = 5;
         
         for (int i = 1; i <= 10; i++) {
-            System.out.println(num + " Ã— " + i + " = " + (num * i));
+            System.out.println(num + " - " + i + " = " + (num * i));
         }
     }
 }
 
 // Output:
-// 5 Ã— 1 = 5
-// 5 Ã— 2 = 10
-// 5 Ã— 3 = 15
+// 5 - 1 = 5
+// 5 - 2 = 10
+// 5 - 3 = 15
 // ... up to 10
 ```
 
@@ -278,7 +278,7 @@ public class GradeCalculator {
 
 ### 1. Infinite Loop
 ```java
-// âŒ WRONG - i never changes
+// [WRONG] WRONG - i never changes
 while (true) {
     System.out.println("Infinite");
     // No break statement!
@@ -292,7 +292,7 @@ for (int i = 0; i < 5; i++) {
 
 ### 2. Off-by-One Error
 ```java
-// âŒ WRONG - prints 1,2,3,4,5,6 (6 times)
+// [WRONG] WRONG - prints 1,2,3,4,5,6 (6 times)
 for (int i = 1; i <= 5; i++) {
     System.out.println(i);
 }
@@ -305,7 +305,7 @@ for (int i = 0; i < 5; i++) {
 
 ### 3. Using Wrong Loop Type
 ```java
-// âŒ Awkward
+// [WRONG] Awkward
 int count = 0;
 while (count < 5) {
     System.out.println(count);

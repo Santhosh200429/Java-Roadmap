@@ -70,26 +70,26 @@ public class ReferenceReassignment {
 ### When Object Reference is Passed:
 ```
 main() stack:           modifyObject() stack:
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”        â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ p â”€â”€â”       â”‚        â”‚ person â”€â”€â”       â”‚
-â”‚     â”‚       â”‚        â”‚          â”‚       â”‚
-â””â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”˜        â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”˜
-      â”‚                            â”‚
-      â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â†’ Heap         â”‚
-               â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”‚
-               â”‚ Person obj   â”‚â†â”€â”€â”˜
-               â”‚ name: "Orig" â”‚
-               â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+"oe""""""""""""""        "oe"""""""""""""""""""
+" p """       "        " person """       "
+"     "       "        "          "       "
+""""""""""""""""        """""""""""""""""""""
+      "                            "
+      """"""""""""""-' Heap         "
+               "oe"""""""""""""""   "
+               " Person obj   "-"""
+               " name: "Orig" "
+               """""""""""""""""
 ```
 
 Both `p` and `person` reference the same object in the heap.
 
 ## Common Misconceptions
 
-### âŒ Myth: Java has pass-by-reference
+### [FALSE] Myth: Java has pass-by-reference
 **Reality:** Java only has pass-by-value, but values can be object references.
 
-### âŒ Myth: You can use a method to change which object a variable points to
+### [FALSE] Myth: You can use a method to change which object a variable points to
 **Reality:** Only the local copy of the reference changes, not the original.
 
 ```java
@@ -116,7 +116,7 @@ public class Demo {
 
 ## Practical Implications
 
-### Modifying Object State Works âœ“
+### Modifying Object State Works [TRUE]
 ```java
 List<String> list = new ArrayList<>();
 modifyList(list);  // list is modified
@@ -126,7 +126,7 @@ public static void modifyList(List<String> list) {
 }
 ```
 
-### Reassigning Reference Doesn't Work âœ—
+### Reassigning Reference Doesn't Work [FALSE]
 ```java
 String str = "Hello";
 replaceString(str);  // str still = "Hello"

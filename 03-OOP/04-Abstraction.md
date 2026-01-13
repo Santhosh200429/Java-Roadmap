@@ -19,7 +19,7 @@ abstract class Animal {
     }
 }
 
-// âŒ Can't create: Animal a = new Animal();
+// [WRONG] Can't create: Animal a = new Animal();
 ```
 
 ## Concrete Implementation

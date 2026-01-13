@@ -188,7 +188,7 @@ strings.add("Hello");
 String word = strings.get(0);  // No casting needed
 
 // Wrong type - compiler error
-strings.add(123);  // âŒ Error - expected String
+strings.add(123);  // [WRONG] Error - expected String
 
 // Without generics (old way - not recommended)
 List list = new ArrayList();  // No type checking

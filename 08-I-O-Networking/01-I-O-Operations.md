@@ -12,10 +12,10 @@ A **stream** is a sequence of data flowing from source to destination.
 
 ```
 Reading File (Input Stream)
-File â†’ InputStream â†’ Your Program
+File -' InputStream -' Your Program
 
 Writing File (Output Stream)
-Your Program â†’ OutputStream â†’ File
+Your Program -' OutputStream -' File
 ```
 
 ## File I/O Types
@@ -325,17 +325,17 @@ public class FileAppender {
 
 | Task | Stream | Reader/Writer |
 |------|--------|---------------|
-| Binary files | Use Stream | âŒ No |
-| Text files | âš ï¸ Works but harder | Use Reader/Writer |
-| Character encoding | âŒ Not automatic | Automatic |
-| Performance | âš ï¸ Slower | Faster |
+| Binary files | Use Stream | [WRONG] No |
+| Text files | , Works but harder | Use Reader/Writer |
+| Character encoding | [WRONG] Not automatic | Automatic |
+| Performance | , Slower | Faster |
 
 ## Common Mistakes
 
 ### 1. Forgetting to Close
 
 ```java
-// âŒ WRONG - resource leak
+// [WRONG] WRONG - resource leak
 public void readFile() throws IOException {
     BufferedReader br = new BufferedReader(
         new FileReader("data.txt")
@@ -356,7 +356,7 @@ public void readFile() throws IOException {
 ### 2. Wrong Encoding
 
 ```java
-// âŒ WRONG - assumes default encoding
+// [WRONG] WRONG - assumes default encoding
 FileReader fr = new FileReader("utf8_file.txt");
 
 // RIGHT - specify encoding
@@ -370,7 +370,7 @@ BufferedReader br = new BufferedReader(isr);
 ### 3. Not Handling EOF Properly
 
 ```java
-// âŒ WRONG - doesn't handle end-of-file
+// [WRONG] WRONG - doesn't handle end-of-file
 BufferedReader br = new BufferedReader(
     new FileReader("data.txt")
 );

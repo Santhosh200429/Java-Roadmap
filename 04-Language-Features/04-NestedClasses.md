@@ -10,11 +10,11 @@
 
 ```
 Nested Classes
-â”œâ”€â”€ Static Nested Class (static inner class)
-â”œâ”€â”€ Inner Classes (non-static)
-â”‚   â”œâ”€â”€ Member Inner Class
-â”‚   â”œâ”€â”€ Local Inner Class
-â”‚   â””â”€â”€ Anonymous Inner Class
+"oe"" Static Nested Class (static inner class)
+"oe"" Inner Classes (non-static)
+"   "oe"" Member Inner Class
+"   "oe"" Local Inner Class
+"   """" Anonymous Inner Class
 ```
 
 ## 1. Static Nested Class
@@ -28,7 +28,7 @@ public class OuterClass {
     public static class StaticNested {
         public void display() {
             System.out.println(staticVar);  // Can access static
-            // System.out.println(instanceVar);  // âŒ Can't access instance
+            // System.out.println(instanceVar);  // [WRONG] Can't access instance
         }
     }
 }
@@ -355,7 +355,7 @@ game.startGame();
 ### 1. Trying to Access Non-Final Variable in Local Class
 
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 public void process() {
     String var = "value";  // Not final
     var = "changed";
@@ -382,7 +382,7 @@ public void process() {
 ### 2. Instance Inner Without Outer Instance
 
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 Outer.Inner inner = new Outer.Inner();  // No outer instance
 
 // RIGHT
@@ -393,7 +393,7 @@ Outer.Inner inner = outer.new Inner();  // Create with outer
 ### 3. Overcomplicating with Anonymous Classes
 
 ```java
-// âŒ COMPLEX - unnecessary anonymous class
+// [WRONG] COMPLEX - unnecessary anonymous class
 button.setOnClickListener(new Button.ClickListener() {
     @Override
     public void onClick() {
@@ -413,7 +413,7 @@ button.setOnClickListener(() -> doSomething());
 - Comparison/filtering logic
 - Logical grouping of related classes
 
-âŒ **Don't Use for:**
+[WRONG] **Don't Use for:**
 - Regular application logic (use separate classes)
 - If complexity increases significantly
 - Deep nesting (limits readability)

@@ -257,7 +257,7 @@ mvn test -Dtest=CalculatorTest#testAdd
 
 ### In IDE
 
-- Right-click test class â†’ Run Tests
+- Right-click test class > Run Tests
 - Or use keyboard shortcut (usually Ctrl+Shift+F10)
 
 ## Test Coverage

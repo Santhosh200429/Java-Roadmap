@@ -23,8 +23,8 @@ class BankAccount {
 // Scenario with 2 threads, balance = 1000
 Thread 1: Check balance >= 100? YES
 Thread 2: Check balance >= 100? YES
-Thread 1: Deduct 100 â†’ balance = 900
-Thread 2: Deduct 100 â†’ balance = 900  // WRONG! Should be 800
+Thread 1: Deduct 100 -' balance = 900
+Thread 2: Deduct 100 -' balance = 900  // WRONG! Should be 800
 ```
 
 ## Synchronized Methods
@@ -70,8 +70,8 @@ class Counter {
 }
 
 // Thread 1: Tries to acquire lock
-// If lock available â†’ enters â†’ increments â†’ releases
-// If lock taken â†’ waits until available
+// If lock available -' enters -' increments -' releases
+// If lock taken -' waits until available
 // Thread 2: Same process (must wait for Thread 1)
 ```
 
@@ -341,7 +341,7 @@ class PrintBuffer {
 
 ### 1. Forgetting to Synchronize All Access
 ```java
-// âŒ WRONG - balance accessed unsynchronized
+// [WRONG] WRONG - balance accessed unsynchronized
 class Account {
     private int balance;
     
@@ -370,7 +370,7 @@ class Account {
 
 ### 2. Synchronizing Too Much
 ```java
-// âŒ INEFFICIENT - locks entire class
+// [WRONG] INEFFICIENT - locks entire class
 public class DataProcessor {
     public synchronized void process() {
         readFile();           // No thread issues
@@ -397,7 +397,7 @@ public class DataProcessor {
 
 ### 3. Calling wait() Without Loop
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 synchronized void getData() throws InterruptedException {
     if (data == null) {  // What if notified spuriously?
         wait();

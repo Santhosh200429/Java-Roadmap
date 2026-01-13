@@ -30,7 +30,7 @@ class Dog extends Animal {
 // If you misspell method name:
 class Cat extends Animal {
     @Override
-    public void Sound() {  // âŒ ERROR: method not found in parent
+    public void Sound() {  // [WRONG] ERROR: method not found in parent
         System.out.println("Meow");
     }
 }
@@ -54,7 +54,7 @@ public class OldAPI {
 
 // Usage generates warning
 OldAPI api = new OldAPI();
-api.oldMethod();  // âš ï¸ Warning: oldMethod is deprecated
+api.oldMethod();  // , Warning: oldMethod is deprecated
 api.newMethod();  // OK
 ```
 
@@ -96,7 +96,7 @@ public interface Calculator {
 @FunctionalInterface
 public interface BadInterface {
     void method1();
-    void method2();  // âŒ ERROR: more than one abstract method
+    void method2();  // [WRONG] ERROR: more than one abstract method
 }
 ```
 
@@ -220,7 +220,7 @@ Extract value from URL path.
 ```java
 @GetMapping("/students/{id}")
 public Student getStudent(@PathVariable int id) {
-    // id from URL: /students/123 â†’ id = 123
+    // id from URL: /students/123 -' id = 123
 }
 
 // Multiple path variables
@@ -456,7 +456,7 @@ public class StudentController {
 
 ### 1. Using @ without annotation
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 @ public void method() { }
 
 // RIGHT
@@ -466,7 +466,7 @@ public void method() { }
 
 ### 2. Wrong annotation on wrong element
 ```java
-// âŒ WRONG - @Override on field
+// [WRONG] WRONG - @Override on field
 @Override
 private int age;
 
@@ -479,7 +479,7 @@ public void someMethod() { }
 ```java
 @Author(name = "Alice")  // OK - date has default
 
-@Author()  // âŒ ERROR - name is required
+@Author()  // [WRONG] ERROR - name is required
 ```
 
 ## Key Takeaways

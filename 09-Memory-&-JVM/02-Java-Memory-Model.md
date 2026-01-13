@@ -43,18 +43,18 @@ public class VisibilityExample {
 
 ```
 Thread 1                Main Thread
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”      â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ flag = false â”‚      â”‚ Main heap    â”‚
-â”‚ (cached)     â”‚      â”‚ flag = false â”‚
-â”‚ reads flag   â”‚      â”‚              â”‚
-â”‚ flag = false â”‚      â”‚              â”‚
-â”‚ reads flag   â”‚      â”‚              â”‚
-â”‚ flag = false â”‚      â”‚ (sets flag)  â”‚
-â”‚ ...          â”‚      â”‚ flag = true  â”‚
-â”‚              â”‚      â”‚              â”‚
-â”‚ Never sees   â”‚      â”‚              â”‚
-â”‚ the change!  â”‚      â”‚              â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜      â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+"oe"""""""""""""""      "oe"""""""""""""""
+" flag = false "      " Main heap    "
+" (cached)     "      " flag = false "
+" reads flag   "      "              "
+" flag = false "      "              "
+" reads flag   "      "              "
+" flag = false "      " (sets flag)  "
+" ...          "      " flag = true  "
+"              "      "              "
+" Never sees   "      "              "
+" the change!  "      "              "
+"""""""""""""""""      """""""""""""""""
 ```
 
 ## Happens-Before Relationship
@@ -93,7 +93,7 @@ public class MultiThreadExample {
         Thread t2 = new Thread(() -> {
             try {
                 t1.join();  // Wait for t1 to finish
-                System.out.println("T2: x = " + x);  // âœ“ Always sees x = 5
+                System.out.println("T2: x = " + x);  // oe" Always sees x = 5
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -105,7 +105,7 @@ public class MultiThreadExample {
     }
 }
 
-// Happens-before: t1 finish â†’ t1.join() returns â†’ x = 5 visible
+// Happens-before: t1 finish -' t1.join() returns -' x = 5 visible
 ```
 
 ## Synchronization & Visibility
@@ -143,18 +143,18 @@ public class VolatileExample {
 ```
 With volatile flag:
 Thread 1                Main Thread
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”      â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ reads flag   â”‚      â”‚ Main heap    â”‚
-â”‚ from memory  â”‚      â”‚ flag = false â”‚
-â”‚ flag = false â”‚      â”‚              â”‚
-â”‚ reads flag   â”‚      â”‚              â”‚
-â”‚ from memory  â”‚      â”‚ (sets flag)  â”‚
-â”‚ flag = false â”‚      â”‚ flag = true  â”‚
-â”‚ reads flag   â”‚      â”‚ (flushed!)   â”‚
-â”‚ from memory  â”‚      â”‚              â”‚
-â”‚ flag = true  â”‚      â”‚              â”‚
-â”‚ âœ“ SEES CHANGEâ”‚      â”‚              â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜      â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+"oe"""""""""""""""      "oe"""""""""""""""
+" reads flag   "      " Main heap    "
+" from memory  "      " flag = false "
+" flag = false "      "              "
+" reads flag   "      "              "
+" from memory  "      " (sets flag)  "
+" flag = false "      " flag = true  "
+" reads flag   "      " (flushed!)   "
+" from memory  "      "              "
+" flag = true  "      "              "
+" oe" SEES CHANGE"      "              "
+"""""""""""""""""      """""""""""""""""
 ```
 
 ### synchronized - Lock & Visibility
@@ -167,10 +167,10 @@ public class SynchronizedVisibility {
         
         public synchronized void increment() {
             count++;  // Acquire lock
-        }        // Release lock â†’ all changes visible
+        }        // Release lock -' all changes visible
         
         public synchronized int getCount() {
-            return count;  // Acquire lock â†’ see all changes
+            return count;  // Acquire lock -' see all changes
         }
     }
     
@@ -203,32 +203,32 @@ public class SynchronizedVisibility {
 
 ```
 1. LoadStore: Load before Store
-   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-   â”‚ Read variable            â”‚
-   â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤ â† Barrier
-   â”‚ Write variable           â”‚
-   â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+   "oe"""""""""""""""""""""""""""
+   " Read variable            "
+   "oe""""""""""""""""""""""""""" - Barrier
+   " Write variable           "
+   """""""""""""""""""""""""""""
 
 2. StoreStore: Store before Store
-   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-   â”‚ Write variable 1         â”‚
-   â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤ â† Barrier
-   â”‚ Write variable 2         â”‚
-   â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+   "oe"""""""""""""""""""""""""""
+   " Write variable 1         "
+   "oe""""""""""""""""""""""""""" - Barrier
+   " Write variable 2         "
+   """""""""""""""""""""""""""""
 
 3. LoadLoad: Load before Load
-   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-   â”‚ Read variable 1          â”‚
-   â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤ â† Barrier
-   â”‚ Read variable 2          â”‚
-   â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+   "oe"""""""""""""""""""""""""""
+   " Read variable 1          "
+   "oe""""""""""""""""""""""""""" - Barrier
+   " Read variable 2          "
+   """""""""""""""""""""""""""""
 
 4. StoreLoad: Store before Load (strongest)
-   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-   â”‚ Write variable           â”‚
-   â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤ â† Barrier
-   â”‚ Read variable            â”‚
-   â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+   "oe"""""""""""""""""""""""""""
+   " Write variable           "
+   "oe""""""""""""""""""""""""""" - Barrier
+   " Read variable            "
+   """""""""""""""""""""""""""""
 ```
 
 ## Data Races
@@ -238,7 +238,7 @@ public class SynchronizedVisibility {
 ```java
 public class DataRace {
     
-    static int counter = 0;  // â† Data race!
+    static int counter = 0;  // - Data race!
     
     public static void main(String[] args) throws InterruptedException {
         Thread t1 = new Thread(() -> {
@@ -276,9 +276,9 @@ counter++; is actually three operations:
 
 Thread 1              Thread 2
 load counter=5
-add 1 â†’ 6
+add 1 -' 6
                      load counter=5 (hasn't seen write yet!)
-                     add 1 â†’ 6
+                     add 1 -' 6
 store counter=6
                      store counter=6
 
@@ -348,7 +348,7 @@ public class SynchronizedFix {
         t1.join();
         t2.join();
         
-        System.out.println(counter);  // âœ“ Always 2000
+        System.out.println(counter);  // oe" Always 2000
     }
 }
 
@@ -382,7 +382,7 @@ public class AtomicFix {
         t1.join();
         t2.join();
         
-        System.out.println(counter);  // âœ“ Always 2000
+        System.out.println(counter);  // oe" Always 2000
     }
 }
 
@@ -413,7 +413,7 @@ public class AtomicFix {
 
 6. Transitivity
    A happens-before B AND B happens-before C
-   â†’ A happens-before C
+   -' A happens-before C
 ```
 
 ## Memory Model in Practice
@@ -459,11 +459,11 @@ public class SafePublication {
     static volatile Configuration config;  // volatile reference
     
     public static void setConfig(Configuration cfg) {
-        config = cfg;  // âœ“ Safe write
+        config = cfg;  // oe" Safe write
     }
     
     public static Configuration getConfig() {
-        return config;  // âœ“ Safe read
+        return config;  // oe" Safe read
     }
 }
 
@@ -490,7 +490,7 @@ public class ImmutableExample {
     public static void main(String[] args) throws InterruptedException {
         Thread t = new Thread(() -> {
             System.out.println("x: " + point.x + ", y: " + point.y);
-            // âœ“ Always sees initial values
+            // oe" Always sees initial values
         });
         
         t.start();

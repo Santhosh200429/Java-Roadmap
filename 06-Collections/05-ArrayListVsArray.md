@@ -28,7 +28,7 @@ public class ArrayExample {
         System.out.println(arr.length);  // 5
         
         // Cannot add 6th element
-        // arr[5] = 30;  // âœ— ArrayIndexOutOfBoundsException
+        // arr[5] = 30;  // oe- ArrayIndexOutOfBoundsException
     }
 }
 ```
@@ -36,16 +36,16 @@ public class ArrayExample {
 ### Primitives Allowed
 
 ```java
-// âœ“ Arrays support primitives
+// oe" Arrays support primitives
 int[] numbers = {1, 2, 3};
 double[] decimals = {1.5, 2.5};
 boolean[] flags = {true, false};
 
-// âœ— ArrayList doesn't support primitives
-// ArrayList<int> list = new ArrayList<>();  // âœ— Compiler error
+// oe- ArrayList doesn't support primitives
+// ArrayList<int> list = new ArrayList<>();  // oe- Compiler error
 
 // Must use wrapper classes
-ArrayList<Integer> list = new ArrayList<>();  // âœ“ Works
+ArrayList<Integer> list = new ArrayList<>();  // oe" Works
 ```
 
 ### Array Memory Layout
@@ -54,10 +54,10 @@ ArrayList<Integer> list = new ArrayList<>();  // âœ“ Works
 int[] arr = {10, 20, 30};
 
 Memory:
-â”Œâ”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”
-â”‚ 10  â”‚ 20  â”‚ 30  â”‚  (contiguous memory, cache-friendly)
-â””â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”˜
-  â†‘
+"oe""""""""""""""""""
+" 10  " 20  " 30  "  (contiguous memory, cache-friendly)
+""""""""""""""""""""
+  -'
 arr (reference to start)
 
 Access: O(1) - Direct memory lookup
@@ -116,14 +116,14 @@ public class ArrayListExample {
 ### Objects Only
 
 ```java
-// âœ“ Objects
+// oe" Objects
 ArrayList<String> strings = new ArrayList<>();
 ArrayList<Person> people = new ArrayList<>();
 
-// âœ— Primitives (must use wrapper)
-// ArrayList<int> numbers = new ArrayList<>();  // âœ— Error
+// oe- Primitives (must use wrapper)
+// ArrayList<int> numbers = new ArrayList<>();  // oe- Error
 
-// âœ“ Wrapper classes (autoboxing)
+// oe" Wrapper classes (autoboxing)
 ArrayList<Integer> numbers = new ArrayList<>();
 numbers.add(5);  // Autoboxed to Integer(5)
 int value = numbers.get(0);  // Unboxed to int
@@ -443,24 +443,24 @@ List<String> list5 = List.of("A", "B", "C");  // Immutable
 ### Mistake 1: Primitives in ArrayList
 
 ```java
-// âœ— Wrong
+// oe- Wrong
 ArrayList<int> numbers = new ArrayList<>();  // Compilation error!
 
-// âœ“ Correct
+// oe" Correct
 ArrayList<Integer> numbers = new ArrayList<>();
 ```
 
 ### Mistake 2: Modifying While Iterating
 
 ```java
-// âœ— Wrong
+// oe- Wrong
 for (String item : list) {
     if (item.equals("remove")) {
         list.remove(item);  // ConcurrentModificationException!
     }
 }
 
-// âœ“ Correct
+// oe" Correct
 Iterator<String> it = list.iterator();
 while (it.hasNext()) {
     if (it.next().equals("remove")) {
@@ -472,11 +472,11 @@ while (it.hasNext()) {
 ### Mistake 3: Forgetting Null Check
 
 ```java
-// âœ— Risk
+// oe- Risk
 Integer value = list.get(index);
 int result = value + 10;  // NullPointerException if value is null!
 
-// âœ“ Safe
+// oe" Safe
 Integer value = list.get(index);
 if (value != null) {
     int result = value + 10;

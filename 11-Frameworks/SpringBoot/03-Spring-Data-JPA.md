@@ -83,13 +83,13 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 ## Query Keywords
 
 ```
-find        â†’ SELECT
-read        â†’ SELECT
-get         â†’ SELECT
-query       â†’ SELECT
-count       â†’ COUNT
-exists      â†’ EXISTS
-delete      â†’ DELETE
+find        -' SELECT
+read        -' SELECT
+get         -' SELECT
+query       -' SELECT
+count       -' COUNT
+exists      -' EXISTS
+delete      -' DELETE
 
 Is, Equals
 Greater, GreaterThan, GreaterThanEqual
@@ -443,7 +443,7 @@ class ErrorResponse {
 
 ### 1. Forgetting @Repository
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 }
 
@@ -455,7 +455,7 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 
 ### 2. Wrong Type for PrimaryKey
 ```java
-// âŒ WRONG - Student ID is Integer, not String
+// [WRONG] WRONG - Student ID is Integer, not String
 public interface StudentRepository extends JpaRepository<Student, String> {
 }
 
@@ -466,7 +466,7 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 
 ### 3. Missing @Param in @Query
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 @Query("SELECT s FROM Student s WHERE s.name = :name")
 List<Student> findByName(String name);  // name not bound
 

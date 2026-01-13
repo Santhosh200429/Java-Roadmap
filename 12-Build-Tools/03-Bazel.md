@@ -16,11 +16,11 @@
 ```
 Feature          | Maven  | Gradle | Bazel
 -----------------|--------|--------|--------
-Speed            | Good   | Good   | Fast â­
-Scalability      | Good   | Good   | Excellent â­
+Speed            | Good   | Good   | Fast -
+Scalability      | Good   | Good   | Excellent -
 Configuration    | XML    | Groovy | Starlark
-Build Cache      | No     | Yes    | Yes â­
-Reproducibility  | Good   | Good   | Excellent â­
+Build Cache      | No     | Yes    | Yes -
+Reproducibility  | Good   | Good   | Excellent -
 Learning Curve   | Easy   | Medium | Hard
 ```
 
@@ -46,24 +46,24 @@ bazel version
 
 ```
 my-java-project/
-â”œâ”€â”€ WORKSPACE              # Root file defining project
-â”œâ”€â”€ BUILD                  # Build rules for root
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ main/
-â”‚   â”‚   â”œâ”€â”€ java/
-â”‚   â”‚   â”‚   â””â”€â”€ com/example/
-â”‚   â”‚   â”‚       â”œâ”€â”€ BUILD
-â”‚   â”‚   â”‚       â”œâ”€â”€ Main.java
-â”‚   â”‚   â”‚       â””â”€â”€ Helper.java
-â”‚   â”‚   â””â”€â”€ resources/
-â”‚   â”‚       â””â”€â”€ BUILD
-â”‚   â””â”€â”€ test/
-â”‚       â”œâ”€â”€ java/
-â”‚       â”‚   â””â”€â”€ com/example/
-â”‚       â”‚       â”œâ”€â”€ BUILD
-â”‚       â”‚       â””â”€â”€ HelperTest.java
-â”‚       â””â”€â”€ resources/
-â””â”€â”€ bazelisk.json          # Bazel version management
+"oe"" WORKSPACE              # Root file defining project
+"oe"" BUILD                  # Build rules for root
+"oe"" src/
+"   "oe"" main/
+"   "   "oe"" java/
+"   "   "   """" com/example/
+"   "   "       "oe"" BUILD
+"   "   "       "oe"" Main.java
+"   "   "       """" Helper.java
+"   "   """" resources/
+"   "       """" BUILD
+"   """" test/
+"       "oe"" java/
+"       "   """" com/example/
+"       "       "oe"" BUILD
+"       "       """" HelperTest.java
+"       """" resources/
+"""" bazelisk.json          # Bazel version management
 ```
 
 ## WORKSPACE File
@@ -430,7 +430,7 @@ deps = ["@maven//:junit_junit"]
 - Complex dependency graphs
 - Enterprise-scale projects
 
-### âŒ Better Alternatives When:
+### [WRONG] Better Alternatives When:
 - Small single-language project
 - Team unfamiliar with Bazel
 - Simple Maven/Gradle setup works

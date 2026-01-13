@@ -454,7 +454,7 @@ public class Person {
 }
 ```
 
-### âŒ Avoid Static Blocks For:
+### [WRONG] Avoid Static Blocks For:
 - Complex logic (use static methods instead)
 - Error-prone initialization
 - Things that change (use initialization methods)
@@ -464,7 +464,7 @@ public class Person {
 ### 1. Accessing Instance Variables in Static Block
 
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 public class Wrong {
     public int value = 5;
     
@@ -486,7 +486,7 @@ public class Correct {
 ### 2. Throwing Checked Exceptions in Static Block
 
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 public class Wrong {
     static {
         FileInputStream fis = new FileInputStream("file.txt");  // ERROR!
@@ -508,7 +508,7 @@ public class Correct {
 ### 3. Overcomplicating Instance Initialization
 
 ```java
-// âŒ WRONG - too complex
+// [WRONG] WRONG - too complex
 public class Complex {
     {
         for (int i = 0; i < 1000; i++) {

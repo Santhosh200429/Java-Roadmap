@@ -11,10 +11,10 @@
 A **thread** is a lightweight process that runs independently but shares memory with other threads in the same program.
 
 ```
-Single-threaded:    Task1 â†’ Task2 â†’ Task3 (sequential)
-Multi-threaded:     Task1 â†“
-                    Task2 â†“  (concurrent)
-                    Task3 â†“
+Single-threaded:    Task1 -' Task2 -' Task3 (sequential)
+Multi-threaded:     Task1 -"
+                    Task2 -"  (concurrent)
+                    Task3 -"
 ```
 
 ## Creating Threads
@@ -108,12 +108,12 @@ public class ThreadExample {
 
 ```
          start()
-          â†“
-    [Ready] â†’ [Running] â†’ [Done]
-        â†‘         â†“
+          -"
+    [Ready] -' [Running] -' [Done]
+        -'         -"
         |  sleep()
-        |    â†“
-        â””â”€[Waiting]
+        |    -"
+        """[Waiting]
 ```
 
 - **New**: Thread created but not started
@@ -127,7 +127,7 @@ public class ThreadExample {
 When threads access shared data, problems occur:
 
 ```java
-// âŒ Not thread-safe
+// [WRONG] Not thread-safe
 public class Counter {
     int count = 0;
     

@@ -75,18 +75,18 @@ javac -version
 ## First Project Setup
 
 ### Creating a New Java Project in IntelliJ IDEA:
-1. File â†’ New â†’ Project
+1. File -' New -' Project
 2. Select Java as project type
 3. Configure JDK path
 4. Choose project template (Console App)
 5. Name your project and click Create
 
 ### Creating a New Java Project in Eclipse:
-1. File â†’ New â†’ Java Project
+1. File -' New -' Java Project
 2. Enter project name
 3. Configure JDK version
 4. Click Finish
-5. Create a new Java class (right-click src â†’ New â†’ Class)
+5. Create a new Java class (right-click src -' New -' Class)
 
 ### Creating a New Java Project in VS Code:
 1. Open Command Palette (Ctrl+Shift+P)
@@ -98,19 +98,19 @@ javac -version
 ## Basic IDE Configuration
 
 ### Set JDK Version:
-- **IntelliJ:** File â†’ Project Structure â†’ Project Settings â†’ JDK
-- **Eclipse:** Window â†’ Preferences â†’ Java â†’ Installed JREs
-- **VS Code:** Settings â†’ Extensions â†’ Extension Pack for Java â†’ Java Home
+- **IntelliJ:** File -' Project Structure -' Project Settings -' JDK
+- **Eclipse:** Window -' Preferences -' Java -' Installed JREs
+- **VS Code:** Settings -' Extensions -' Extension Pack for Java -' Java Home
 
 ### Configure Code Style:
-- **IntelliJ:** File â†’ Settings â†’ Editor â†’ Code Style â†’ Java
-- **Eclipse:** Window â†’ Preferences â†’ Java â†’ Code Style
-- **VS Code:** Settings â†’ [Language] â†’ Format
+- **IntelliJ:** File -' Settings -' Editor -' Code Style -' Java
+- **Eclipse:** Window -' Preferences -' Java -' Code Style
+- **VS Code:** Settings -' [Language] -' Format
 
 ### Enable Auto-Save:
-- **IntelliJ:** File â†’ Settings â†’ Appearance & Behavior â†’ System Settings â†’ Save Files
-- **Eclipse:** Window â†’ Preferences â†’ General â†’ Editors â†’ Text Editors â†’ Auto Save
-- **VS Code:** File â†’ Preferences â†’ Settings â†’ Auto Save
+- **IntelliJ:** File -' Settings -' Appearance & Behavior -' System Settings -' Save Files
+- **Eclipse:** Window -' Preferences -' General -' Editors -' Text Editors -' Auto Save
+- **VS Code:** File -' Preferences -' Settings -' Auto Save
 
 ## Essential Plugins/Extensions
 
@@ -142,16 +142,16 @@ public class HelloWorld {
 ```
 
 ### Running:
-- **IntelliJ:** Right-click â†’ Run 'HelloWorld.main()'
-- **Eclipse:** Right-click â†’ Run As â†’ Java Application
-- **VS Code:** Terminal â†’ Run Java or use CodeLens
+- **IntelliJ:** Right-click -' Run 'HelloWorld.main()'
+- **Eclipse:** Right-click -' Run As -' Java Application
+- **VS Code:** Terminal -' Run Java or use CodeLens
 
 ## Debugging
 
 All three IDEs provide debugging capabilities:
 
 1. Set breakpoints by clicking on line numbers
-2. Right-click file â†’ Debug As â†’ Java Application
+2. Right-click file -' Debug As -' Java Application
 3. Use Debug view to inspect variables
 4. Step through code (Step Over, Step Into, Step Out)
 5. Watch expressions and variables

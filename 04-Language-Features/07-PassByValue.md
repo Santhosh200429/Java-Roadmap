@@ -92,31 +92,31 @@ Before call:
 Heap:
   Person object: name="Alice", age=25
 Stack:
-  person â†’ [reference to object]
+  person -' [reference to object]
 
 Inside modifyPerson(Person p):
 Stack:
-  person â†’ [reference to object]      (main method)
-  p â†’ [copy of reference]             (modifyPerson)
+  person -' [reference to object]      (main method)
+  p -' [copy of reference]             (modifyPerson)
 
 p.age = 26:
 Heap:
   Person object: name="Alice", age=26  (MODIFIED!)
 Stack:
-  person â†’ [reference]
-  p â†’ [same reference]
+  person -' [reference]
+  p -' [same reference]
 
 p = new Person("Bob", 30):
 Heap:
   Person object: name="Alice", age=26
   NEW Person object: name="Bob", age=30
 Stack:
-  person â†’ [reference to Alice]        (unchanged!)
-  p â†’ [reference to Bob]               (local change only)
+  person -' [reference to Alice]        (unchanged!)
+  p -' [reference to Bob]               (local change only)
 
 Return:
 Stack:
-  person â†’ [reference to Alice]        (unchanged!)
+  person -' [reference to Alice]        (unchanged!)
 ```
 
 ## Complete Examples
@@ -381,8 +381,8 @@ public class BankTransfer {
     
     // This works - modifying objects
     static void transfer(Account from, Account to, double amount) {
-        from.balance -= amount;     // Modifies 'from' object âœ“
-        to.balance += amount;       // Modifies 'to' object âœ“
+        from.balance -= amount;     // Modifies 'from' object oe"
+        to.balance += amount;       // Modifies 'to' object oe"
     }
     
     // This doesn't work - reassigning references

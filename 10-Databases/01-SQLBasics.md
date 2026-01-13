@@ -16,16 +16,16 @@
 
 ```
 Database
-â”œâ”€â”€ Table: users
-â”‚   â”œâ”€â”€ Columns: id, name, email, age
-â”‚   â”œâ”€â”€ Row 1: [1, "Alice", "alice@email.com", 25]
-â”‚   â”œâ”€â”€ Row 2: [2, "Bob", "bob@email.com", 30]
-â”‚   â””â”€â”€ Row 3: [3, "Charlie", "charlie@email.com", 28]
-â”‚
-â””â”€â”€ Table: orders
-    â”œâ”€â”€ Columns: orderId, userId, amount, date
-    â”œâ”€â”€ Row 1: [101, 1, 99.99, 2024-01-15]
-    â””â”€â”€ Row 2: [102, 2, 149.99, 2024-01-20]
+"oe"" Table: users
+"   "oe"" Columns: id, name, email, age
+"   "oe"" Row 1: [1, "Alice", "alice@email.com", 25]
+"   "oe"" Row 2: [2, "Bob", "bob@email.com", 30]
+"   """" Row 3: [3, "Charlie", "charlie@email.com", 28]
+"
+"""" Table: orders
+    "oe"" Columns: orderId, userId, amount, date
+    "oe"" Row 1: [101, 1, 99.99, 2024-01-15]
+    """" Row 2: [102, 2, 149.99, 2024-01-20]
 ```
 
 ### Creating a Table
@@ -335,7 +335,7 @@ CREATE INDEX idx_email ON users(email);
 CREATE INDEX idx_name_age ON users(name, age);
 
 -- Make searches faster
-SELECT * FROM users WHERE email = 'alice@email.com';  -- âœ“ Fast!
+SELECT * FROM users WHERE email = 'alice@email.com';  -- oe" Fast!
 ```
 
 ## Transactions

@@ -452,7 +452,7 @@ assertEquals(result, 5);  // Note: order reversed!
 ### 1. Confusing Parameter Order
 
 ```java
-// âŒ WRONG - TestNG order is (actual, expected)
+// [WRONG] WRONG - TestNG order is (actual, expected)
 @Test(dataProvider = "data")
 public void testAdd(int a, int b, int expected) {
     assertEquals(expected, a + b);  // Wrong order!
@@ -465,7 +465,7 @@ assertEquals(a + b, expected);
 ### 2. Not Using Data Provider for Multiple Cases
 
 ```java
-// âŒ WRONG - separate test for each case
+// [WRONG] WRONG - separate test for each case
 @Test
 public void testAdd1() { assertEquals(5, add(2,3)); }
 @Test
@@ -485,7 +485,7 @@ public void testAdd(int a, int b, int expected) {
 ### 3. Not Cleaning Up Resources
 
 ```java
-// âŒ WRONG - resources leaked
+// [WRONG] WRONG - resources leaked
 @BeforeMethod
 public void setUp() {
     connection = createConnection();

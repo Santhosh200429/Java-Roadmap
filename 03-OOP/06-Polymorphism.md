@@ -92,7 +92,7 @@ Dog dog = (Dog) animal;  // Cast to Dog
 dog.bark();  // Dog-specific method
 
 // But be careful!
-Cat cat = (Cat) animal;  // âŒ Runtime error - animal is actually Dog!
+Cat cat = (Cat) animal;  // [WRONG] Runtime error - animal is actually Dog!
 ```
 
 Check type before casting:

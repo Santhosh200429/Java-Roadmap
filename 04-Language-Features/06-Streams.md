@@ -23,9 +23,9 @@ A **Stream** is a pipeline for processing collections of data. It allows filteri
 
 ```
 Stream<T>
-  â†’ Intermediate operations (filter, map, sorted)
-  â†’ Terminal operation (collect, forEach, reduce)
-  â†’ Result
+  -' Intermediate operations (filter, map, sorted)
+  -' Terminal operation (collect, forEach, reduce)
+  -' Result
 ```
 
 ### Example
@@ -365,7 +365,7 @@ public class StreamExample {
 
 ### 1. Reusing Stream
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 Stream<Integer> stream = nums.stream();
 stream.filter(n -> n > 2);
 stream.map(n -> n * 2);  // ERROR: stream closed
@@ -379,7 +379,7 @@ nums.stream()
 
 ### 2. Forgetting Terminal Operation
 ```java
-// âŒ WRONG - no output
+// [WRONG] WRONG - no output
 nums.stream()
     .filter(n -> n > 2);  // Only intermediate, does nothing
 
@@ -391,7 +391,7 @@ nums.stream()
 
 ### 3. Side Effects
 ```java
-// âŒ Avoid
+// [WRONG] Avoid
 nums.stream()
     .forEach(n -> System.out.println(n));  // Impure
 

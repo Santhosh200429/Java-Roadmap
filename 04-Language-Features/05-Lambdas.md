@@ -305,7 +305,7 @@ public class StudentFilter {
 
 ### 1. No Curly Braces when Multiple Statements
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 List<Integer> nums = Arrays.asList(1, 2, 3);
 nums.forEach(n -> 
     int x = n * 2;  // ERROR: need braces
@@ -321,7 +321,7 @@ nums.forEach(n -> {
 
 ### 2. Forgetting Return Statement
 ```java
-// âŒ WRONG
+// [WRONG] WRONG
 Function<Integer, Integer> square = x -> { x * x; };
 
 // RIGHT
@@ -332,7 +332,7 @@ Function<Integer, Integer> square = x -> { return x * x; };
 
 ### 3. Wrong Functional Interface
 ```java
-// âŒ WRONG - Predicate returns boolean, not String
+// [WRONG] WRONG - Predicate returns boolean, not String
 Predicate<Integer> check = n -> "value";
 
 // RIGHT

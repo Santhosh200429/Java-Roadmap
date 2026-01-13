@@ -464,7 +464,7 @@ public void testListAssertions() {
 ### 1. Ignoring Status Code
 
 ```java
-// âŒ WRONG - doesn't check status
+// [WRONG] WRONG - doesn't check status
 Response response = get("/students/1").then().extract().response();
 
 // RIGHT - verify status first
@@ -478,7 +478,7 @@ get("/students/1")
 ### 2. Not Waiting for Async Operations
 
 ```java
-// âŒ WRONG - data not ready
+// [WRONG] WRONG - data not ready
 given()
     .body(student)
     .post("/students")
@@ -495,7 +495,7 @@ get("/students/1")
 ### 3. Hardcoded Test Data
 
 ```java
-// âŒ WRONG - relies on existing data
+// [WRONG] WRONG - relies on existing data
 get("/students/123")
     .then()
     .statusCode(200);
@@ -525,7 +525,7 @@ get("/students/" + id)
 ## Key Takeaways
 
 - REST-Assured provides fluent API for testing REST endpoints
-- `given()` â†’ `when()` â†’ `then()` pattern for readability
+- `given()` -' `when()` -' `then()` pattern for readability
 - Verify status codes, headers, and response body
 - Support for authentication, path params, query params
 - Extract data from responses for chaining tests

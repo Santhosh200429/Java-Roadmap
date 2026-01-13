@@ -28,7 +28,7 @@ Before installing, make sure your computer meets these minimum requirements:
 
 1. Visit the official Oracle website: https://www.oracle.com/java/technologies/downloads/
 2. Look for **Java 21** (Latest) or **Java 17** (LTS - Long Term Support)
-3. Select **Windows** â†’ **x64 Installer**
+3. Select **Windows** -' **x64 Installer**
 4. Accept the license agreement
 5. Click **Download** and save the file
 
@@ -75,7 +75,7 @@ javac 21.0.1
 
 1. Visit https://www.oracle.com/java/technologies/downloads/
 2. Select **Java 21** or **Java 17**
-3. Choose **macOS** â†’ **x64 DMG Installer** (or ARM64 if you have Apple Silicon)
+3. Choose **macOS** -' **x64 DMG Installer** (or ARM64 if you have Apple Silicon)
 4. Download the file
 
 #### Step 2: Install

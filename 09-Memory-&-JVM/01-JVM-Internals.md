@@ -10,17 +10,17 @@
 ```
 Java Code      Java Code
 (.java)        (.java)
-   â†“              â†“
+   -"              -"
 Compiler     Compiler
-   â†“              â†“
+   -"              -"
 Bytecode     Bytecode
 (.class)     (.class)
-   â†“              â†“
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   -"              -"
+"""""""""""""""""""""
         JVM
-        â†“
+        -"
     Machine Code
-        â†“
+        -"
    Execution
 ```
 
@@ -63,21 +63,21 @@ javap -c Simple
 
 ```
 Method Stack Frames
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ Method 3        â”‚
-â”‚ Local vars: [z] â”‚
-â”‚ Operand Stack   â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ Method 2        â”‚
-â”‚ Local vars: [y] â”‚
-â”‚ Operand Stack   â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ Method 1        â”‚
-â”‚ Local vars: [x] â”‚
-â”‚ Operand Stack   â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+"oe""""""""""""""""""
+" Method 3        "
+" Local vars: [z] "
+" Operand Stack   "
+""""""""""""""""""""
+"oe""""""""""""""""""
+" Method 2        "
+" Local vars: [y] "
+" Operand Stack   "
+""""""""""""""""""""
+"oe""""""""""""""""""
+" Method 1        "
+" Local vars: [x] "
+" Operand Stack   "
+""""""""""""""""""""
 ```
 
 ### Bytecode Instructions
@@ -135,17 +135,17 @@ public static int count(int);
 
 ```
 1. Loading
-   â”œâ”€ Bootstrap ClassLoader (loads rt.jar)
-   â”œâ”€ Extension ClassLoader (loads jdk extensions)
-   â””â”€ Application ClassLoader (loads app classes)
+   "oe" Bootstrap ClassLoader (loads rt.jar)
+   "oe" Extension ClassLoader (loads jdk extensions)
+   """ Application ClassLoader (loads app classes)
 
 2. Linking
-   â”œâ”€ Verify (check valid bytecode)
-   â”œâ”€ Prepare (allocate memory)
-   â””â”€ Resolve (resolve symbolic references)
+   "oe" Verify (check valid bytecode)
+   "oe" Prepare (allocate memory)
+   """ Resolve (resolve symbolic references)
 
 3. Initialization
-   â””â”€ Execute static blocks and initializers
+   """ Execute static blocks and initializers
 ```
 
 ### Class Loader Example
@@ -201,26 +201,26 @@ dog.sound();
 ## Memory Layout of Objects
 
 ```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚   Object Header            â”‚
-â”‚ â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”‚
-â”‚ â”‚ Mark Word (8 bytes)  â”‚   â”‚ Metadata for GC, locking
-â”‚ â”‚ Class Pointer (8)    â”‚   â”‚ Points to class metadata
-â”‚ â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜   â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚   Instance Variables       â”‚
-â”‚ â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”‚
-â”‚ â”‚ int age        (4)   â”‚   â”‚
-â”‚ â”‚ boolean active (1)   â”‚   â”‚
-â”‚ â”‚ padding        (3)   â”‚   â”‚ Alignment padding
-â”‚ â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜   â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚   Reference Fields         â”‚
-â”‚ â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”‚
-â”‚ â”‚ String name (8)      â”‚   â”‚
-â”‚ â”‚ List data (8)        â”‚   â”‚
-â”‚ â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜   â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+"oe"""""""""""""""""""""""""""""
+"   Object Header            "
+" "oe"""""""""""""""""""""""   "
+" " Mark Word (8 bytes)  "   " Metadata for GC, locking
+" " Class Pointer (8)    "   " Points to class metadata
+" """""""""""""""""""""""""   "
+"oe"""""""""""""""""""""""""""""
+"   Instance Variables       "
+" "oe"""""""""""""""""""""""   "
+" " int age        (4)   "   "
+" " boolean active (1)   "   "
+" " padding        (3)   "   " Alignment padding
+" """""""""""""""""""""""""   "
+"oe"""""""""""""""""""""""""""""
+"   Reference Fields         "
+" "oe"""""""""""""""""""""""   "
+" " String name (8)      "   "
+" " List data (8)        "   "
+" """""""""""""""""""""""""   "
+"""""""""""""""""""""""""""""""
 ```
 
 ## Execution Engine
@@ -229,15 +229,15 @@ dog.sound();
 
 ```
 Bytecode Execution
-        â†“
+        -"
     Interpreted (slow)
-        â†“
+        -"
     Profiling counter increments
-        â†“
+        -"
     Method called enough times?
-        â†“
+        -"
     JIT compile to native code
-        â†“
+        -"
     Native code execution (fast!)
 ```
 
@@ -245,9 +245,9 @@ Bytecode Execution
 
 ```
 Tier 0: Interpreter (all code)
-         â†“ (hot code)
+         -" (hot code)
 Tier 1: C1 Compiler (quick compilation)
-         â†“ (very hot code)
+         -" (very hot code)
 Tier 2-4: C2 Compiler (aggressive optimization)
 ```
 
@@ -358,11 +358,11 @@ public class MemoryMonitor {
 ```bash
 # Set initial and max heap
 java -Xms512m -Xmx2g MyApp
-#     â””â”€ 512MB initial   â””â”€ 2GB maximum
+#     """ 512MB initial   """ 2GB maximum
 
 # Set new generation size
 java -Xms512m -Xmx2g -Xmn256m MyApp
-#                      â””â”€ 256MB young generation
+#                      """ 256MB young generation
 
 # Metaspace
 java -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=512m MyApp

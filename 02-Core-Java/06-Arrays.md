@@ -239,7 +239,7 @@ for (int i = 0; i < matrix.length; i++) {
 
 ```java
 int[] numbers = {10, 20, 30};
-System.out.println(numbers[3]);  // âŒ Error! Index 3 doesn't exist
+System.out.println(numbers[3]);  // [WRONG] Error! Index 3 doesn't exist
 System.out.println(numbers[2]);  // Last element (index is 0-2)
 ```
 
@@ -254,7 +254,7 @@ System.out.println(scores[0]);   // 85 (first element)
 ### Mistake 3: Forgetting Array Type
 
 ```java
-int[] numbers = {"10", "20", "30"};  // âŒ Strings in int array
+int[] numbers = {"10", "20", "30"};  // [WRONG] Strings in int array
 int[] numbers = {10, 20, 30};        // Correct
 ```
 

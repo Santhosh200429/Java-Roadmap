@@ -6,13 +6,13 @@
 
 ```
 Object Creation
-     â†“
+     -"
 Object Usage
-     â†“
+     -"
 Object no longer needed (unreachable)
-     â†“
+     -"
 GC detects unreachable object
-     â†“
+     -"
 Memory reclaimed
 ```
 
@@ -44,12 +44,12 @@ container.clear();                    // No longer reachable
 
 ```
 Heap
-â”œâ”€ Young Generation (90% of collections happen here)
-â”‚  â”œâ”€ Eden Space (most objects allocated)
-â”‚  â”œâ”€ Survivor 0 (survived one collection)
-â”‚  â””â”€ Survivor 1 (survived multiple collections)
-â”‚
-â””â”€ Old Generation (long-lived objects)
+"oe" Young Generation (90% of collections happen here)
+"  "oe" Eden Space (most objects allocated)
+"  "oe" Survivor 0 (survived one collection)
+"  """ Survivor 1 (survived multiple collections)
+"
+""" Old Generation (long-lived objects)
 ```
 
 ## GC Algorithms
@@ -58,13 +58,13 @@ Heap
 
 ```
 Step 1: Mark all reachable objects
-  Root â†’ A â†’ B â†’ C
-         â†“       â†“
+  Root -' A -' B -' C
+         -"       -"
          D       E
   (A, B, C, D, E are marked)
 
 Step 2: Sweep unreachable
-  F, G, H are unmarked â†’ Reclaimed
+  F, G, H are unmarked -' Reclaimed
 ```
 
 ### 2. Generational GC
@@ -293,7 +293,7 @@ java -XX:ConcGCThreads=2 MyApp
 ### 1. Avoid Full GC
 
 ```java
-// âŒ Creates garbage frequently
+// [WRONG] Creates garbage frequently
 public void badMethod() {
     for (int i = 0; i < 1_000_000; i++) {
         String s = "Value: " + i;  // Creates millions of objects
@@ -310,7 +310,7 @@ for (int i = 0; i < 1_000_000; i++) {
 ### 2. Avoid Memory Leaks
 
 ```java
-// âŒ Memory leak - references keep growing
+// [WRONG] Memory leak - references keep growing
 static List<String> cache = new ArrayList<>();
 
 public void addToCache(String value) {
@@ -328,7 +328,7 @@ static Map<String, String> cache = new LinkedHashMap<String, String>(100) {
 ### 3. Avoid Long Object References
 
 ```java
-// âŒ Keeps old objects in memory
+// [WRONG] Keeps old objects in memory
 class Node {
     Object value;
     Node next;
